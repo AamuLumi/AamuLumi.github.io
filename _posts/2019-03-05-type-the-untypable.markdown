@@ -12,7 +12,7 @@ _You use Typescript. You want to type the world. But you don’t want to read th
 
 _Note: this article is not an introduction for Typescript beginners. I’m considering you’re here with a bit of Typescript experience and you need to go further in Typescript world. If you never used Typescript, please take a look at lease to this tutorial and take the time to manipulate some Typescript code._
 
- - Typescript in 5 minutes: [https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- Typescript in 5 minutes: [https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 ## Dynamically type a function
 
@@ -69,9 +69,9 @@ If we take `T = string | undefined`, we reduce the code with this:
 NonNullable<string|undefined> = (string extends undefined | null ? never : T) | (undefined extends undefined | null ? never : T);
 {% endhighlight %}
 
-So we check each type of T and if one of these types is *null* or *undefined*, it will be replaced by never which is the Typescript way to remove a type.
+So we check each type of T and if one of these types is _null_ or _undefined_, it will be replaced by never which is the Typescript way to remove a type.
 
-You can also define a *Diff* type to remove any type from T:
+You can also define a _Diff_ type to remove any type from T:
 
 {% highlight typescript %}
 type Diff<T, U> = T extends U ? never : T;
@@ -125,7 +125,7 @@ InstanceType<typeof C> // C
 
 Always [Typescript 2.8](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html) use here.
 
-This is the same trick as *ReturnType*. We just need to check if the object T extends the function *new* (which is the needed function to create a class in JS). If *new* exists, we just get the return type of the new function.
+This is the same trick as _ReturnType_. We just need to check if the object T extends the function _new_ (which is the needed function to create a class in JS). If _new_ exists, we just get the return type of the new function.
 
 {% include image.html url="/assets/gif/surprising1.gif" description="" %}
 
