@@ -1,0 +1,39 @@
+<script>
+  var observer;
+
+  function loadImage(image) {
+    image.src = image.dataset.echo;
+
+    image.onload = function() {
+      image.classList.remove("not-loaded");
+      image.classList.add("lazy-loaded");
+    };
+    image.onerror = function() {
+      image.classList.add("lazy-error");
+    };
+  }
+
+  function onIntersection(entries) {
+    for (var e in entries) {
+      if (entries[e].intersectionRatio <= 0) continue;
+      observer.unobserve(entries[e].target); // Stop watching
+      loadImage(entries[e].target);
+    }
+  }
+
+  var images = document.querySelectorAll("img[data-echo]");
+
+  if ("IntersectionObserver" in window) {
+    observer = new IntersectionObserver(onIntersection, {
+      rootMargin: "250px"
+    });
+
+    for (var i in images) {
+      if (typeof images[i] === "object") {
+        observer.observe(images[i]);
+      }
+    }
+  } else {
+    for (var image in images) loadImage(image);
+  }
+</script>
