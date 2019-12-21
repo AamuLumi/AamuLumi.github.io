@@ -5,7 +5,10 @@ permalink: /bingoForChristmas/
 sidebar_link: true
 ---
 
-<div id="score-bar"></div>
+<div id="score-bar">
+  <div id="score"></div>
+  <div id="score-sentence"></div>
+</div>
 <div id="app"></div>
 <style>
   .container {
@@ -34,12 +37,28 @@ sidebar_link: true
     color: #000000;
     background-color: white;
     width: 100%;
-    padding: 8px;
+    padding: 16px;
     box-sizing: border-box;
     text-align: center;
-    font-size: 1.375em;
     position: sticky;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #score {
+    flex-shrink: 0;
+    margin-right: 16px;
+    background-color: #ca5a98;
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.375rem;
+  }
+
+  #score-sentence {
+    font-size: 1.125rem;
   }
 
   @media (max-width: 1027px) {
@@ -50,12 +69,13 @@ sidebar_link: true
       align-items: center;
       flex-direction: center;
       flex-grow: 1;
+      margin: -12px 0;
     }
 
     .card {
       flex-shrink: 0;
       width: 100%;
-      margin: 8px 0;
+      margin: 12px 0;
       font-size: 1.125em;
       padding: 16px;
       box-sizing: border-box;
@@ -63,7 +83,7 @@ sidebar_link: true
       align-items: center;
       justify-content: center;
       text-align: center;
-      background-color: black;
+      background-color: 666666;
       color: #ffffff;
       transition: all 0.25s ease-in-out;
       background-image: linear-gradient(130deg, #c9177988, #a70f6288);
@@ -73,8 +93,8 @@ sidebar_link: true
     }
 
     .card.enabled {
-      border-top-color: rgb(130, 204, 130);
-      border-bottom-color: rgb(130, 204, 130);
+      border-top-color: rgb(129, 194, 129);
+      border-bottom-color: rgb(129, 194, 129);
       background-color: #ca5a98;
     }
   }
@@ -115,7 +135,7 @@ sidebar_link: true
     }
 
     .card.enabled {
-      border-color: rgb(130, 204, 130);
+      border-color: rgb(129, 194, 129);
       background-color: #ca5a98;
     }
   }
@@ -130,13 +150,13 @@ sidebar_link: true
     "Islamo-bobo-gauchiasse",
     "Non mais l'écologie c'est des conneries",
     "Le point Gilets Jaunes",
-    "Les policiers ne font que leur boulot",
-    "Les fonctionnaires sont des feignants",
+    "Les fonctionnaires, ces feignants",
     "Les cheminots, ces privilégiés",
-		"Les féministes, ces mal-baisées",
-		"Les jeunes, ces bons à rien",
+    "Les féministes, ces mal-baisées",
+    "Les jeunes, ces bons à rien",
+    "Macron a raison de ...",
     "Blague homophobe et/ou transphobe",
-    "Blague raciste",
+    "Blague ou remarque raciste",
     "Blague ou remarque sexiste"
   ];
 
@@ -148,12 +168,14 @@ sidebar_link: true
     { min: 8, value: "Autorisation de vider la bouteille accordée" },
     { min: 10, value: "Vous avez pensé à les unfriend sur Facebook ?" },
     { min: 12, value: "Songez à reprendre les cadeaux et vous barrer" },
-    { min: 14, value: "Allez faire le Noël chez les voisins" },
+    { min: 14, value: "Allez faire Noël chez les voisins" },
     { min: 16, value: "Hotline de SOS Amitié : 01 42 96 26 26" }
   ].reverse();
 
   const container = document.getElementById("app");
   const scoreBar = document.getElementById("score-bar");
+  const scoreDiv = document.getElementById("score");
+  const scoreSentence = document.getElementById("score-sentence");
   const cards = [];
   let enabledGoals = goals.map(() => false);
 
@@ -170,7 +192,8 @@ sidebar_link: true
   const refreshScoreBar = () => {
     nextSentenceObj = scoreSentences.find(obj => currentScore >= obj.min);
 
-    scoreBar.textContent = `${currentScore} / ${goals.length} - ${nextSentenceObj.value}`;
+    scoreDiv.textContent = `${currentScore} / ${goals.length}`;
+    scoreSentence.textContent = `${nextSentenceObj.value}`;
   };
 
   refreshScoreBar();
