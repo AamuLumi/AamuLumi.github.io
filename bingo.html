@@ -1,0 +1,209 @@
+---
+layout: page
+title: Bingo de Noël
+permalink: /bingoForChristmas/
+sidebar_link: true
+---
+
+<div id="score-bar"></div>
+<div id="app"></div>
+<style>
+  .container {
+    padding: 0;
+  }
+
+  .container header {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    max-width: none;
+  }
+
+  #score-bar {
+    color: #000000;
+    background-color: white;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.375em;
+    position: sticky;
+    top: 0;
+  }
+
+  @media (max-width: 1027px) {
+    #app {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: center;
+      flex-grow: 1;
+    }
+
+    .card {
+      flex-shrink: 0;
+      width: 100%;
+      margin: 8px 0;
+      font-size: 1.125em;
+      padding: 16px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: black;
+      color: #ffffff;
+      transition: all 0.25s ease-in-out;
+      background-image: linear-gradient(130deg, #c9177988, #a70f6288);
+      user-select: none;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+
+    .card.enabled {
+      border-top-color: rgb(130, 204, 130);
+      border-bottom-color: rgb(130, 204, 130);
+      background-color: #ca5a98;
+    }
+  }
+
+  @media (min-width: 1028px) {
+    #app {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .card {
+      flex-shrink: 0;
+      width: 20%;
+      height: 20vh;
+      margin: 0 2.5%;
+      font-size: 1.125em;
+      padding: 32px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: black;
+      color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+      background-image: linear-gradient(130deg, #c9177988, #a70f6288);
+      user-select: none;
+      border: 4px solid transparent;
+    }
+
+    .card:hover {
+      background-color: #ca5a98;
+    }
+
+    .card.enabled {
+      border-color: rgb(130, 204, 130);
+      background-color: #ca5a98;
+    }
+  }
+</style>
+<script type="text/javascript">
+  const goals = [
+    "Les grévistes nous prennent en otage",
+    "Raz-le-bol de payer pour des assisté·e·s",
+    "Ils n'ont qu'à retourner dans leurs pays",
+    "Syndicalistes de merde",
+    "Greta Thunberg est une connasse",
+    "Islamo-bobo-gauchiasse",
+    "Non mais l'écologie c'est des conneries",
+    "Le point Gilets Jaunes",
+    "Les policiers ne font que leur boulot",
+    "Blague homophobe et/ou transphobe",
+    "Blague raciste",
+    "Blague ou remarque machiste"
+  ];
+
+  const scoreSentences = [
+    { min: 0, value: "Une famille en or" },
+    { min: 2, value: "Ce n'est qu'un petit dérapage" },
+    { min: 4, value: "Ça dérape plus que Paul Walker" },
+    { min: 6, value: "Prenez un bon verre d'alcool" },
+    { min: 8, value: "Songez à reprendre les cadeaux et vous barrer" },
+    { min: 10, value: "Je suis terriblement désolé pour vous" },
+    { min: 12, value: "Hotline de SOS Amitié : 01 42 96 26 26" }
+  ].reverse();
+
+  const container = document.getElementById("app");
+  const scoreBar = document.getElementById("score-bar");
+  const cards = [];
+  let enabledGoals = goals.map(() => false);
+
+  if ("sessionStorage" in window) {
+    const data = sessionStorage.getItem("data");
+
+    if (data) {
+      enabledGoals = JSON.parse(data);
+    }
+  }
+
+  let currentScore = enabledGoals.reduce((acc, e) => (e ? acc + 1 : acc), 0);
+
+  const refreshScoreBar = () => {
+    nextSentenceObj = scoreSentences.find(obj => currentScore >= obj.min);
+
+    scoreBar.textContent = `${currentScore} / ${goals.length} - ${nextSentenceObj.value}`;
+  };
+
+  refreshScoreBar();
+
+  const toggleGoal = i => {
+    enabledGoals[i] = !enabledGoals[i];
+
+    if (enabledGoals[i]) {
+      cards[i].classList.add("enabled");
+      currentScore++;
+    } else {
+      cards[i].classList.remove("enabled");
+      currentScore--;
+    }
+
+    refreshScoreBar();
+
+    if ("sessionStorage" in window) {
+      sessionStorage.setItem("data", JSON.stringify(enabledGoals));
+    }
+  };
+
+  const createCardListener = i => () => toggleGoal(i);
+
+  const createCard = (str, i) => {
+    const card = document.createElement("div");
+
+    card.classList.add("card");
+    card.textContent = str;
+    card.onclick = createCardListener(i);
+
+    if (enabledGoals[i]) {
+      card.classList.add("enabled");
+    }
+
+    cards.push(card);
+
+    container.appendChild(card);
+  };
+
+  goals.forEach(createCard);
+</script>
