@@ -19,7 +19,7 @@ sidebar_link: true
     display: none;
   }
 
-  .content {
+  .container > .content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +61,7 @@ sidebar_link: true
     font-size: 1.125rem;
   }
 
-  @media (max-width: 1027px) {
+  @media (max-width: 1023px) {
     #app {
       max-width: 1200px;
       display: flex;
@@ -99,13 +99,14 @@ sidebar_link: true
     }
   }
 
-  @media (min-width: 1028px) {
+  @media (min-width: 1024px) {
     #app {
       max-width: 1200px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       flex-grow: 1;
+      margin: 0 8px;
     }
 
     .card {
@@ -113,7 +114,7 @@ sidebar_link: true
       width: 20%;
       height: 20vh;
       margin: 0 2.5%;
-      font-size: 1.125em;
+      font-size: 1rem;
       padding: 32px;
       box-sizing: border-box;
       display: flex;
@@ -130,12 +131,23 @@ sidebar_link: true
       border: 4px solid transparent;
     }
 
-    .card:hover {
-      background-color: #ca5a98;
-    }
-
     .card.enabled {
       border-color: rgb(129, 194, 129);
+      background-color: #ca5a98;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .card {
+      padding: 8px;
+      width: 23%;
+			margin: 0 1%;
+			font-size: 0.875rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .card:hover {
       background-color: #ca5a98;
     }
   }
