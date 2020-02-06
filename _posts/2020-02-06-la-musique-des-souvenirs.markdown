@@ -16,7 +16,7 @@ Et c'est un phénomène que j'apprécie particulièrement au travers des différ
 
 <iframe src="https://open.spotify.com/embed/track/58kPky40SdGYdUh5TIBMxU" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-Pour l'exemple, quand j'écoute cette musique, je me souviens que je venais d'arriver sur Grenoble (c'était il y a 9 ans au moment où j'écris ce post), et je revois encore le chemin du tramway que je prenais en plein été caniculaire. Je revois toutes les personnes que j'ai rencontré pendant mon court séjour dans les études de médecine, alors que je serais quasimment incapable de me souvenir de ça sans ce stimlulus.
+Pour l'exemple, quand j'écoute cette musique, je me souviens que je venais d'arriver sur Grenoble (c'était il y a 9 ans au moment où j'écris ce post), et je revois encore le chemin du tramway que je prenais en plein été caniculaire. Je revois toutes les personnes que j'ai rencontré pendant mon court séjour dans les études de médecine, alors que je serais quasiment incapable de me souvenir de ça sans ce stimulus.
 
 En fait, la musique est mon journal intime. C'est un peu comme la **Pensine de Dumbledore**, sauf que vous évitez les effets désagréables du type _vous êtes un fantôme et les gens peuvent vous traverser_ ou encore la chute libre quand vous entrez dans le souvenir.
 
