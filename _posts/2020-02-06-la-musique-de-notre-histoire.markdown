@@ -14,7 +14,7 @@ Marcel Proust, sans le savoir, a défini au travers de ces lignes un concept sim
 
 Et c'est un phénomène que j'apprécie particulièrement au travers des différentes facettes de la musique. Pour ma part, l'écoute permet de me remémorer de la situation au moment précis de mon passé où j'écoutais cette musique. L'écoute d'une composition perso est encore plus forte car cette composition retranscrit un état d'esprit précis avec lequel j'ai écrit le morceau.
 
-<iframe src="https://open.spotify.com/embed/track/58kPky40SdGYdUh5TIBMxU" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe src="https://open.spotify.com/embed/track/58kPky40SdGYdUh5TIBMxU" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 Pour l'exemple, quand j'écoute cette musique, je me souviens que je venais d'arriver sur Grenoble (c'était il y a 9 ans au moment où j'écris ce post), et je revois encore le chemin du tramway que je prenais en plein été caniculaire. Je revois toutes les personnes que j'ai rencontré pendant mon court séjour dans les études de médecine, alors que je serais quasimment incapable de me souvenir de ça sans ce stimlulus.
 
@@ -32,4 +32,5 @@ Mais vous verrez, une fois que ça sera fait, vous pourrez vous rappeler de tout
 
 Pour vous donner une idée de ce que ça donne, la mienne est actuellement à 172 titres.
 
-<iframe src="https://open.spotify.com/embed/playlist/2IYyQoWL6KuOh7ZQaH7PxB" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<iframe src="https://open.spotify.com/embed/playlist/2IYyQoWL6KuOh7ZQaH7PxB" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
