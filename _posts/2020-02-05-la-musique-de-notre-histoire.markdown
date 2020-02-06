@@ -8,9 +8,9 @@ tags: musique histoire playlist mémoire souvenirs pensine
 
 > Et tout d'un coup le souvenir m'est apparu. Ce goût c'était celui du petit morceau de madeleine que le dimanche matin, à Combray. [...] Mais, quand d'un passé ancien rien ne subsiste, après la mort des êtres, après la destruction des choses, seules, plus frêles mais plus vivaces, plus immatérielles, plus persistantes, plus fidèles, l'odeur et la saveur restent encore longtemps, comme des âmes, à se rappeler, à attendre, à espérer, sur la ruine de tout le reste, à porter sans fléchir, sur leur gouttelette presque impalpable, l'édifice immense du souvenir.
 
-{% include image.html url="/assets/images/madeleine.jpg" %}
-
 Marcel Proust, sans le savoir, a défini au travers de ces lignes un concept simple mais puissant : la **madeleine de Proust**. Une odeur, un goût ou de manière plus générale une chose nous permet de revoir une situation, un moment, un souvenir. On entrevoit des réminiscences de notre passé au travers d'une chose.
+
+{% include image.html url="/assets/images/madeleine.jpg" %}
 
 Et c'est un phénomène que j'apprécie particulièrement au travers des différentes facettes de la musique. Pour ma part, l'écoute permet de me remémorer de la situation au moment précis de mon passé où j'écoutais cette musique. L'écoute d'une composition perso est encore plus forte car cette composition retranscrit un état d'esprit précis avec lequel j'ai écrit le morceau.
 
