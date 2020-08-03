@@ -1,0 +1,334 @@
+---
+layout: page
+title: FFBE Tier List
+permalink: /ffbe/
+---
+
+<div id="app">
+  <div id="filters">
+    <button data-id="tank" onclick="toggleFilter('tank')">Tank</button>
+    <button data-id="support" onclick="toggleFilter('support')">Support</button>
+    <button data-id="healing" onclick="toggleFilter('healing')">Healing</button>
+    <button data-id="chaining" onclick="toggleFilter('chaining')">
+      Chaining
+    </button>
+    <button data-id="breaker" onclick="toggleFilter('breaker')">Breaker</button>
+    <button data-id="summoner" onclick="toggleFilter('summoner')">
+      Summoner
+    </button>
+    <button data-id="physical-damage" onclick="toggleFilter('physical-damage')">
+      P. Damage
+    </button>
+    <button data-id="magical-damage" onclick="toggleFilter('magical-damage')">
+      M. Damage
+    </button>
+    <button data-id="1-hit-finisher" onclick="toggleFilter('1-hit-finisher')">
+      1-Hit Finisher
+    </button>
+  </div>
+  <table id="tier-list">
+    <colgroup>
+      <col style="width: 10%;" />
+      <col style="width: 40%;" />
+      <col style="width: 40%;" />
+      <col style="width: 10%;" />
+    </colgroup>
+    <thead>
+      <tr>
+        <td>Image</td>
+        <td onclick="toggleSort('name')" style="display: flex;">
+          <input
+            type="text"
+            placeholder="Name"
+            onclick="cancelEvent(event)"
+            onkeyup="filterName(event)"
+            style="width: 0; flex-grow: 1;"
+          />
+        </td>
+        <td>Roles</td>
+        <td onclick="toggleSort('rating')">Rating</td>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+<style>
+  #app {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .container header {
+    display: none;
+  }
+
+  .container > .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    max-width: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tier-list {
+    width: 100%;
+  }
+
+  #filters {
+    padding: 4px;
+  }
+
+  #filters button {
+    transition: none;
+    padding: 8px;
+  }
+
+  button.enabled {
+    background-color: #e96bb0;
+    color: white;
+  }
+
+  td {
+    padding: 4px;
+  }
+
+  img {
+    margin: 0;
+  }
+</style>
+<script type="text/javascript">
+  const COLS = new Array(5);
+  const filters = {
+    tank: true,
+    support: true,
+    chaining: true,
+    healing: true,
+    breaker: true,
+    "magical-damage": true,
+    "physical-damage": true,
+    summoner: true,
+    "1-hit-finisher": true,
+  };
+  let originalData = [];
+  let displayedData = [];
+  let sortKey = "rating";
+  let sortOrder = "DESC";
+  let nameToFilter = "";
+
+  const filterButtons = Array.from(
+    document.querySelectorAll("#filters button")
+  );
+
+  const toggleFilter = (filterToToggle) => {
+    const areAllEnabled = !Object.keys(filters).some((key) => !filters[key]);
+
+    if (areAllEnabled && filters[filterToToggle]) {
+      Object.keys(filters).forEach((key) => {
+        filters[key] = false;
+      });
+
+      filters[filterToToggle] = true;
+    } else {
+      filters[filterToToggle] = !filters[filterToToggle];
+    }
+
+    const areAllDisabled = !Object.keys(filters).some((key) => filters[key]);
+
+    if (areAllDisabled) {
+      Object.keys(filters).forEach((key) => {
+        filters[key] = true;
+      });
+    }
+
+    sortData();
+    refreshDisplay();
+  };
+
+  const toggleSort = (newSortKey) => {
+    if (sortKey === newSortKey) {
+      if (sortOrder === "DESC") {
+        sortOrder = "ASC";
+      } else {
+        sortOrder = "DESC";
+      }
+    } else {
+      sortKey = newSortKey;
+
+      if (sortKey === "rating") {
+        sortOrder = "DESC";
+      } else {
+        sortOrder = "ASC";
+      }
+    }
+
+    sortData();
+    refreshDisplay();
+  };
+
+  function cancelEvent(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  function filterName(e) {
+    nameToFilter = e.target.value;
+
+    sortData();
+    refreshDisplay();
+  }
+
+  function sortData() {
+    displayedData = originalData.filter((entry) => {
+      if (
+        nameToFilter &&
+        entry.name.toLowerCase().indexOf(nameToFilter.toLowerCase()) === -1
+      ) {
+        return false;
+      }
+
+      const roles = entry.roles.map((role) => role.toLowerCase());
+
+      return roles.reduce((acc, e) => filters[e] || acc, false);
+    });
+
+    switch (sortKey) {
+      case "name":
+        displayedData.sort((a, b) =>
+          sortOrder === "DESC"
+            ? b.name.localeCompare(a.name)
+            : a.name.localeCompare(b.name)
+        );
+
+        break;
+      case "rating":
+      default:
+        displayedData.sort((a, b) =>
+          sortOrder === "DESC" ? b.rating - a.rating : a.rating - b.rating
+        );
+    }
+  }
+
+  function createNotesRowFrom(entry) {
+    const row = document.createElement("tr");
+    const col = document.createElement("td");
+
+    col.colSpan = 4;
+
+    col.textContent = entry.notes.reduce((acc, e) => `${acc} - ${e}`);
+
+    row.classList.add("hidden");
+
+    row.appendChild(col);
+    return row;
+  }
+
+  function createRowFrom(entry) {
+    const row = document.createElement("tr");
+
+    const cols = [
+      document.createElement("td"),
+      document.createElement("td"),
+      document.createElement("td"),
+      document.createElement("td"),
+    ];
+    const unitImage = document.createElement("img");
+
+    unitImage.src = entry.imageURL;
+
+    cols[0].appendChild(unitImage);
+    cols[0].classList.add("center-div");
+    cols[1].textContent = entry.name;
+    cols[2].textContent = entry.roles.reduce((acc, e) => `${acc} - ${e}`);
+    cols[3].textContent = entry.rating;
+
+    cols.forEach((col) => row.appendChild(col));
+
+    return row;
+  }
+
+  function swap(rows, oldIndex, newIndex) {
+    const cache = rows[oldIndex];
+    rows[oldIndex] = rows[newIndex];
+    rows[newIndex] = cache;
+  }
+
+  function refreshDisplay() {
+    const table = document.querySelector("#tier-list");
+    const tableBody = document.querySelector("#tier-list tbody");
+    const nextBody = document.createElement("tbody");
+    const rows = Array.from(tableBody.rows);
+
+    displayedData.forEach((entry, newIndex) => {
+      nextBody.appendChild(entry.rows[0]);
+      nextBody.appendChild(entry.rows[1]);
+      nextBody.appendChild(entry.rows[2]);
+    });
+
+    const areAllEnabled = !Object.keys(filters).some((key) => !filters[key]);
+
+    filterButtons.forEach((filterButton) => {
+      const isEnabled = areAllEnabled
+        ? false
+        : filters[filterButton.dataset.id];
+
+      if (isEnabled && !filterButton.classList.contains("enabled")) {
+        filterButton.classList.add("enabled");
+      } else if (!isEnabled && filterButton.classList.contains("enabled")) {
+        filterButton.classList.remove("enabled");
+      }
+    });
+
+    table.replaceChild(nextBody, tableBody);
+  }
+
+  function displayData() {
+    sortData();
+
+    const table = document.querySelector("#tier-list tbody");
+
+    displayedData.forEach((entry, index) => {
+      const row = createRowFrom(entry);
+      const emptyRow = document.createElement("tr");
+      const notesRow = createNotesRowFrom(entry);
+
+      row.addEventListener("click", () => {
+        notesRow.classList.toggle("hidden");
+      });
+
+      entry.rows = [row, emptyRow, notesRow];
+
+      table.appendChild(row);
+      table.appendChild(emptyRow);
+      table.appendChild(notesRow);
+    });
+  }
+
+  fetch("/ffbeTierList.json", {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      originalData = res;
+    })
+    .then(displayData);
+</script>
