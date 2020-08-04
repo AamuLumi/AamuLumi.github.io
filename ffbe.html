@@ -68,17 +68,20 @@ permalink: /ffbe/
     <thead>
       <tr>
         <td>Image</td>
-        <td onclick="toggleSort('name')" style="display: flex;">
+        <td
+          onclick="toggleSort('name')"
+          style="display: flex; cursor: pointer;"
+        >
           <input
             type="text"
             placeholder="Name"
             onclick="cancelEvent(event)"
             onkeyup="filterName(event)"
-            style="width: 0; flex-grow: 1;"
+            style="width: 0; flex-grow: 1; margin-right: 16px; cursor: text;"
           />
         </td>
         <td>Roles</td>
-        <td onclick="toggleSort('rating')">Rating</td>
+        <td onclick="toggleSort('rating')" style="cursor: pointer;">Rating</td>
       </tr>
     </thead>
     <tbody></tbody>
@@ -126,6 +129,15 @@ permalink: /ffbe/
     width: 100%;
   }
 
+  #tier-list tr:nth-child(4n) td,
+  #tier-list tr:nth-child(4n + 1) td {
+    background-color: #f9f9f9;
+  }
+  #tier-list tr:nth-child(4n + 2) td,
+  #tier-list tr:nth-child(4n + 3) td {
+    background-color: white;
+  }
+
   #filters {
     padding: 4px;
   }
@@ -136,7 +148,7 @@ permalink: /ffbe/
   }
 
   button.enabled {
-    background-color: #e96bb0;
+    background-color: #d30375;
     color: white;
   }
 
@@ -281,8 +293,17 @@ permalink: /ffbe/
 
     col.colSpan = 4;
 
+    const seeOnWikiLink = document.createElement("a");
+    seeOnWikiLink.href = `https://exvius.gamepedia.com${entry.url}`;
+    seeOnWikiLink.textContent = `See ${entry.name} on Wiki`;
+
     const notesDiv = document.createElement("div");
-    notesDiv.textContent = entry.notes.reduce((acc, e) => `${acc} - ${e}`);
+    notesDiv.style.fontSize = "0.75em";
+    entry.notes.forEach((e) => {
+      const div = document.createElement("div");
+      div.textContent = e;
+      notesDiv.appendChild(div);
+    });
 
     const familiesDiv = document.createElement("div");
     familiesDiv.style.display = "flex";
@@ -303,6 +324,7 @@ permalink: /ffbe/
 
     row.classList.add("hidden");
 
+    col.appendChild(seeOnWikiLink);
     col.appendChild(notesDiv);
     col.appendChild(familiesDiv);
 
@@ -318,8 +340,15 @@ permalink: /ffbe/
       tmrTitleDiv.textContent = `TMR - ${entry.tmr.name}`;
       tmrInformationsDiv.appendChild(tmrTitleDiv);
 
+      const tmrOnWikiLink = document.createElement("a");
+      tmrOnWikiLink.href = `https://exvius.gamepedia.com${entry.tmr.url}`;
+      tmrOnWikiLink.textContent = `See Wiki`;
+      tmrOnWikiLink.style.marginLeft = "8px";
+      tmrOnWikiLink.style.fontSize = "0.875em";
+      tmrTitleDiv.appendChild(tmrOnWikiLink);
+
       const tmrTitleDesc = document.createElement("div");
-      tmrTitleDesc.style.fontWeight = "0.75em";
+      tmrTitleDesc.style.fontSize = "0.75em";
       entry.tmr.description.forEach((e) => {
         const elementDiv = document.createElement("div");
 
@@ -354,8 +383,15 @@ permalink: /ffbe/
       stmrTitleDiv.textContent = `STMR - ${entry.stmr.name}`;
       stmrInformationsDiv.appendChild(stmrTitleDiv);
 
+      const stmrOnWikiLink = document.createElement("a");
+      stmrOnWikiLink.href = `https://exvius.gamepedia.com${entry.stmr.url}`;
+      stmrOnWikiLink.textContent = `See Wiki`;
+      stmrOnWikiLink.style.marginLeft = "8px";
+      stmrOnWikiLink.style.fontSize = "0.875em";
+      stmrTitleDiv.appendChild(stmrOnWikiLink);
+
       const stmrTitleDesc = document.createElement("div");
-      stmrTitleDesc.style.fontWeight = "0.75em";
+      stmrTitleDesc.style.fontSize = "0.75em";
       entry.stmr.description.forEach((e) => {
         const elementDiv = document.createElement("div");
 
@@ -383,6 +419,7 @@ permalink: /ffbe/
 
   function createRowFrom(entry) {
     const row = document.createElement("tr");
+    row.style.cursor = "pointer";
 
     const cols = [
       document.createElement("td"),
@@ -420,7 +457,6 @@ permalink: /ffbe/
     displayedData.forEach((entry, newIndex) => {
       nextBody.appendChild(entry.rows[0]);
       nextBody.appendChild(entry.rows[1]);
-      nextBody.appendChild(entry.rows[2]);
     });
 
     const areAllEnabled = !Object.keys(filters).some((key) => !filters[key]);
@@ -447,17 +483,15 @@ permalink: /ffbe/
 
     displayedData.forEach((entry, index) => {
       const row = createRowFrom(entry);
-      const emptyRow = document.createElement("tr");
       const notesRow = createNotesRowFrom(entry);
 
       row.addEventListener("click", () => {
         notesRow.classList.toggle("hidden");
       });
 
-      entry.rows = [row, emptyRow, notesRow];
+      entry.rows = [row, notesRow];
 
       table.appendChild(row);
-      table.appendChild(emptyRow);
       table.appendChild(notesRow);
     });
   }
