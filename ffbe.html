@@ -25,6 +25,38 @@ permalink: /ffbe/
     <button data-id="1-hit-finisher" onclick="toggleFilter('1-hit-finisher')">
       1-Hit Finisher
     </button>
+    <select onchange="changeChainFilter(event)">
+      <option value="">Select Chain Filter...</option>
+      <option>Divine Ruination</option>
+      <option>Absolute Mirror of Equity</option>
+      <option>Piledriver</option>
+      <option>Quick Hit</option>
+      <option>Onion Slice</option>
+      <option>Octaslash</option>
+      <option>Aureole Ray</option>
+      <option>Graviton Cannon</option>
+      <option>Stardust Ray</option>
+      <option>Bolting Strike</option>
+      <option>Chainsaw</option>
+      <option>Kingsglaive</option>
+      <option>Tornado</option>
+      <option>Flood</option>
+      <option>Freeze</option>
+      <option>Chaos Wave Awakened</option>
+      <option>Chaos Wave</option>
+      <option>Fatal Barrage</option>
+      <option>Sword of Kings</option>
+      <option>Disorder</option>
+      <option>Firm Punch</option>
+      <option>Free Energy</option>
+      <option>Meteor Rain</option>
+      <option>Absolute Zero</option>
+      <option>Ryujin</option>
+      <option>Torrential Slash</option>
+      <option>Blade Prison</option>
+      <option>Avalanche Kick</option>
+      <option>Extreme Nova</option>
+    </select>
   </div>
   <table id="tier-list">
     <colgroup>
@@ -134,6 +166,7 @@ permalink: /ffbe/
   let sortKey = "rating";
   let sortOrder = "DESC";
   let nameToFilter = "";
+  let chainToFilter = "";
 
   const filterButtons = Array.from(
     document.querySelectorAll("#filters button")
@@ -197,11 +230,25 @@ permalink: /ffbe/
     refreshDisplay();
   }
 
+  function changeChainFilter(e) {
+    chainToFilter = e.target.value;
+
+    sortData();
+    refreshDisplay();
+  }
+
   function sortData() {
     displayedData = originalData.filter((entry) => {
       if (
         nameToFilter &&
         entry.name.toLowerCase().indexOf(nameToFilter.toLowerCase()) === -1
+      ) {
+        return false;
+      }
+
+      if (
+        chainToFilter &&
+        !entry.chainFamilies?.some((e) => e === chainToFilter)
       ) {
         return false;
       }
