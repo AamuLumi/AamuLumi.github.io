@@ -234,9 +234,101 @@ permalink: /ffbe/
 
     col.colSpan = 4;
 
-    col.textContent = entry.notes.reduce((acc, e) => `${acc} - ${e}`);
+    const notesDiv = document.createElement("div");
+    notesDiv.textContent = entry.notes.reduce((acc, e) => `${acc} - ${e}`);
+
+    const familiesDiv = document.createElement("div");
+    familiesDiv.style.display = "flex";
+    familiesDiv.style.margin = "8px 0";
+
+    entry.chainFamilies?.forEach((e) => {
+      const familyDiv = document.createElement("div");
+      familyDiv.style.padding = "4px 8px";
+      familyDiv.style.backgroundColor = "rgba(200, 200, 200)";
+      familyDiv.style.marginRight = "8px";
+      familyDiv.style.borderRadius = "8px";
+      familyDiv.style.fontSize = "0.75em";
+
+      familyDiv.textContent = e;
+
+      familiesDiv.appendChild(familyDiv);
+    });
 
     row.classList.add("hidden");
+
+    col.appendChild(notesDiv);
+    col.appendChild(familiesDiv);
+
+    if (entry.tmr) {
+      const tmrDiv = document.createElement("div");
+      tmrDiv.style.display = "flex";
+      tmrDiv.style.alignItems = "center";
+
+      const tmrInformationsDiv = document.createElement("div");
+
+      const tmrTitleDiv = document.createElement("div");
+      tmrTitleDiv.style.fontWeight = 700;
+      tmrTitleDiv.textContent = `TMR - ${entry.tmr.name}`;
+      tmrInformationsDiv.appendChild(tmrTitleDiv);
+
+      const tmrTitleDesc = document.createElement("div");
+      tmrTitleDesc.style.fontWeight = "0.75em";
+      entry.tmr.description.forEach((e) => {
+        const elementDiv = document.createElement("div");
+
+        elementDiv.textContent = e;
+
+        tmrTitleDesc.appendChild(elementDiv);
+      });
+      tmrInformationsDiv.appendChild(tmrTitleDesc);
+
+      const tmrImg = document.createElement("img");
+      tmrImg.src = entry.tmr.imageURL;
+      tmrImg.style.height = "40px";
+      tmrImg.style.width = "40px";
+      tmrImg.style.marginRight = "8px";
+
+      tmrDiv.appendChild(tmrImg);
+      tmrDiv.appendChild(tmrInformationsDiv);
+
+      col.appendChild(tmrDiv);
+    }
+
+    if (entry.stmr) {
+      const stmrDiv = document.createElement("div");
+      stmrDiv.style.margin = "8px 0";
+      stmrDiv.style.display = "flex";
+      stmrDiv.style.alignItems = "center";
+
+      const stmrInformationsDiv = document.createElement("div");
+
+      const stmrTitleDiv = document.createElement("div");
+      stmrTitleDiv.style.fontWeight = 700;
+      stmrTitleDiv.textContent = `STMR - ${entry.stmr.name}`;
+      stmrInformationsDiv.appendChild(stmrTitleDiv);
+
+      const stmrTitleDesc = document.createElement("div");
+      stmrTitleDesc.style.fontWeight = "0.75em";
+      entry.stmr.description.forEach((e) => {
+        const elementDiv = document.createElement("div");
+
+        elementDiv.textContent = e;
+
+        stmrTitleDesc.appendChild(elementDiv);
+      });
+      stmrInformationsDiv.appendChild(stmrTitleDesc);
+
+      const stmrImg = document.createElement("img");
+      stmrImg.src = entry.stmr.imageURL;
+      stmrImg.style.height = "40px";
+      stmrImg.style.width = "40px";
+      stmrImg.style.marginRight = "8px";
+
+      stmrDiv.appendChild(stmrImg);
+      stmrDiv.appendChild(stmrInformationsDiv);
+
+      col.appendChild(stmrDiv);
+    }
 
     row.appendChild(col);
     return row;
