@@ -60,7 +60,7 @@ Pour continuer mes propos, l'année 2021 a été le moment où un petit groupe d
 
 ### Découverte de l'instant
 
-La chose que EōN et Wreckage Systems m'ont fait réalisé est que **la musique générative est éphémère**. On peut la rapprocher, d'une certaine manière, à la musique créée en concert qui correspond à une version unique de plusieurs morceaux (tant que ceux-ci ne sont pas enregistrés). On peut garder des instants, on se souvient qu'il y a eu ce solo, cette mélodie, ce mix, mais on ne peut pas revivre le même moment.
+La chose que EōN et Wreckage Systems m'ont fait réaliser est que **la musique générative est éphémère**. On peut la rapprocher, d'une certaine manière, à la musique créée en concert qui correspond à une version unique de plusieurs morceaux (tant que ceux-ci ne sont pas enregistrés). On peut garder des instants, on se souvient qu'il y a eu ce solo, cette mélodie, ce mix, mais on ne peut pas revivre le même moment.
 
 La musique générative recrée ce sentiment et ramène l'écoute à ses origines les plus primaires : la découverte. Chaque morceau est une construction unique, et, pour peu que l'algorithme de génération aient des résultats suffisamment variable, il ne sera jamais possible de prévoir l'évolution des morceaux. Nous nous retrouvons dans un musée sans fin, perdu à déambuler dans les couloirs du son, sans aucun moyen de revenir sur nos pas.
 
