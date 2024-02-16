@@ -3,21 +3,19 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Pink in the dark",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    analytics: null, 
+    locale: "fr-FR",
+    baseUrl: "aamulumi.info",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "published",
     theme: {
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Noto Sans Display",
+        body: "Libre Baskerville",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -32,13 +30,13 @@ const config: QuartzConfig = {
           highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          light: "#0e0c0c",
+          lightgray: "rgba(89,47,89,0.35)",
+          gray: "rgba(243,103,35,0.6)",
+          darkgray: "rgba(212,212,212,0.85)",
+          dark: "rgba(224,224,224,0.75)",
+          secondary: "#e17baf",
+          tertiary: "#f88d3b",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
       },

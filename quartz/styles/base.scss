@@ -154,7 +154,6 @@ a {
       position: fixed;
       @media all and (max-width: $fullPageWidth) {
         position: initial;
-        flex-direction: row;
         padding: 0;
         width: initial;
         margin-top: 2rem;
@@ -163,15 +162,16 @@ a {
 
     & .sidebar.left {
       left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
+     
       @media all and (max-width: $fullPageWidth) {
-        gap: 0;
-        align-items: center;
+        gap: 8px 0;
       }
     }
 
     & .sidebar.right {
       right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
       flex-wrap: wrap;
+
       & > * {
         @media all and (max-width: $fullPageWidth) {
           flex: 1;
@@ -438,6 +438,7 @@ td {
 
 tr {
   border-bottom: 1px solid var(--lightgray);
+
   &:last-child {
     border-bottom: none;
   }

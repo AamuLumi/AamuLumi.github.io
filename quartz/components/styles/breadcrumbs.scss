@@ -6,17 +6,31 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.breadcrumb-element {
+.breadcrumb-element-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   p {
     margin: 0;
     margin-left: 0.5rem;
     padding: 0;
     line-height: normal;
   }
+}
+
+.breadcrumb-element a {
+    background-color: var(--lightgray);
+  padding: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  transition: background-color .2s;
+  
+  &:hover {
+    background-color: var(--gray);
+  }
 }

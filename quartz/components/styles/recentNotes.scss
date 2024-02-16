@@ -18,6 +18,16 @@
       .section > .meta {
         margin: 0 0 0.5rem 0;
         opacity: 0.6;
+        font-family: sans-serif;
+        font-size: 0.75rem;
+      }
+      
+      .section {
+        h5 {
+          margin: 4px 0;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
       }
     }
   }
