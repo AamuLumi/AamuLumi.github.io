@@ -1,44 +1,78 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import ContentMeta from "./ContentMeta"
-import { classNames } from "../util/lang"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from './types';
+import ContentMeta from './ContentMeta';
+import { classNames } from '../util/lang';
+
+const imagesExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
 
 const ArticleTitle: QuartzComponent = (props: QuartzComponentProps) => {
-  const { fileData, displayClass } = props
-  const title = fileData.frontmatter?.title
-  const titleImage = fileData.frontmatter?.titleImage
-  const subTitle = fileData.frontmatter?.subtitle
+	const { fileData, displayClass } = props;
+	const title = fileData.frontmatter?.title;
+	let titleImage = fileData.frontmatter?.titleImage as string;
+	const subTitle = fileData.frontmatter?.subtitle as string;
 
-  if (title) {
-    if (titleImage) {
-      return <div>
-        <div class={classNames(displayClass, "header-image-container")}>
-          <div class={classNames(displayClass, "header-image-gradient")}></div>
-          {!!titleImage && <img class={classNames(displayClass, "header-image")}
-                                src={`/_assets/headers/${encodeURIComponent(titleImage)}`} />}
-          <h1 className={classNames(displayClass, "article-decoration-title-on-image")}>{title}</h1>
+	const ContentMetaComponent = ContentMeta();
 
-          <div class={classNames(displayClass, "article-informations-container")}>
-            <h1 class={classNames(displayClass, "article-title-on-image")}>{title}</h1>
+	if (title) {
+		if (titleImage) {
+			const ext = titleImage.substring(titleImage.lastIndexOf('.'));
 
-            {!!subTitle &&
-              <div class={classNames(displayClass, "article-subtitle-on-image")}>{subTitle}</div>
-            }
+			if (imagesExtensions.includes(ext)) {
+				titleImage = `${titleImage.substring(0, titleImage.lastIndexOf('.'))}.webp`;
+			}
 
-            <ContentMeta {...props} />
-          </div>
-        </div>
-      </div>
-    } else {
-      return <div>
-        <h1 className={classNames(displayClass, "article-title")}>{title}</h1>
-        <div className={classNames(displayClass, "article-subtitle-on-image")}>{subTitle}</div>
-        <ContentMeta {...props} />
-      </div>
-    }
-  } else {
-    return null
-  }
-}
+			return (
+				<div>
+					<div class={classNames(displayClass, 'header-image-container')}>
+						<div class={classNames(displayClass, 'header-image-gradient')}></div>
+						{!!titleImage && (
+							<img
+								class={classNames(displayClass, 'header-image')}
+								src={`/_assets/headers/${encodeURIComponent(titleImage)}`}
+							/>
+						)}
+						<h1
+							className={classNames(
+								displayClass,
+								'article-decoration-title-on-image',
+							)}>
+							{title}
+						</h1>
+
+						<div class={classNames(displayClass, 'article-informations-container')}>
+							<h1 class={classNames(displayClass, 'article-title-on-image')}>
+								{title}
+							</h1>
+
+							{!!subTitle && (
+								<div class={classNames(displayClass, 'article-subtitle-on-image')}>
+									{subTitle}
+								</div>
+							)}
+						</div>
+
+						<div class={classNames(displayClass, 'article-meta-container')}>
+							<ContentMetaComponent {...props} />
+						</div>
+					</div>
+				</div>
+			);
+		} else {
+			return (
+				<div class={classNames(displayClass, 'article-no-image-container')}>
+					<h1 className={classNames(displayClass, 'article-title')}>{title}</h1>
+					<div className={classNames(displayClass, 'article-subtitle-on-image')}>
+						{subTitle}
+					</div>
+					<div style={{ marginLeft: -8 }}>
+						<ContentMetaComponent {...props} />
+					</div>
+				</div>
+			);
+		}
+	} else {
+		return null;
+	}
+};
 
 ArticleTitle.css = `
 .article-title {
@@ -50,6 +84,19 @@ ArticleTitle.css = `
   bottom: 16px;
   left: 16px;
   right: 16px;
+}
+
+.article-no-image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.article-meta-container {
+	position: absolute;
+	top: 16px;
+	right: 16px;
 }
 
 .article-subtitle-on-image {
@@ -103,6 +150,6 @@ ArticleTitle.css = `
     background-blend-mode: multiply;
   border-radius: 8px;
 }
-`
+`;
 
-export default (() => ArticleTitle) satisfies QuartzComponentConstructor
+export default (() => ArticleTitle) satisfies QuartzComponentConstructor;

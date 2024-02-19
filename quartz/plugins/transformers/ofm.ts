@@ -19,6 +19,8 @@ import { capitalize } from '../../util/lang';
 import { PluggableList } from 'unified';
 import { ValidCallout, i18n } from '../../i18n';
 
+const imagesExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
+
 export interface Options {
 	comments: boolean;
 	highlight: boolean;
@@ -223,7 +225,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
 											'.webp',
 										].includes(ext)
 									) {
-										console.error(alias);
 										const match = wikilinkImageEmbedRegex.exec(alias ?? '');
 										const _alt = match?.groups?.alt ?? '';
 										const width = match?.groups?.width ?? 'auto';
@@ -239,6 +240,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
 										if (transforms.indexOf('right') !== -1) {
 											dataAlign = 'right';
 										}
+
+										console.log('url', url);
 
 										if (!alt.trim()) {
 											return {
