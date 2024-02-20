@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Pink in the dark</title>
+      <link>https://aamulumi.info</link>
+      <description>Les dernières 10 notes on Pink in the dark</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>index</title>
+    <link>https://aamulumi.info/</link>
+    <guid>https://aamulumi.info/</guid>
+    <description>Hello Test.</description>
+    <pubDate>Tue, 20 Feb 2024 14:29:47 GMT</pubDate>
+  </item><item>
+    <title>Welcome to Quartz</title>
+    <link>https://aamulumi.info/Test-pour-voir</link>
+    <guid>https://aamulumi.info/Test-pour-voir</guid>
+    <description>Lol const a = { &quot;type&quot;: &quot;ADD_AMOUNT_ON_ACCOUNT&quot;, &quot;value&quot;: 23.96 }.</description>
+    <pubDate>Tue, 20 Feb 2024 14:29:47 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
