@@ -60,8 +60,6 @@ export const Assets: QuartzEmitterPlugin = () => {
 					await fs.promises.copyFile(src, dest);
 				}
 
-				console.log('p', dest);
-
 				res.push(dest);
 			}
 

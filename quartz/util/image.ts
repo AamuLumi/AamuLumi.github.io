@@ -19,8 +19,6 @@ export default function createOptimizedImage(
 			});
 		}
 
-		console.log(src, isGif);
-
 		if (isGif) {
 			return s.webp({ quality: 80 }).toFile(dest, (err, info) => {
 				if (err) {

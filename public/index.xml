@@ -6,17 +6,47 @@
       <description>Les dernières 10 notes on Pink in the dark</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Et la machine devînt artiste</title>
+    <link>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</link>
+    <guid>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</guid>
+    <description>La musique est un art. Elle nous touche, nous transporte, nous fascine, mais sans jamais se répéter. Les compositeurs créent depuis des siècles nombre d’oeuvres uniques et formidables : nous pouvons goûter à la Danse Macabre de Camille Saint-Saëns et enchaîner aussitôt sur un Iron de Woodkid pour finir sur un Time de Pink Floyd.</description>
+    <pubDate>Fri, 06 Aug 2021 17:00:00 GMT</pubDate>
+  </item><item>
+    <title>Quid d&#039;un monde sans travail</title>
+    <link>https://aamulumi.info/Sociologie/Quid-d'un-monde-sans-travail</link>
+    <guid>https://aamulumi.info/Sociologie/Quid-d'un-monde-sans-travail</guid>
+    <description> Le travail c’est la santé Rien faire c’est la conserver Les prisonniers du boulot N’font pas de vieux os. C’est au travers de ces paroles que l’illustre Henri Salvador commence sa musique hautement célèbre dans la culture française.</description>
+    <pubDate>Tue, 25 Feb 2020 15:01:00 GMT</pubDate>
+  </item><item>
+    <title>La musique des souvenirs</title>
+    <link>https://aamulumi.info/Musique/La-musique-des-souvenirs</link>
+    <guid>https://aamulumi.info/Musique/La-musique-des-souvenirs</guid>
+    <description> Et tout d’un coup le souvenir m’est apparu. Ce goût c’était celui du petit morceau de madeleine que le dimanche matin, à Combray. […] Mais, quand d’un passé ancien rien ne subsiste, après la mort des êtres, après la destruction des choses, seules, plus frêles mais plus vivaces, plus immatérielles, plus persistantes, plus fidèles, l’odeur et la saveur restent encore longtemps, comme des âmes, à se rappeler, à attendre, à espérer, sur la ruine de tout le reste, à porter sans fléchir, sur leur gouttelette presque impalpable, l’édifice immense du souvenir.</description>
+    <pubDate>Thu, 06 Feb 2020 13:44:00 GMT</pubDate>
+  </item><item>
+    <title>Vers une nouvelle conception du travail</title>
+    <link>https://aamulumi.info/Sociologie/Vers-une-nouvelle-conception-du-travail</link>
+    <guid>https://aamulumi.info/Sociologie/Vers-une-nouvelle-conception-du-travail</guid>
+    <description>Note : n’étant ni économiste ni sociologue, je ne vise qu’à apporter quelques pistes de réflexion qui, j’espère, seront au mieux source de lectures approfondies, au pire source de critiques hardies.</description>
+    <pubDate>Wed, 02 Oct 2019 11:00:00 GMT</pubDate>
+  </item><item>
+    <title>Type the Untypable: 101 for Advanced Typings in Typescript</title>
+    <link>https://aamulumi.info/Dev/Type-the-Untypable</link>
+    <guid>https://aamulumi.info/Dev/Type-the-Untypable</guid>
+    <description>You use Typescript. You want to type the world. But you don’t want to read the whole Typescript doc. So here I come with this introduction to Typescript advanced typings with all type tricks you need.</description>
+    <pubDate>Tue, 05 Mar 2019 11:00:00 GMT</pubDate>
+  </item><item>
+    <title>I&#039;ve never understood Redux, so I rewrote it.</title>
+    <link>https://aamulumi.info/Dev/I've-never-understood-Redux,-so-I-rewrote-it.</link>
+    <guid>https://aamulumi.info/Dev/I've-never-understood-Redux,-so-I-rewrote-it.</guid>
+    <description>I’ve been using Redux for a few years. It’s cool! I can manage the state of my application in a single Store with many reducers. But… wait, what is really a store? A reducer? An action? Let’s decrypt it! Note: I wrote this article after having prepared a talk on the same subject.</description>
+    <pubDate>Fri, 25 Jan 2019 00:00:00 GMT</pubDate>
+  </item><item>
     <title>index</title>
     <link>https://aamulumi.info/</link>
     <guid>https://aamulumi.info/</guid>
-    <description>Hello Test.</description>
-    <pubDate>Tue, 20 Feb 2024 14:29:47 GMT</pubDate>
-  </item><item>
-    <title>Welcome to Quartz</title>
-    <link>https://aamulumi.info/Test-pour-voir</link>
-    <guid>https://aamulumi.info/Test-pour-voir</guid>
-    <description>Lol const a = { &quot;type&quot;: &quot;ADD_AMOUNT_ON_ACCOUNT&quot;, &quot;value&quot;: 23.96 }.</description>
-    <pubDate>Tue, 20 Feb 2024 14:29:47 GMT</pubDate>
+    <description> Tel le Michael Scott qui vogue au gré des clients et des ramettes de papier sur son Segway©, je vous souhaite la bienvenue sur cette magnifique page de ce magnifique site de cet absurde Internet.</description>
+    <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

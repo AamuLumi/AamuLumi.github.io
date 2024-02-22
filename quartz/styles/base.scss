@@ -148,9 +148,11 @@ a {
       gap: 2rem;
       top: 0;
       width: $sidePanelWidth;
-      margin-top: $topSpacing;
+      max-height: calc(100vh - $topSpacing);
       box-sizing: border-box;
       padding: 0 4rem;
+      margin-top: $topSpacing;
+      overflow-y: scroll;
       position: fixed;
       @media all and (max-width: $fullPageWidth) {
         position: initial;
@@ -194,7 +196,8 @@ a {
   & footer {
     margin-left: auto;
     margin-right: auto;
-    width: $pageWidth;
+    width: calc($pageWidth - 16px);
+    padding: 0 8px;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
       margin-left: 0;

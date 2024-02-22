@@ -7,8 +7,9 @@ export const sharedPageComponents: SharedLayout = {
 	header: [],
 	footer: Component.Footer({
 		links: {
-			GitHub: 'https://github.com/jackyzha0/quartz',
-			'Discord Community': 'https://discord.gg/cRFFHYye7t',
+			Mastodon: 'https://rivals.space/@aamulumi',
+			GitHub: 'https://github.com/AamuLumi/blog-next',
+			SoundCloud: 'https://soundcloud.com/aamulumi',
 		},
 	}),
 };
@@ -23,8 +24,8 @@ export const defaultContentPageLayout: PageLayout = {
 		Component.DesktopOnly(Component.Explorer()),
 		Component.DesktopOnly(
 			Component.RecentNotes({
-				title: 'Recently Created',
-				limit: 5,
+				title: '📝 Derniers articles',
+				limit: 3,
 			}),
 		),
 	],

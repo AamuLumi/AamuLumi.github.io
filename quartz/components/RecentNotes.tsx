@@ -55,28 +55,33 @@ export default ((userOpts?: Partial<Options>) => {
 											</a>
 										</h3>
 									</div>
-									<div className="desc">
-										<h5>{subTitle}</h5>
-									</div>
+									{!!subTitle && (
+										<div className="desc">
+											<h5>{subTitle}</h5>
+										</div>
+									)}
+
+									{!!tags.length && (
+										<ul class="tags">
+											{tags.map((tag) => (
+												<li>
+													<a
+														class="tag-link"
+														href={resolveRelative(
+															fileData.slug!,
+															`tags/${tag}` as FullSlug,
+														)}>
+														#{tag}
+													</a>
+												</li>
+											))}
+										</ul>
+									)}
 									{page.dates && (
 										<p class="meta">
 											<Date date={getDate(cfg, page)!} locale={cfg.locale} />
 										</p>
 									)}
-									<ul class="tags">
-										{tags.map((tag) => (
-											<li>
-												<a
-													class="tag-link"
-													href={resolveRelative(
-														fileData.slug!,
-														`tags/${tag}` as FullSlug,
-													)}>
-													#{tag}
-												</a>
-											</li>
-										))}
-									</ul>
 								</div>
 							</li>
 						);

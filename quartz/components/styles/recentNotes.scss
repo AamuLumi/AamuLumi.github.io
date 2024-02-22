@@ -3,6 +3,13 @@
     margin: 0.5rem 0 0 0;
     font-size: 1rem;
   }
+  
+  .tag-link {
+      border-radius: 8px;
+      background-color: var(--highlight);
+      padding: 0.2rem 0.4rem;
+      margin: 0 0.1rem;
+  }
 
   & > ul.recent-ul {
     list-style: none;
@@ -10,7 +17,7 @@
     padding-left: 0;
 
     & > li {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       .section > .desc > h3 > a {
         background-color: transparent;
       }
@@ -18,15 +25,20 @@
       .section > .meta {
         margin: 0 0 0.5rem 0;
         opacity: 0.6;
-        font-family: sans-serif;
+        font-family: var(--sansSerifFont);
         font-size: 0.75rem;
       }
       
       .section {
+        & > .tags {
+            margin: 8px 0;
+        }
+        
         h5 {
           margin: 4px 0;
           font-size: 0.875rem;
           font-weight: 500;
+          font-family: var(--sansSerifFont);
         }
       }
     }

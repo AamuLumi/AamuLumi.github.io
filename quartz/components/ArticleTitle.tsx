@@ -6,6 +6,11 @@ const imagesExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
 
 const ArticleTitle: QuartzComponent = (props: QuartzComponentProps) => {
 	const { fileData, displayClass } = props;
+
+	if (fileData?.frontmatter?.noHeader) {
+		return null;
+	}
+
 	const title = fileData.frontmatter?.title;
 	let titleImage = fileData.frontmatter?.titleImage as string;
 	const subTitle = fileData.frontmatter?.subtitle as string;
@@ -50,9 +55,11 @@ const ArticleTitle: QuartzComponent = (props: QuartzComponentProps) => {
 							)}
 						</div>
 
-						<div class={classNames(displayClass, 'article-meta-container')}>
-							<ContentMetaComponent {...props} />
-						</div>
+						{!fileData?.frontmatter?.noMeta && (
+							<div class={classNames(displayClass, 'article-meta-container')}>
+								<ContentMetaComponent {...props} />
+							</div>
+						)}
 					</div>
 				</div>
 			);
@@ -63,9 +70,11 @@ const ArticleTitle: QuartzComponent = (props: QuartzComponentProps) => {
 					<div className={classNames(displayClass, 'article-subtitle-on-image')}>
 						{subTitle}
 					</div>
-					<div style={{ marginLeft: -8 }}>
-						<ContentMetaComponent {...props} />
-					</div>
+					{!fileData?.frontmatter?.noMeta && (
+						<div style={{ marginLeft: -8 }}>
+							<ContentMetaComponent {...props} />
+						</div>
+					)}
 				</div>
 			);
 		}

@@ -30,10 +30,10 @@ export default {
 			darkMode: 'Mode sombre',
 		},
 		explorer: {
-			title: 'Explorateur',
+			title: '🕵️ Explorateur',
 		},
 		footer: {
-			createdWith: 'Créé avec',
+			createdWith: "Créé à partir de l'incroyable ",
 		},
 		graph: {
 			title: 'Vue Graphique',
@@ -51,7 +51,7 @@ export default {
 			searchBarPlaceholder: 'Rechercher quelque chose',
 		},
 		tableOfContents: {
-			title: 'Table des Matières',
+			title: '📖 Table des Matières',
 		},
 		contentMeta: {
 			readingTime: ({ minutes }) => `${minutes} min de lecture`,

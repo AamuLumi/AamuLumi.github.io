@@ -30,7 +30,7 @@ PageTitle.css = `
 .page-sub-title {
   font-size: 0.875rem;
   font-weight: 100;
-  font-family: sans-serif;
+  font-family: var(--sansSerifFont);
   margin: 0;
   margin-top: 16px;
   line-height: 125%;
