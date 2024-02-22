@@ -8,7 +8,7 @@ const imagesExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
 export default (() => {
 	const Head: QuartzComponent = ({ cfg, fileData, externalResources }: QuartzComponentProps) => {
 		const title = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title;
-		const description =
+		let description =
 			fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description;
 		const { css, js } = externalResources;
 
@@ -29,6 +29,10 @@ export default (() => {
 			}
 
 			ogImagePath = `https://${cfg.baseUrl}/_assets/headers/${encodeURIComponent(headerImage)}`;
+		}
+
+		if (fileData.frontmatter?.subtitle) {
+			description = fileData.frontmatter.subtitle as string;
 		}
 
 		return (
