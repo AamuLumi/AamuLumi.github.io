@@ -31,7 +31,8 @@ button#toc {
   max-height: none;
   transition: max-height 0.5s ease;
   position: relative;
-
+  font-family: var(--sansSerifFont);
+  
   &.collapsed > .overflow::after {
     opacity: 0;
   }
@@ -40,6 +41,11 @@ button#toc {
     list-style: none;
     margin: 0.5rem 0;
     padding: 0;
+    
+    &.overflow {
+      max-height: 600;
+    }
+    
     & > li > a {
       color: var(--dark);
       opacity: 0.35;

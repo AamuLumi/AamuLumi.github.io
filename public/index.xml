@@ -6,6 +6,12 @@
       <description>Les dernières 10 notes on Pink in the dark</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Non, on ne forme pas une développeuse ou un développeur en 6 mois</title>
+    <link>https://aamulumi.info/Dev/Non,-on-ne-forme-pas-une-d%C3%A9veloppeuse-ou-un-d%C3%A9veloppeur-en-6-mois</link>
+    <guid>https://aamulumi.info/Dev/Non,-on-ne-forme-pas-une-d%C3%A9veloppeuse-ou-un-d%C3%A9veloppeur-en-6-mois</guid>
+    <description>Avant toute chose, je tiens à préciser qu’il s’agit d’un point de vue complètement personnel. Cet article est issu d’un ensemble d’expériences rassemblées au cours de mes années de travail en tant que Directeur Technique et Tech Lead d’une petite entreprise bordelaise, mais aussi formateur et conférencier.</description>
+    <pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Et la machine devînt artiste</title>
     <link>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</link>
     <guid>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</guid>
@@ -30,7 +36,7 @@
     <description>Note : n’étant ni économiste ni sociologue, je ne vise qu’à apporter quelques pistes de réflexion qui, j’espère, seront au mieux source de lectures approfondies, au pire source de critiques hardies.</description>
     <pubDate>Wed, 02 Oct 2019 11:00:00 GMT</pubDate>
   </item><item>
-    <title>Type the Untypable: 101 for Advanced Typings in Typescript</title>
+    <title>Type the Untypable</title>
     <link>https://aamulumi.info/Dev/Type-the-Untypable</link>
     <guid>https://aamulumi.info/Dev/Type-the-Untypable</guid>
     <description>You use Typescript. You want to type the world. But you don’t want to read the whole Typescript doc. So here I come with this introduction to Typescript advanced typings with all type tricks you need.</description>
@@ -42,7 +48,7 @@
     <description>I’ve been using Redux for a few years. It’s cool! I can manage the state of my application in a single Store with many reducers. But… wait, what is really a store? A reducer? An action? Let’s decrypt it! Note: I wrote this article after having prepared a talk on the same subject.</description>
     <pubDate>Fri, 25 Jan 2019 00:00:00 GMT</pubDate>
   </item><item>
-    <title>index</title>
+    <title>🏠 Home</title>
     <link>https://aamulumi.info/</link>
     <guid>https://aamulumi.info/</guid>
     <description> Tel le Michael Scott qui vogue au gré des clients et des ramettes de papier sur son Segway©, je vous souhaite la bienvenue sur cette magnifique page de ce magnifique site de cet absurde Internet.</description>

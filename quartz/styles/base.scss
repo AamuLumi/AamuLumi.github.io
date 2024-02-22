@@ -173,6 +173,7 @@ a {
     & .sidebar.right {
       right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
       flex-wrap: wrap;
+      max-height: 200vh;
 
       & > * {
         @media all and (max-width: $fullPageWidth) {

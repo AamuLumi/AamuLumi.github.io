@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color .2s;
+  font-family: var(--sansSerifFont);
   
   &:hover {
     background-color: var(--gray);
