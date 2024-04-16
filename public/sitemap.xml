@@ -1,9 +1,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://aamulumi.info/Dev/Comment-j'ai-hack%C3%A9-le-dino-de-Chrome</loc>
+    <lastmod>2021-07-20T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://aamulumi.info/Dev/I've-never-understood-Redux,-so-I-rewrote-it.</loc>
     <lastmod>2019-01-25T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://aamulumi.info/Dev/Infra/Mise-en-place-d'un-Grafana-pour-g%C3%A9rer-les-m%C3%A9triques-de-CleverCloud</loc>
+    <lastmod>2021-08-24T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/Le-monorepo</loc>
+    <lastmod>2021-09-07T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://aamulumi.info/Dev/Non,-on-ne-forme-pas-une-d%C3%A9veloppeuse-ou-un-d%C3%A9veloppeur-en-6-mois</loc>
     <lastmod>2024-02-22T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/Patterns/Observer---The-JS-Way</loc>
+    <lastmod>2021-07-07T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/Patterns/Queue---The-JS-Way</loc>
+    <lastmod>2021-11-02T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</loc>
+    <lastmod>2021-06-08T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</loc>
+    <lastmod>2021-06-22T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://aamulumi.info/Dev/The-Useless-Type-Calculator-in-Typescript</loc>
+    <lastmod>2021-10-05T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://aamulumi.info/Dev/Type-the-Untypable</loc>
     <lastmod>2019-03-05T11:00:00.000Z</lastmod>

@@ -12,47 +12,59 @@
     <description>Avant toute chose, je tiens à préciser qu’il s’agit d’un point de vue complètement personnel. Cet article est issu d’un ensemble d’expériences rassemblées au cours de mes années de travail en tant que Directeur Technique et Tech Lead d’une petite entreprise bordelaise, mais aussi formateur et conférencier.</description>
     <pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Queue - The JS Way</title>
+    <link>https://aamulumi.info/Dev/Patterns/Queue---The-JS-Way</link>
+    <guid>https://aamulumi.info/Dev/Patterns/Queue---The-JS-Way</guid>
+    <description>This time, I didn’t pick this pattern from the awful book of Javapocalypse. It’s something I discovered a few years ago when a colleague presented to me RabbitMQ.</description>
+    <pubDate>Tue, 02 Nov 2021 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>The Useless Type Calculator in Typescript</title>
+    <link>https://aamulumi.info/Dev/The-Useless-Type-Calculator-in-Typescript</link>
+    <guid>https://aamulumi.info/Dev/The-Useless-Type-Calculator-in-Typescript</guid>
+    <description>It’s time for one of the most useless things I ever made — something beyond reason, where the logic stops being rational and the void is the reality. It’s time to create a calculator using only types from Typescript.</description>
+    <pubDate>Tue, 05 Oct 2021 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Le monorepo</title>
+    <link>https://aamulumi.info/Dev/Le-monorepo</link>
+    <guid>https://aamulumi.info/Dev/Le-monorepo</guid>
+    <description>Sous ce nom de jeu de société, la technique du monorepo est une technique d’organisation des projets extrêmement simple : on met tout dans le même dépôt.</description>
+    <pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Mise en place d&#039;un Grafana pour gérer les métriques de CleverCloud</title>
+    <link>https://aamulumi.info/Dev/Infra/Mise-en-place-d'un-Grafana-pour-g%C3%A9rer-les-m%C3%A9triques-de-CleverCloud</link>
+    <guid>https://aamulumi.info/Dev/Infra/Mise-en-place-d'un-Grafana-pour-g%C3%A9rer-les-m%C3%A9triques-de-CleverCloud</guid>
+    <description>Mis à jour (25/08/21) : Aurélien Hebert, développeur chez CleverCloud, nous a partagé un dépôt Git pour déployer un Grafana directement sur CleverCloud.</description>
+    <pubDate>Tue, 24 Aug 2021 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Et la machine devînt artiste</title>
     <link>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</link>
     <guid>https://aamulumi.info/Musique/Et-la-machine-dev%C3%AEnt-artiste</guid>
     <description>La musique est un art. Elle nous touche, nous transporte, nous fascine, mais sans jamais se répéter. Les compositeurs créent depuis des siècles nombre d’oeuvres uniques et formidables : nous pouvons goûter à la Danse Macabre de Camille Saint-Saëns et enchaîner aussitôt sur un Iron de Woodkid pour finir sur un Time de Pink Floyd.</description>
     <pubDate>Fri, 06 Aug 2021 17:00:00 GMT</pubDate>
   </item><item>
-    <title>Quid d&#039;un monde sans travail</title>
-    <link>https://aamulumi.info/Sociologie/Quid-d'un-monde-sans-travail</link>
-    <guid>https://aamulumi.info/Sociologie/Quid-d'un-monde-sans-travail</guid>
-    <description> Le travail c’est la santé Rien faire c’est la conserver Les prisonniers du boulot N’font pas de vieux os. C’est au travers de ces paroles que l’illustre Henri Salvador commence sa musique hautement célèbre dans la culture française.</description>
-    <pubDate>Tue, 25 Feb 2020 15:01:00 GMT</pubDate>
+    <title>Comment j&#039;ai hacké le dino de Chrome</title>
+    <link>https://aamulumi.info/Dev/Comment-j'ai-hack%C3%A9-le-dino-de-Chrome</link>
+    <guid>https://aamulumi.info/Dev/Comment-j'ai-hack%C3%A9-le-dino-de-Chrome</guid>
+    <description>Plus de connexion Internet pour bosser ? Il est alors temps de démarrer l’activité préférée des développeur·euses web sans Internet : jouer avec le dino de Chrome.</description>
+    <pubDate>Tue, 20 Jul 2021 00:00:00 GMT</pubDate>
   </item><item>
-    <title>La musique des souvenirs</title>
-    <link>https://aamulumi.info/Musique/La-musique-des-souvenirs</link>
-    <guid>https://aamulumi.info/Musique/La-musique-des-souvenirs</guid>
-    <description> Et tout d’un coup le souvenir m’est apparu. Ce goût c’était celui du petit morceau de madeleine que le dimanche matin, à Combray. […] Mais, quand d’un passé ancien rien ne subsiste, après la mort des êtres, après la destruction des choses, seules, plus frêles mais plus vivaces, plus immatérielles, plus persistantes, plus fidèles, l’odeur et la saveur restent encore longtemps, comme des âmes, à se rappeler, à attendre, à espérer, sur la ruine de tout le reste, à porter sans fléchir, sur leur gouttelette presque impalpable, l’édifice immense du souvenir.</description>
-    <pubDate>Thu, 06 Feb 2020 13:44:00 GMT</pubDate>
+    <title>Observer - The JS Way</title>
+    <link>https://aamulumi.info/Dev/Patterns/Observer---The-JS-Way</link>
+    <guid>https://aamulumi.info/Dev/Patterns/Observer---The-JS-Way</guid>
+    <description>Back to the book of the four horsemen of Javapocalypse, they defined the Observer pattern as a way to define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</description>
+    <pubDate>Wed, 07 Jul 2021 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Vers une nouvelle conception du travail</title>
-    <link>https://aamulumi.info/Sociologie/Vers-une-nouvelle-conception-du-travail</link>
-    <guid>https://aamulumi.info/Sociologie/Vers-une-nouvelle-conception-du-travail</guid>
-    <description>Note : n’étant ni économiste ni sociologue, je ne vise qu’à apporter quelques pistes de réflexion qui, j’espère, seront au mieux source de lectures approfondies, au pire source de critiques hardies.</description>
-    <pubDate>Wed, 02 Oct 2019 11:00:00 GMT</pubDate>
+    <title>i18n&#039;em all with Singleton</title>
+    <link>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</link>
+    <guid>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</guid>
+    <description>Developing a good web app involves to implement an efficient internationalization system. You have to provide the same content in multiple languages, so you need a module to translate all your texts.</description>
+    <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Type the Untypable</title>
-    <link>https://aamulumi.info/Dev/Type-the-Untypable</link>
-    <guid>https://aamulumi.info/Dev/Type-the-Untypable</guid>
-    <description>You use Typescript. You want to type the world. But you don’t want to read the whole Typescript doc. So here I come with this introduction to Typescript advanced typings with all type tricks you need.</description>
-    <pubDate>Tue, 05 Mar 2019 11:00:00 GMT</pubDate>
-  </item><item>
-    <title>I&#039;ve never understood Redux, so I rewrote it.</title>
-    <link>https://aamulumi.info/Dev/I've-never-understood-Redux,-so-I-rewrote-it.</link>
-    <guid>https://aamulumi.info/Dev/I've-never-understood-Redux,-so-I-rewrote-it.</guid>
-    <description>I’ve been using Redux for a few years. It’s cool! I can manage the state of my application in a single Store with many reducers. But… wait, what is really a store? A reducer? An action? Let’s decrypt it! Note: I wrote this article after having prepared a talk on the same subject.</description>
-    <pubDate>Fri, 25 Jan 2019 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>🏠 Home</title>
-    <link>https://aamulumi.info/</link>
-    <guid>https://aamulumi.info/</guid>
-    <description> Tel le Michael Scott qui vogue au gré des clients et des ramettes de papier sur son Segway©, je vous souhaite la bienvenue sur cette magnifique page de ce magnifique site de cet absurde Internet.</description>
-    <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
+    <title>Singleton - The JS way</title>
+    <link>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</link>
+    <guid>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</guid>
+    <description>Described in Design Patterns from E. Gamma, R. Helm, R. Johnson, and J. Vlissides, the pattern “ensures a class only has one instance, and provide a global point of access to it.</description>
+    <pubDate>Tue, 08 Jun 2021 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
