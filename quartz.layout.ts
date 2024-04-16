@@ -21,7 +21,8 @@ export const defaultContentPageLayout: PageLayout = {
 		Component.PageTitle(),
 		Component.MobileOnly(Component.Spacer()),
 		Component.Search(),
-		Component.DesktopOnly(Component.Explorer()),
+		Component.MobileOnly(Component.Spacer()),
+		Component.Explorer(),
 		Component.DesktopOnly(
 			Component.RecentNotes({
 				title: '📝 Derniers articles',

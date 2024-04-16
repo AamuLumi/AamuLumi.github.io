@@ -152,7 +152,7 @@ a {
       box-sizing: border-box;
       padding: 0 4rem;
       margin-top: $topSpacing;
-      overflow-y: scroll;
+      overflow-y: auto;
       position: fixed;
       @media all and (max-width: $fullPageWidth) {
         position: initial;
@@ -475,6 +475,7 @@ video {
 
 .spacer {
   flex: 1 1 auto;
+  margin: 4px;
 }
 
 ul.overflow,

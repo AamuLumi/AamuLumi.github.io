@@ -39,6 +39,10 @@ button#explorer {
   }
 }
 
+#explorer-ul {
+  max-height: none;
+}
+
 .folder-outer.open {
   grid-template-rows: 1fr;
 }
