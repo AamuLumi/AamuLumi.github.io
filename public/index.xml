@@ -6,12 +6,6 @@
       <description>Les dernières 10 notes on Pink in the dark</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Démarrer le modding sur Rimworld</title>
-    <link>https://aamulumi.info/Jeux/Modding/Rimworld/D%C3%A9marrer-le-modding-sur-Rimworld</link>
-    <guid>https://aamulumi.info/Jeux/Modding/Rimworld/D%C3%A9marrer-le-modding-sur-Rimworld</guid>
-    <description>Après un an de modding sur Rimworld, il me semble pertinent de faire ce que tout•e bon•ne développeur•euse devrait faire en temps normal mais ne fait jamais par manque de temps : de la documentation technique.</description>
-    <pubDate>Fri, 17 May 2024 10:09:36 GMT</pubDate>
-  </item><item>
     <title>Tous les trucs pour briller comme développeur•euse</title>
     <link>https://aamulumi.info/Dev/Tous-les-trucs-pour-briller-comme-d%C3%A9veloppeur%E2%80%A2euse</link>
     <guid>https://aamulumi.info/Dev/Tous-les-trucs-pour-briller-comme-d%C3%A9veloppeur%E2%80%A2euse</guid>
@@ -65,6 +59,12 @@
     <guid>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</guid>
     <description>Developing a good web app involves to implement an efficient internationalization system. You have to provide the same content in multiple languages, so you need a module to translate all your texts.</description>
     <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Singleton - The JS way</title>
+    <link>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</link>
+    <guid>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</guid>
+    <description>Described in Design Patterns from E. Gamma, R. Helm, R. Johnson, and J. Vlissides, the pattern “ensures a class only has one instance, and provide a global point of access to it.</description>
+    <pubDate>Tue, 08 Jun 2021 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
