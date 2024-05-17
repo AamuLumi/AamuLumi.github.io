@@ -6,6 +6,18 @@
       <description>Les dernières 10 notes on Pink in the dark</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Démarrer le modding sur Rimworld</title>
+    <link>https://aamulumi.info/Jeux/Modding/Rimworld/D%C3%A9marrer-le-modding-sur-Rimworld</link>
+    <guid>https://aamulumi.info/Jeux/Modding/Rimworld/D%C3%A9marrer-le-modding-sur-Rimworld</guid>
+    <description>Après un an de modding sur Rimworld, il me semble pertinent de faire ce que tout•e bon•ne développeur•euse devrait faire en temps normal mais ne fait jamais par manque de temps : de la documentation technique.</description>
+    <pubDate>Fri, 17 May 2024 10:09:36 GMT</pubDate>
+  </item><item>
+    <title>Tous les trucs pour briller comme développeur•euse</title>
+    <link>https://aamulumi.info/Dev/Tous-les-trucs-pour-briller-comme-d%C3%A9veloppeur%E2%80%A2euse</link>
+    <guid>https://aamulumi.info/Dev/Tous-les-trucs-pour-briller-comme-d%C3%A9veloppeur%E2%80%A2euse</guid>
+    <description>C’est juste une longue liste de trucs lus ou à lire qui, peut-être un jour, me serviront. Mis à jour quand j’en ai envie. Notions d’informatique Mainframe : https://en.</description>
+    <pubDate>Fri, 17 May 2024 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Non, on ne forme pas une développeuse ou un développeur en 6 mois</title>
     <link>https://aamulumi.info/Dev/Non,-on-ne-forme-pas-une-d%C3%A9veloppeuse-ou-un-d%C3%A9veloppeur-en-6-mois</link>
     <guid>https://aamulumi.info/Dev/Non,-on-ne-forme-pas-une-d%C3%A9veloppeuse-ou-un-d%C3%A9veloppeur-en-6-mois</guid>
@@ -23,12 +35,6 @@
     <guid>https://aamulumi.info/Dev/The-Useless-Type-Calculator-in-Typescript</guid>
     <description>It’s time for one of the most useless things I ever made — something beyond reason, where the logic stops being rational and the void is the reality. It’s time to create a calculator using only types from Typescript.</description>
     <pubDate>Tue, 05 Oct 2021 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Le monorepo</title>
-    <link>https://aamulumi.info/Dev/Le-monorepo</link>
-    <guid>https://aamulumi.info/Dev/Le-monorepo</guid>
-    <description>Sous ce nom de jeu de société, la technique du monorepo est une technique d’organisation des projets extrêmement simple : on met tout dans le même dépôt.</description>
-    <pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate>
   </item><item>
     <title>Mise en place d&#039;un Grafana pour gérer les métriques de CleverCloud</title>
     <link>https://aamulumi.info/Dev/Infra/Mise-en-place-d'un-Grafana-pour-g%C3%A9rer-les-m%C3%A9triques-de-CleverCloud</link>
@@ -59,12 +65,6 @@
     <guid>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</guid>
     <description>Developing a good web app involves to implement an efficient internationalization system. You have to provide the same content in multiple languages, so you need a module to translate all your texts.</description>
     <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Singleton - The JS way</title>
-    <link>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</link>
-    <guid>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</guid>
-    <description>Described in Design Patterns from E. Gamma, R. Helm, R. Johnson, and J. Vlissides, the pattern “ensures a class only has one instance, and provide a global point of access to it.</description>
-    <pubDate>Tue, 08 Jun 2021 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -21,7 +21,7 @@ const ArticleTitle: QuartzComponent = (props: QuartzComponentProps) => {
 		if (titleImage) {
 			const ext = titleImage.substring(titleImage.lastIndexOf('.'));
 
-			if (imagesExtensions.includes(ext)) {
+			if (!process.env.NO_IMAGE_OPTIMIZATION && imagesExtensions.includes(ext)) {
 				titleImage = `${titleImage.substring(0, titleImage.lastIndexOf('.'))}.webp`;
 			}
 

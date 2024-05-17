@@ -24,7 +24,7 @@ export default (() => {
 		if (headerImage) {
 			const ext = headerImage.substring(headerImage.lastIndexOf('.'));
 
-			if (imagesExtensions.includes(ext)) {
+			if (!process.env.NO_IMAGE_OPTIMIZATION && imagesExtensions.includes(ext)) {
 				headerImage = `${headerImage.substring(0, headerImage.lastIndexOf('.'))}.webp`;
 			}
 

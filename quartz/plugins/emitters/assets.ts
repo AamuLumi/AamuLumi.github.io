@@ -32,7 +32,11 @@ export const Assets: QuartzEmitterPlugin = () => {
 				const src = joinSegments(argv.directory, fp) as FilePath;
 				const name = (slugifyFilePath(fp as FilePath, true) + ext) as FilePath;
 
-				const dest = joinSegments(argv.output, name).replace(ext, '.webp') as FilePath;
+				let dest = joinSegments(argv.output, name) as FilePath;
+
+				if (!process.env.NO_IMAGE_OPTIMIZATION) {
+					dest = dest.replace(ext, '.webp') as FilePath;
+				}
 
 				graph.addEdge(src, dest);
 			}
@@ -53,7 +57,7 @@ export const Assets: QuartzEmitterPlugin = () => {
 
 				await fs.promises.mkdir(dir, { recursive: true }); // ensure dir exists
 
-				if (imagesExtensions.indexOf(ext) !== -1) {
+				if (!process.env.NO_IMAGE_OPTIMIZATION && imagesExtensions.indexOf(ext) !== -1) {
 					dest = dest.replace(ext, '.webp') as FilePath;
 					await createOptimizedImage(src, dest);
 				} else {

@@ -164,7 +164,11 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options> | undefined> =
 									);
 									let ext = _getFileExtension(dest);
 
-									if (ext && imagesExtensions.includes(ext)) {
+									if (
+										!process.env.NO_IMAGE_OPTIMIZATION &&
+										ext &&
+										imagesExtensions.includes(ext)
+									) {
 										dest =
 											`${dest.substring(0, dest.lastIndexOf('.'))}.webp` as RelativeURL;
 									}
