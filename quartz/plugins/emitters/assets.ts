@@ -69,7 +69,7 @@ export const Assets: QuartzEmitterPlugin = () => {
 					)
 						.toString(16)
 						.padStart(8, '0');
-					dest = dest.replace(ext, `-${hash}.webp`) as FilePath;
+					dest = dest.replace(ext, `.webp`) as FilePath;
 
 					console.log('check', dest);
 
