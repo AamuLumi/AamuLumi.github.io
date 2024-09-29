@@ -58,8 +58,25 @@ export const Assets: QuartzEmitterPlugin = () => {
 				await fs.promises.mkdir(dir, { recursive: true }); // ensure dir exists
 
 				if (!process.env.NO_IMAGE_OPTIMIZATION && imagesExtensions.indexOf(ext) !== -1) {
-					dest = dest.replace(ext, '.webp') as FilePath;
-					await createOptimizedImage(src, dest);
+					const stats = fs.lstatSync(src);
+					console.log(src.replace(/\s*/gim, '') + stats.ctime.toISOString());
+					const hash = (
+						Buffer.from(src.replace(/\s*/gim, '') + stats.ctime.toISOString())
+							.toString('base64')
+							.split('')
+							.reduce((acc, e) => acc + e.charCodeAt(0) * e.charCodeAt(0), 0) &
+						0xffffffff
+					)
+						.toString(16)
+						.padStart(8, '0');
+					dest = dest.replace(ext, `-${hash}.webp`) as FilePath;
+
+					console.log('check', dest);
+
+					if (!fs.existsSync(dest)) {
+						console.log('create', dest);
+						await createOptimizedImage(src, dest);
+					}
 				} else {
 					await fs.promises.copyFile(src, dest);
 				}

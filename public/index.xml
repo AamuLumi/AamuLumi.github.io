@@ -18,6 +18,12 @@
     <description>Avant toute chose, je tiens à préciser qu’il s’agit d’un point de vue complètement personnel. Cet article est issu d’un ensemble d’expériences rassemblées au cours de mes années de travail en tant que Directeur Technique et Tech Lead d’une petite entreprise bordelaise, mais aussi formateur et conférencier.</description>
     <pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate>
   </item><item>
+    <title>Création d&#039;un droit de congé médical de courte durée pour les salariés</title>
+    <link>https://aamulumi.info/Autre/Cr%C3%A9ation-d'un-droit-de-cong%C3%A9-m%C3%A9dical-de-courte-dur%C3%A9e-pour-les-salari%C3%A9s</link>
+    <guid>https://aamulumi.info/Autre/Cr%C3%A9ation-d'un-droit-de-cong%C3%A9-m%C3%A9dical-de-courte-dur%C3%A9e-pour-les-salari%C3%A9s</guid>
+    <description>Image par Peter H de Pixabay Ce texte est issu d’un travail précédemment effectuée pour une pétition déposée sur le site de l’Assemblée nationale (disponible à cet endroit) et est disponible ici à titre d’archive.</description>
+    <pubDate>Thu, 28 Sep 2023 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Queue - The JS Way</title>
     <link>https://aamulumi.info/Dev/Patterns/Queue---The-JS-Way</link>
     <guid>https://aamulumi.info/Dev/Patterns/Queue---The-JS-Way</guid>
@@ -59,12 +65,6 @@
     <guid>https://aamulumi.info/Dev/Patterns/i18n'em-all-with-Singleton</guid>
     <description>Developing a good web app involves to implement an efficient internationalization system. You have to provide the same content in multiple languages, so you need a module to translate all your texts.</description>
     <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Singleton - The JS way</title>
-    <link>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</link>
-    <guid>https://aamulumi.info/Dev/Patterns/Singleton---The-JS-way</guid>
-    <description>Described in Design Patterns from E. Gamma, R. Helm, R. Johnson, and J. Vlissides, the pattern “ensures a class only has one instance, and provide a global point of access to it.</description>
-    <pubDate>Tue, 08 Jun 2021 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
