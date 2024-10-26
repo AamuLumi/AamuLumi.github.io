@@ -47,7 +47,7 @@ export default (() => {
 				<meta property="og:height" content="675" />
 				{fileData?.frontmatter?.publishDate && (
 					<meta
-						property="article:publishedTime"
+						property="article:published_time"
 						content={new Date(
 							Date.parse(fileData.frontmatter?.publishDate as any),
 						).toISOString()}
