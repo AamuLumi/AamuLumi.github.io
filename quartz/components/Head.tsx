@@ -45,6 +45,14 @@ export default (() => {
 				{cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}
 				<meta property="og:width" content="1200" />
 				<meta property="og:height" content="675" />
+				{fileData?.frontmatter?.publishDate && (
+					<meta
+						property="article:publishedTime"
+						content={new Date(
+							Date.parse(fileData.frontmatter?.publishDate as any),
+						).toISOString()}
+					/>
+				)}
 				<link rel="icon" href={iconPath} />
 				<meta name="description" content={description} />
 				<meta name="generator" content="Quartz" />
