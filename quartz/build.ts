@@ -38,6 +38,10 @@ type BuildData = {
 
 type FileEvent = 'add' | 'change' | 'delete';
 
+function newBuildId() {
+  return Math.random().toString(36).substring(2, 8)
+}
+
 async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
 	const ctx: BuildCtx = {
 		argv,

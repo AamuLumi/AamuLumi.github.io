@@ -11,6 +11,41 @@ import chalk from 'chalk';
 import { write } from './helpers';
 import DepGraph from '../../depgraph';
 
+// get all the dependencies for the markdown file
+// eg. images, scripts, stylesheets, transclusions
+const parseDependencies = (argv: Argv, hast: Root, file: VFile): string[] => {
+  const dependencies: string[] = []
+
+  visit(hast, "element", (elem): void => {
+    let ref: string | null = null
+
+    if (
+      ["script", "img", "audio", "video", "source", "iframe"].includes(elem.tagName) &&
+      elem?.properties?.src
+    ) {
+      ref = elem.properties.src.toString()
+    } else if (["a", "link"].includes(elem.tagName) && elem?.properties?.href) {
+      // transclusions will create a tags with relative hrefs
+      ref = elem.properties.href.toString()
+    }
+
+    // if it is a relative url, its a local file and we need to add
+    // it to the dependency graph. otherwise, ignore
+    if (ref === null || !isRelativeURL(ref)) {
+      return
+    }
+
+    let fp = path.join(file.data.filePath!, path.relative(argv.directory, ref)).replace(/\\/g, "/")
+    // markdown files have the .md extension stripped in hrefs, add it back here
+    if (!fp.split("/").pop()?.includes(".")) {
+      fp += ".md"
+    }
+    dependencies.push(fp)
+  })
+
+  return dependencies
+}
+
 export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) => {
 	const opts: FullPageLayout = {
 		...sharedPageComponents,

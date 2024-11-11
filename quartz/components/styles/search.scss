@@ -10,20 +10,25 @@
 .search {
   min-width: fit-content;
   max-width: 14rem;
-  flex-grow: 0.3;
+  @media all and ($mobile) {
+    flex-grow: 0.3;
+  }
 
-  & > #search-icon {
+  & > .search-button {
     background-color: var(--lightgray);
+    border: none;
     border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
     height: 2rem;
+    padding: 0;
     display: flex;
     align-items: center;
+    text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
-
-    & > div {
-      flex-grow: 1;
-    }
+    width: 100%;
+    justify-content: space-between;
 
     & > p {
       display: inline;
@@ -66,7 +71,7 @@
       margin-left: auto;
       margin-right: auto;
 
-      @media all and (max-width: $fullPageWidth) {
+      @media all and not ($desktop) {
         width: 90%;
       }
 
@@ -108,7 +113,7 @@
           flex: 0 0 min(30%, 450px);
         }
 
-        @media all and (min-width: $tabletBreakpoint) {
+        @media all and not ($tablet) {
           &[data-preview] {
             & .result-card > p.preview {
               display: none;
@@ -134,7 +139,7 @@
           border-radius: 5px;
         }
 
-        @media all and (max-width: $tabletBreakpoint) {
+        @media all and ($tablet) {
           & > #preview-container {
             display: none !important;
           }

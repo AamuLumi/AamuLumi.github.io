@@ -12,7 +12,6 @@ html {
 body,
 section {
   margin: 0;
-  max-width: 100%;
   box-sizing: border-box;
   background-color: var(--light);
   font-family: var(--bodyFont);
@@ -20,11 +19,10 @@ section {
 }
 
 .text-highlight {
-  background-color: #fff23688;
+  background-color: var(--textHighlight);
   padding: 0 0.1rem;
   border-radius: 5px;
 }
-
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
@@ -43,8 +41,20 @@ ul,
 .math {
   color: var(--darkgray);
   fill: var(--darkgray);
-  overflow-wrap: anywhere;
   hyphens: auto;
+}
+
+p,
+ul,
+text,
+a,
+li,
+ol,
+ul,
+.katex,
+.math {
+  overflow-wrap: anywhere;
+  /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
 }
 
 .math {
@@ -53,8 +63,12 @@ ul,
   }
 }
 
+strong {
+  font-weight: $semiBoldWeight;
+}
+
 a {
-  font-weight: $boldWeight;
+  font-weight: $semiBoldWeight;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
@@ -75,6 +89,11 @@ a {
       border-radius: 0;
       padding: 0;
     }
+    &.tag-link {
+      &::before {
+        content: "#";
+      }
+    }
   }
 
   &.external .external-icon {
@@ -89,25 +108,21 @@ a {
 
 .desktop-only {
   display: initial;
-  @media all and (max-width: $fullPageWidth) {
+  @media all and ($mobile) {
     display: none;
   }
 }
 
 .mobile-only {
   display: none;
-  @media all and (max-width: $fullPageWidth) {
+  @media all and ($mobile) {
     display: initial;
   }
 }
 
 .page {
-  @media all and (max-width: $fullPageWidth) {
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: $pageWidth;
-  }
-
+  max-width: calc(#{map-get($breakpoints, desktop)} + 300px);
+  margin: 0 auto;
   & article {
     & > h1 {
       font-size: 2rem;
@@ -135,16 +150,35 @@ a {
   }
 
   & > #quartz-body {
-    width: 100%;
-    display: flex;
-    @media all and (max-width: $fullPageWidth) {
-      flex-direction: column;
+    display: grid;
+    grid-template-columns: #{map-get($desktopGrid, templateColumns)};
+    grid-template-rows: #{map-get($desktopGrid, templateRows)};
+    column-gap: #{map-get($desktopGrid, columnGap)};
+    row-gap: #{map-get($desktopGrid, rowGap)};
+    grid-template-areas: #{map-get($desktopGrid, templateAreas)};
+    @media all and ($tablet) {
+      grid-template-columns: #{map-get($tabletGrid, templateColumns)};
+      grid-template-rows: #{map-get($tabletGrid, templateRows)};
+      column-gap: #{map-get($tabletGrid, columnGap)};
+      row-gap: #{map-get($tabletGrid, rowGap)};
+      grid-template-areas: #{map-get($tabletGrid, templateAreas)};
+    }
+    @media all and ($mobile) {
+      grid-template-columns: #{map-get($mobileGrid, templateColumns)};
+      grid-template-rows: #{map-get($mobileGrid, templateRows)};
+      column-gap: #{map-get($mobileGrid, columnGap)};
+      row-gap: #{map-get($mobileGrid, rowGap)};
+      grid-template-areas: #{map-get($mobileGrid, templateAreas)};
+    }
+
+    @media all and not ($desktop) {
+      padding: 0 1rem;
+    }
+    @media all and ($mobile) {
+      margin: 0 auto;
     }
 
     & .sidebar {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
       gap: 2rem;
       top: 0;
       width: $sidePanelWidth;
@@ -178,20 +212,29 @@ a {
       & > * {
         @media all and (max-width: $fullPageWidth) {
           flex: 1;
-          min-width: 140px;
+        }
+        & > .toc {
+          display: none;
         }
       }
     }
-  }
-
-  & .page-header {
-    width: $pageWidth;
-    margin: $topSpacing auto 0 auto;
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
-      margin-top: 2rem;
+    & .page-header,
+    & .page-footer {
+      margin-top: 1rem;
     }
-  }
+
+    & .page-header {
+      grid-area: grid-header;
+      margin: $topSpacing 0 0 0;
+      @media all and ($mobile) {
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+
+    & .center > article {
+      grid-area: grid-center;
+    }
 
   & .center,
   & footer {
@@ -202,7 +245,6 @@ a {
     @media all and (max-width: $fullPageWidth) {
       width: initial;
       margin-left: 0;
-      margin-right: 0;
     }
   }
 }
@@ -358,7 +400,7 @@ pre {
     counter-increment: line 0;
     display: grid;
     padding: 0.5rem 0;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     & [data-highlighted-chars] {
       background-color: var(--highlight);
@@ -478,9 +520,15 @@ video {
   margin: 4px;
 }
 
+div:has(> .overflow) {
+  display: flex;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
 ul.overflow,
 ol.overflow {
-  max-height: 400;
+  max-height: 100%;
   overflow-y: auto;
 
   // clearfix
@@ -490,8 +538,7 @@ ol.overflow {
   & > li:last-of-type {
     margin-bottom: 30px;
   }
-
-  &:after {
+  /*&:after {
     pointer-events: none;
     content: "";
     width: 100%;
@@ -502,11 +549,24 @@ ol.overflow {
     opacity: 1;
     transition: opacity 0.3s ease;
     background: linear-gradient(transparent 0px, var(--light));
-  }
+  }*/
 }
 
 .transclude {
   ul {
     padding-left: 1rem;
   }
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.external-embed.youtube,
+iframe.pdf {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
 }
