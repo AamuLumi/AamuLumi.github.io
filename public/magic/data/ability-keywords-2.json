@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "affinity",
+    "category": "ability_keywords",
+    "names": { "fr": "Affinité", "en": "Affinity" },
+    "simple": {
+      "fr": "Affinité pour [type] : Ce sort coûte {1} de moins à lancer pour chaque [type] que vous contrôlez.",
+      "en": "Affinity for [type]: This spell costs {1} less to cast for each [type] you control."
+    },
+    "examples": {
+      "fr": ["Un artefact coûtant {5} avec « Affinité pour les artefacts » et vous contrôlez 3 artefacts : il coûte {2}.", "L'affinité fait des combos puissants ; le bloc Mirrodin (2003-2004) a été marqué par les decks d'affinité."],
+      "en": ["An artifact costing {5} with 'Affinity for artifacts' and you control 3 artifacts: it costs {2}.", "Affinity makes powerful combos; the Mirrodin block (2003-2004) was defined by affinity decks."]
+    },
+    "fullDefinition": {
+      "fr": "L'affinité est une capacité statique fonctionnant pendant que le sort est sur la pile. « Affinité pour [type] » signifie « Ce sort coûte {1} de moins à lancer pour chaque [type] que vous contrôlez ». L'affinité ne peut pas réduire le mana coloré requis.",
+      "en": "Affinity is a static ability that functions while the spell is on the stack. 'Affinity for [type]' means 'This spell costs {1} less to cast for each [type] you control.' Affinity can't reduce colored mana requirements."
+    },
+    "rules": [
+      { "ref": "702.40a", "text": { "fr": "L'affinité est une capacité statique qui fonctionne pendant que le sort est sur la pile.", "en": "Affinity is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "annihilator",
+    "category": "ability_keywords",
+    "names": { "fr": "Annihilateur", "en": "Annihilator" },
+    "simple": {
+      "fr": "Annihilateur N : À chaque fois que cette créature attaque, le joueur défenseur sacrifie N permanentes.",
+      "en": "Annihilator N: Whenever this creature attacks, defending player sacrifices N permanents."
+    },
+    "examples": {
+      "fr": ["Un Eldrazi avec Annihilateur 2 attaque : votre adversaire doit sacrifier 2 permanentes de son choix.", "Annihilateur a été introduit dans Rise of the Eldrazi (2010) sur les Eldrazi titans."],
+      "en": ["An Eldrazi with Annihilator 2 attacks: your opponent must sacrifice 2 permanents of their choice.", "Annihilator was introduced in Rise of the Eldrazi (2010) on the Eldrazi titans."]
+    },
+    "fullDefinition": {
+      "fr": "L'annihilateur est une capacité déclenchée. « Annihilateur N » signifie « À chaque fois que cette créature attaque, le joueur défenseur sacrifie N permanentes ». Cette capacité se déclenche pour chaque créature avec annihilateur qui attaque.",
+      "en": "Annihilator is a triggered ability. 'Annihilator N' means 'Whenever this creature attacks, defending player sacrifices N permanents.' This ability triggers for each attacking creature with annihilator."
+    },
+    "rules": [
+      { "ref": "702.86a", "text": { "fr": "L'annihilateur est une capacité déclenchée. « Annihilateur N » signifie « À chaque fois que cette créature attaque, le joueur défenseur sacrifie N permanentes ».", "en": "Annihilator is a triggered ability. 'Annihilator N' means 'Whenever this creature attacks, defending player sacrifices N permanents.'" } }
+    ]
+  },
+  {
+    "id": "ascend",
+    "category": "ability_keywords",
+    "names": { "fr": "Ascension", "en": "Ascend" },
+    "simple": {
+      "fr": "Si vous contrôlez 10 permanentes ou plus, vous obtenez la cité d'or pour le reste de la partie.",
+      "en": "If you control 10 or more permanents, you get the city's blessing for the rest of the game."
+    },
+    "examples": {
+      "fr": ["Vous contrôlez 10 permanentes : vous gagnez « la cité d'or » de manière permanente, activant les bonus liés.", "Ascension est apparu dans Rivals of Ixalan (2018)."],
+      "en": ["You control 10 permanents: you gain 'the city's blessing' permanently, activating linked bonuses.", "Ascend appeared in Rivals of Ixalan (2018)."]
+    },
+    "fullDefinition": {
+      "fr": "Ascension est une capacité statique ou déclenchée selon le contexte. « Ascension » signifie « Si vous contrôlez dix permanentes ou plus, vous obtenez la cité d'or pour le reste de la partie ». Une fois obtenue, la cité d'or ne se perd jamais, même si votre nombre de permanentes diminue.",
+      "en": "Ascend is a static or triggered ability depending on context. 'Ascend' means 'If you control ten or more permanents, you get the city's blessing for the rest of the game.' Once obtained, the city's blessing is never lost, even if your permanent count drops."
+    },
+    "rules": [
+      { "ref": "702.131a", "text": { "fr": "Ascension est une capacité statique ou déclenchée. « Ascension » signifie « Si vous contrôlez dix permanentes ou plus, vous obtenez la cité d'or pour le reste de la partie. »", "en": "Ascend is a static or triggered ability. 'Ascend' means 'If you control ten or more permanents, you get the city's blessing for the rest of the game.'" } }
+    ]
+  },
+  {
+    "id": "awaken",
+    "category": "ability_keywords",
+    "names": { "fr": "Réveil", "en": "Awaken" },
+    "simple": {
+      "fr": "Réveil N — [coût] : Vous pouvez payer ce coût additionnel pour mettre N marqueurs +1/+1 sur un terrain ciblé et en faire une créature 0/0 élémental avec la hâte.",
+      "en": "Awaken N — [cost]: Pay this additional cost to put N +1/+1 counters on a target land and turn it into a 0/0 Elemental creature with haste."
+    },
+    "examples": {
+      "fr": ["Un sort avec « Réveil 3 — {5}{W}{W} » : pour le surcoût, vous mettez 3 marqueurs +1/+1 sur un de vos terrains, et il devient une créature 3/3.", "Réveil est apparu dans Battle for Zendikar (2015)."],
+      "en": ["A spell with 'Awaken 3 — {5}{W}{W}': for the extra cost, you put 3 +1/+1 counters on one of your lands, and it becomes a 3/3 creature.", "Awaken appeared in Battle for Zendikar (2015)."]
+    },
+    "fullDefinition": {
+      "fr": "Le réveil est une capacité statique fonctionnant pendant que le sort est sur la pile. « Réveil N — [coût] » signifie « Vous pouvez payer [coût] en lançant ce sort. Si le coût de réveil a été payé, mettez N marqueurs +1/+1 sur un terrain ciblé que vous contrôlez ; ce terrain devient une créature 0/0 Elémental avec la hâte. C'est toujours un terrain. »",
+      "en": "Awaken is a static ability that functions while the spell is on the stack. 'Awaken N — [cost]' means 'You may pay [cost] as you cast this spell. If the awaken cost was paid, put N +1/+1 counters on target land you control; that land becomes a 0/0 Elemental creature with haste. It's still a land.'"
+    },
+    "rules": [
+      { "ref": "702.114a", "text": { "fr": "Le réveil est une capacité fonctionnant pendant que le sort est sur la pile et pendant que la permanente est sur le champ de bataille.", "en": "Awaken is an ability that functions while the spell is on the stack and while the permanent is on the battlefield." } }
+    ]
+  },
+  {
+    "id": "banding",
+    "category": "ability_keywords",
+    "names": { "fr": "Bande", "en": "Banding" },
+    "simple": {
+      "fr": "Capacité ancienne et complexe permettant à plusieurs créatures d'attaquer ou de bloquer ensemble en une « bande ».",
+      "en": "Old, complex ability allowing multiple creatures to attack or block together in a 'band'."
+    },
+    "examples": {
+      "fr": ["Pendant la déclaration des attaquants, vous pouvez former une bande avec plusieurs créatures dont une au moins a la bande. Toute la bande est bloquée comme une seule unité.", "Bande a été introduite dans Alpha (1993) et est rarement réimprimée."],
+      "en": ["During the declare attackers step, you may form a band with multiple creatures, at least one with banding. The whole band is blocked as a single unit.", "Banding was introduced in Alpha (1993) and is rarely reprinted."]
+    },
+    "fullDefinition": {
+      "fr": "La bande est une capacité statique modifiant les règles de déclaration des attaquants et de blocage. Plusieurs créatures attaquantes, dont au moins une a la bande, peuvent former une bande. Le contrôleur de la bande choisit comment les blessures de combat sont assignées entre les créatures bloqueuses. La bande est connue pour sa complexité.",
+      "en": "Banding is a static ability that modifies the declare attackers and declare blockers rules. Multiple attacking creatures, at least one with banding, can form a band. The banding player chooses how combat damage is assigned among blocking creatures. Banding is known for its complexity."
+    },
+    "rules": [
+      { "ref": "702.21a", "text": { "fr": "La bande est une capacité statique qui modifie les règles de déclaration des attaquants et de blocage.", "en": "Banding is a static ability that modifies the rules for declaring attackers and blockers." } }
+    ]
+  },
+  {
+    "id": "battle_cry",
+    "category": "ability_keywords",
+    "names": { "fr": "Cri de guerre", "en": "Battle Cry" },
+    "simple": {
+      "fr": "À chaque fois que cette créature attaque, chaque autre créature attaquante gagne +1/+0 jusqu'à la fin du tour.",
+      "en": "Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn."
+    },
+    "examples": {
+      "fr": ["Vous attaquez avec un 2/2 (cri de guerre) et trois autres 2/2. Les autres deviennent 3/2.", "Cri de guerre est apparu dans Mirrodin Besieged (2011)."],
+      "en": ["You attack with a 2/2 (battle cry) and three other 2/2s. The others become 3/2.", "Battle cry appeared in Mirrodin Besieged (2011)."]
+    },
+    "fullDefinition": {
+      "fr": "Le cri de guerre est une capacité déclenchée. « Cri de guerre » signifie « À chaque fois que cette créature attaque, chaque autre créature attaquante gagne +1/+0 jusqu'à la fin du tour ». Le bonus s'applique à toutes les autres créatures attaquantes, pas seulement celles que vous contrôlez.",
+      "en": "Battle cry is a triggered ability. 'Battle cry' means 'Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.' The bonus applies to all other attacking creatures, not just yours."
+    },
+    "rules": [
+      { "ref": "702.91a", "text": { "fr": "Le cri de guerre est une capacité déclenchée. « Cri de guerre » signifie « À chaque fois que cette créature attaque, chaque autre créature attaquante gagne +1/+0 jusqu'à la fin du tour. »", "en": "Battle cry is a triggered ability. 'Battle cry' means 'Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.'" } }
+    ]
+  },
+  {
+    "id": "bestow",
+    "category": "ability_keywords",
+    "names": { "fr": "Octroi", "en": "Bestow" },
+    "simple": {
+      "fr": "Vous pouvez lancer cette carte de créature comme une Aura pour son coût d'octroi. Si la créature enchantée meurt, l'Aura redevient une créature.",
+      "en": "You may cast this creature card as an Aura for its bestow cost. If the enchanted creature dies, the Aura reverts to a creature."
+    },
+    "examples": {
+      "fr": ["Une créature avec « Octroi {5}{W} » peut être lancée pour son coût normal (comme créature) ou pour son coût d'octroi (comme Aura).", "Octroi a été introduit dans Theros (2013)."],
+      "en": ["A creature with 'Bestow {5}{W}' can be cast for its normal cost (as a creature) or for its bestow cost (as an Aura).", "Bestow was introduced in Theros (2013)."]
+    },
+    "fullDefinition": {
+      "fr": "L'octroi est une capacité statique. « Octroi [coût] » signifie « Vous pouvez lancer cette carte comme un sort d'Aura en payant [coût] au lieu de son coût de mana. Cette carte devient un sort d'enchantement et a la capacité enchanter créature. Si l'Aura n'est plus attachée à une créature, elle redevient une créature au lieu d'aller au cimetière ».",
+      "en": "Bestow is a static ability. 'Bestow [cost]' means 'You may cast this card as an Aura spell by paying [cost] rather than its mana cost. That card becomes an Aura spell with enchant creature. If the Aura becomes unattached from a creature, it reverts to a creature rather than going to the graveyard.'"
+    },
+    "rules": [
+      { "ref": "702.102a", "text": { "fr": "L'octroi est une capacité statique fonctionnant pendant que la carte est sur la pile ou sur le champ de bataille.", "en": "Bestow is a static ability that functions while the card is on the stack and the battlefield." } }
+    ]
+  },
+  {
+    "id": "bloodthirst",
+    "category": "ability_keywords",
+    "names": { "fr": "Soif de sang", "en": "Bloodthirst" },
+    "simple": {
+      "fr": "Soif de sang N : Si un adversaire a subi des blessures ce tour-ci, cette créature arrive avec N marqueurs +1/+1.",
+      "en": "Bloodthirst N: If an opponent took damage this turn, this creature enters with N +1/+1 counters."
+    },
+    "examples": {
+      "fr": ["Soif de sang 2 : si votre adversaire a perdu au moins 1 point de vie ce tour, la créature arrive avec 2 marqueurs +1/+1.", "Apparu dans Guildpact (2006) avec la guilde Gruul."],
+      "en": ["Bloodthirst 2: if your opponent has lost at least 1 life this turn, the creature enters with 2 +1/+1 counters.", "Appeared in Guildpact (2006) with the Gruul guild."]
+    },
+    "fullDefinition": {
+      "fr": "La soif de sang est une capacité statique. « Soif de sang N » signifie « Si un adversaire a subi des blessures ce tour-ci, cette créature arrive sur le champ de bataille avec N marqueurs +1/+1 sur elle ». Elle vérifie seulement si des blessures ont été infligées, pas qui les a infligées.",
+      "en": "Bloodthirst is a static ability. 'Bloodthirst N' means 'If an opponent was dealt damage this turn, this creature enters the battlefield with N +1/+1 counters on it.' It only checks if damage was dealt, not who dealt it."
+    },
+    "rules": [
+      { "ref": "702.53a", "text": { "fr": "La soif de sang est une capacité statique. « Soif de sang N » signifie « Si un adversaire a subi des blessures ce tour-ci, cette permanente arrive sur le champ de bataille avec N marqueurs +1/+1 sur elle. »", "en": "Bloodthirst is a static ability. 'Bloodthirst N' means 'If an opponent was dealt damage this turn, this permanent enters the battlefield with N +1/+1 counters on it.'" } }
+    ]
+  },
+  {
+    "id": "bushido",
+    "category": "ability_keywords",
+    "names": { "fr": "Bushido", "en": "Bushido" },
+    "simple": {
+      "fr": "Bushido N : Quand cette créature bloque ou est bloquée, elle gagne +N/+N jusqu'à la fin du tour.",
+      "en": "Bushido N: Whenever this creature blocks or becomes blocked, it gets +N/+N until end of turn."
+    },
+    "examples": {
+      "fr": ["Un Samurai 2/2 avec Bushido 1 devient 3/3 quand il bloque ou est bloqué.", "Bushido est apparu dans Champions of Kamigawa (2004)."],
+      "en": ["A 2/2 Samurai with Bushido 1 becomes 3/3 when it blocks or is blocked.", "Bushido appeared in Champions of Kamigawa (2004)."]
+    },
+    "fullDefinition": {
+      "fr": "Le bushido est une capacité déclenchée. « Bushido N » signifie « À chaque fois que cette créature bloque ou devient bloquée, elle gagne +N/+N jusqu'à la fin du tour ». Plusieurs occurrences du bushido sont cumulatives.",
+      "en": "Bushido is a triggered ability. 'Bushido N' means 'Whenever this creature blocks or becomes blocked, it gets +N/+N until end of turn.' Multiple instances of bushido are cumulative."
+    },
+    "rules": [
+      { "ref": "702.45a", "text": { "fr": "Le bushido est une capacité déclenchée. « Bushido N » signifie « À chaque fois que cette créature bloque ou devient bloquée, elle gagne +N/+N jusqu'à la fin du tour. »", "en": "Bushido is a triggered ability. 'Bushido N' means 'Whenever this creature blocks or becomes blocked, it gets +N/+N until end of turn.'" } }
+    ]
+  },
+  {
+    "id": "buyback",
+    "category": "ability_keywords",
+    "names": { "fr": "Renvoi", "en": "Buyback" },
+    "simple": {
+      "fr": "Renvoi [coût] : Vous pouvez payer un coût supplémentaire en lançant ce sort ; si vous le faites, renvoyez-le dans votre main au lieu de le mettre au cimetière.",
+      "en": "Buyback [cost]: Pay an additional cost as you cast this; if you do, return it to your hand instead of putting it into the graveyard."
+    },
+    "examples": {
+      "fr": ["Un sort avec « Renvoi {3} » peut être renvoyé en main après résolution si vous payez 3 manas en plus.", "Renvoi est apparu dans Tempest (1997)."],
+      "en": ["A spell with 'Buyback {3}' can be returned to hand after resolving if you pay 3 extra mana.", "Buyback appeared in Tempest (1997)."]
+    },
+    "fullDefinition": {
+      "fr": "Le renvoi est une capacité statique fonctionnant pendant que le sort est sur la pile. « Renvoi [coût] » signifie « Vous pouvez payer un coût supplémentaire de [coût] en lançant ce sort ». « Si le coût de renvoi a été payé, mettez ce sort dans la main de son propriétaire au lieu de le mettre dans son cimetière au moment de sa résolution. »",
+      "en": "Buyback is a static ability that functions while the spell is on the stack. 'Buyback [cost]' means 'You may pay an additional [cost] as you cast this spell.' 'If the buyback cost was paid, put this spell into its owner's hand instead of into their graveyard as it resolves.'"
+    },
+    "rules": [
+      { "ref": "702.27a", "text": { "fr": "Le renvoi est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Buyback is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "cascade",
+    "category": "ability_keywords",
+    "names": { "fr": "Cascade", "en": "Cascade" },
+    "simple": {
+      "fr": "Quand vous lancez ce sort, exilez des cartes jusqu'à en trouver une non-terrain moins coûteuse, et lancez-la gratuitement.",
+      "en": "When you cast this spell, exile cards until you find a nonland card with lesser cost, then cast it free."
+    },
+    "examples": {
+      "fr": ["Vous lancez « Bloodbraid Elf » (4 manas) avec cascade. Vous exilez jusqu'à trouver un sort de moins de 4 manas et le lancez gratuitement.", "Cascade peut déclencher d'autres cascades en chaîne !"],
+      "en": ["You cast 'Bloodbraid Elf' (4 mana) with cascade. You exile until finding a spell under 4 mana and cast it free.", "Cascade can trigger other cascades in a chain!"]
+    },
+    "fullDefinition": {
+      "fr": "La cascade est une capacité déclenchée qui fonctionne sur la pile. « Cascade » signifie « À chaque fois que vous lancez ce sort, exilez des cartes du dessus de votre bibliothèque jusqu'à ce que vous exiliez une carte non-terrain dont la valeur de mana est inférieure à celle de ce sort. Vous pouvez lancer cette carte sans payer son coût de mana. Ensuite, placez aléatoirement toutes les cartes exilées de cette façon et n'ayant pas été lancées sous votre bibliothèque ».",
+      "en": "Cascade is a triggered ability that functions on the stack. 'Cascade' means 'Whenever you cast this spell, exile cards from the top of your library until you exile a nonland card whose mana value is less than this spell's mana value. You may cast it without paying its mana cost. Then put all exiled cards not cast this way on the bottom of your library in a random order.'"
+    },
+    "rules": [
+      { "ref": "702.85a", "text": { "fr": "La cascade est une capacité déclenchée qui fonctionne pendant que le sort avec cascade est sur la pile.", "en": "Cascade is a triggered ability that functions only while the spell with cascade is on the stack." } }
+    ]
+  },
+  {
+    "id": "champion",
+    "category": "ability_keywords",
+    "names": { "fr": "Champion", "en": "Champion" },
+    "simple": {
+      "fr": "Quand cette créature arrive, exilez une autre créature que vous contrôlez (du type indiqué). Quand cette créature quitte, la créature exilée revient.",
+      "en": "When this creature enters, exile another creature you control (of the indicated type). When this creature leaves, the exiled creature returns."
+    },
+    "examples": {
+      "fr": ["« Champion d'un Kithkin » : quand cette créature arrive, exilez un Kithkin que vous contrôlez ; quand elle quitte, le Kithkin revient.", "Apparu dans Lorwyn (2007). Si l'exil n'est pas possible, sacrifiez cette créature."],
+      "en": ["'Champion a Kithkin': when this creature enters, exile a Kithkin you control; when it leaves, the Kithkin returns.", "Appeared in Lorwyn (2007). If exile isn't possible, sacrifice this creature."]
+    },
+    "fullDefinition": {
+      "fr": "Champion représente deux capacités déclenchées liées. « Champion un(e) [type] » signifie « Quand cette permanente arrive, sacrifiez-la à moins que vous n'exiliez une autre [type] que vous contrôlez » et « Quand cette permanente quitte le champ de bataille, remettez la carte exilée sur le champ de bataille sous le contrôle de son propriétaire ».",
+      "en": "Champion represents two linked triggered abilities. 'Champion a(n) [type]' means 'When this permanent enters the battlefield, sacrifice it unless you exile another [type] you control' and 'When this permanent leaves the battlefield, return the exiled card to the battlefield under its owner's control.'"
+    },
+    "rules": [
+      { "ref": "702.71a", "text": { "fr": "Champion est une capacité représentant deux capacités déclenchées liées.", "en": "Champion represents two linked triggered abilities." } }
+    ]
+  },
+  {
+    "id": "cipher",
+    "category": "ability_keywords",
+    "names": { "fr": "Code", "en": "Cipher" },
+    "simple": {
+      "fr": "Vous pouvez exiler ce sort encodé sur une créature que vous contrôlez. À chaque fois que cette créature inflige des blessures de combat à un joueur, vous pouvez lancer une copie du sort.",
+      "en": "You may exile this spell encoded on a creature you control. Whenever that creature deals combat damage to a player, you may cast a copy of the spell."
+    },
+    "examples": {
+      "fr": ["Vous lancez un sort avec code, puis l'encodez sur votre créature. Chaque fois qu'elle touche un joueur, vous lancez une copie gratuite.", "Code est apparu dans Gatecrash (2013) avec la guilde Dimir."],
+      "en": ["You cast a spell with cipher, then encode it on your creature. Each time it hits a player, you cast a free copy.", "Cipher appeared in Gatecrash (2013) with the Dimir guild."]
+    },
+    "fullDefinition": {
+      "fr": "Code est une capacité représentant deux capacités liées. « Code » signifie « Vous pouvez exiler ce sort encodé sur une créature que vous contrôlez » et « À chaque fois que la créature avec ce code inflige des blessures de combat à un joueur, son contrôleur peut lancer une copie de la carte encodée sans payer son coût de mana ».",
+      "en": "Cipher is an ability representing two linked abilities. 'Cipher' means 'You may exile this spell card encoded on a creature you control' and 'Whenever the creature with this cipher deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.'"
+    },
+    "rules": [
+      { "ref": "702.97a", "text": { "fr": "Code est une capacité qui apparaît sur certains éphémères et rituels.", "en": "Cipher is an ability that appears on some instants and sorceries." } }
+    ]
+  },
+  {
+    "id": "conspire",
+    "category": "ability_keywords",
+    "names": { "fr": "Conspirer", "en": "Conspire" },
+    "simple": {
+      "fr": "En lançant ce sort, vous pouvez engager deux créatures dégagées partageant une couleur avec ce sort. Si vous le faites, copiez le sort.",
+      "en": "As you cast this spell, you may tap two untapped creatures sharing a color with it. If you do, copy the spell."
+    },
+    "examples": {
+      "fr": ["Vous lancez un sort vert avec conspirer. Vous engagez deux créatures vertes : vous obtenez une copie du sort.", "Conspirer apparaît dans Shadowmoor/Eventide (2008) et dans des sets ultérieurs."],
+      "en": ["You cast a green spell with conspire. Tap two green creatures: you get a copy of the spell.", "Conspire appeared in Shadowmoor/Eventide (2008) and in later sets."]
+    },
+    "fullDefinition": {
+      "fr": "Conspirer est une capacité statique fonctionnant pendant que le sort est sur la pile. « Conspirer » signifie « En lançant ce sort, vous pouvez engager deux créatures dégagées que vous contrôlez et qui partagent une couleur avec lui comme coût additionnel. Si vous le faites, copiez ce sort. Si le sort a des cibles, vous pouvez choisir de nouvelles cibles pour la copie ».",
+      "en": "Conspire is a static ability that functions while the spell is on the stack. 'Conspire' means 'As you cast this spell, you may tap two untapped creatures you control that share a color with it as an additional cost. If you do, copy this spell. If the spell has any targets, you may choose new targets for the copy.'"
+    },
+    "rules": [
+      { "ref": "702.78a", "text": { "fr": "Conspirer est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Conspire is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "cumulative_upkeep",
+    "category": "ability_keywords",
+    "names": { "fr": "Entretien cumulatif", "en": "Cumulative Upkeep" },
+    "simple": {
+      "fr": "Au début de votre entretien, ajoutez un marqueur d'âge. Payez le coût pour chaque marqueur d'âge ou sacrifiez la permanente.",
+      "en": "At the beginning of your upkeep, add an age counter. Pay the cost for each age counter or sacrifice the permanent."
+    },
+    "examples": {
+      "fr": ["Une permanente avec « Entretien cumulatif {1} » : 1er tour {1}, 2ème tour {2}, 3ème tour {3}, etc.", "Entretien cumulatif est apparu dans Ice Age (1995)."],
+      "en": ["A permanent with 'Cumulative upkeep {1}': 1st turn {1}, 2nd turn {2}, 3rd turn {3}, etc.", "Cumulative upkeep appeared in Ice Age (1995)."]
+    },
+    "fullDefinition": {
+      "fr": "L'entretien cumulatif est une capacité déclenchée. « Entretien cumulatif [coût] » signifie « Au début de votre entretien, si cette permanente est sur le champ de bataille, mettez un marqueur d'âge sur elle. Puis vous pouvez payer [coût] autant de fois qu'il y a de marqueurs d'âge sur elle. Si vous ne le faites pas, sacrifiez cette permanente ».",
+      "en": "Cumulative upkeep is a triggered ability. 'Cumulative upkeep [cost]' means 'At the beginning of your upkeep, if this permanent is on the battlefield, put an age counter on it. Then you may pay [cost] for each age counter on it. If you don't, sacrifice this permanent.'"
+    },
+    "rules": [
+      { "ref": "702.24a", "text": { "fr": "L'entretien cumulatif est une capacité déclenchée qui modifie les règles du paiement du coût d'entretien d'une permanente.", "en": "Cumulative upkeep is a triggered ability that imposes an increasing cost on a permanent." } }
+    ]
+  },
+  {
+    "id": "dash",
+    "category": "ability_keywords",
+    "names": { "fr": "Pointe d'attaque", "en": "Dash" },
+    "simple": {
+      "fr": "Pointe d'attaque [coût] : Vous pouvez lancer cette créature pour son coût de pointe d'attaque. Si vous le faites, elle gagne la hâte et est renvoyée en main à la fin du tour.",
+      "en": "Dash [cost]: You may cast this creature for its dash cost. If you do, it has haste and returns to your hand at end of turn."
+    },
+    "examples": {
+      "fr": ["Une créature avec « Pointe d'attaque {1}{R} » peut être lancée pour 1R avec la hâte, puis revient en main à la fin du tour.", "Pointe d'attaque est apparu dans Dragons of Tarkir (2015)."],
+      "en": ["A creature with 'Dash {1}{R}' can be cast for 1R with haste, then returns to hand at end of turn.", "Dash appeared in Dragons of Tarkir (2015)."]
+    },
+    "fullDefinition": {
+      "fr": "Pointe d'attaque représente deux capacités liées : une statique fonctionnant en n'importe quelle zone (coût alternatif), et une déclenchée. « Pointe d'attaque [coût] » signifie « Vous pouvez lancer cette carte en payant [coût] au lieu de son coût de mana. Si vous le faites, elle gagne la hâte jusqu'à la fin du tour, et au début de la prochaine étape de fin, son contrôleur la remet dans sa main ».",
+      "en": "Dash represents two linked abilities: a static one functioning in any zone (alternate cost), and a triggered one. 'Dash [cost]' means 'You may cast this card by paying [cost] rather than its mana cost. If you do, it has haste until end of turn, and at the beginning of the next end step, its controller returns it to their hand.'"
+    },
+    "rules": [
+      { "ref": "702.108a", "text": { "fr": "La pointe d'attaque est une capacité statique fonctionnant en n'importe quelle zone à partir de laquelle vous pourriez lancer la carte.", "en": "Dash is a static ability that functions in any zone from which you could play the card." } }
+    ]
+  },
+  {
+    "id": "daybound_nightbound",
+    "category": "ability_keywords",
+    "names": { "fr": "Diurne / Nocturne", "en": "Daybound / Nightbound" },
+    "simple": {
+      "fr": "Cycle jour/nuit : si aucun sort n'a été lancé dans le tour, la nuit tombe. Si deux ou plus ont été lancés, le jour revient.",
+      "en": "Day/Night cycle: if no spell was cast in a turn, night falls. If two or more were cast, day breaks."
+    },
+    "examples": {
+      "fr": ["Les loups-garous avec « Diurne » se transforment en leur face « Nocturne » la nuit (et inversement).", "Diurne/Nocturne est apparu dans Innistrad: Midnight Hunt (2021)."],
+      "en": ["Werewolves with 'Daybound' transform to their 'Nightbound' face at night (and vice versa).", "Daybound/Nightbound appeared in Innistrad: Midnight Hunt (2021)."]
+    },
+    "fullDefinition": {
+      "fr": "Diurne et Nocturne sont des capacités liées au cycle jour/nuit. Une permanente diurne se transforme en sa face nocturne si la nuit tombe (aucun sort lancé pendant le tour précédent), et inversement. Le jour/nuit ne commence pas tant qu'un sort avec diurne ou nocturne n'a pas été lancé ou qu'un effet n'introduit pas le cycle.",
+      "en": "Daybound and Nightbound are abilities tied to the day/night cycle. A daybound permanent transforms to its nightbound face if night falls (no spell cast during the previous turn), and vice versa. Day/night doesn't start until a spell with daybound or nightbound is cast or an effect introduces the cycle."
+    },
+    "rules": [
+      { "ref": "702.144a", "text": { "fr": "Diurne et nocturne sont des capacités fonctionnant pendant que la permanente est sur le champ de bataille.", "en": "Daybound and nightbound are abilities that function while the permanent is on the battlefield." } }
+    ]
+  },
+  {
+    "id": "decayed",
+    "category": "ability_keywords",
+    "names": { "fr": "Décomposition", "en": "Decayed" },
+    "simple": {
+      "fr": "Cette créature ne peut pas bloquer. Quand elle attaque, sacrifiez-la à la fin du combat.",
+      "en": "This creature can't block. When it attacks, sacrifice it at end of combat."
+    },
+    "examples": {
+      "fr": ["Les jetons Zombie créés par certains sorts d'Innistrad: Midnight Hunt arrivent avec « décomposition ».", "Décomposition limite l'usage de la créature à une seule attaque."],
+      "en": ["Zombie tokens created by certain Innistrad: Midnight Hunt spells enter with 'decayed'.", "Decayed limits the creature's use to a single attack."]
+    },
+    "fullDefinition": {
+      "fr": "Décomposition est une capacité représentant deux capacités liées. « Décomposition » signifie « Cette créature ne peut pas bloquer » et « Quand cette créature attaque, sacrifiez-la à la fin du combat ».",
+      "en": "Decayed is an ability representing two linked abilities. 'Decayed' means 'This creature can't block' and 'When this creature attacks, sacrifice it at end of combat.'"
+    },
+    "rules": [
+      { "ref": "702.145a", "text": { "fr": "Décomposition est une capacité statique. « Décomposition » signifie « Cette créature ne peut pas bloquer » et « Quand cette créature attaque, sacrifiez-la à la fin du combat ».", "en": "Decayed is a static ability. 'Decayed' means 'This creature can't block' and 'When this creature attacks, sacrifice it at end of combat.'" } }
+    ]
+  },
+  {
+    "id": "delve",
+    "category": "ability_keywords",
+    "names": { "fr": "Fouille", "en": "Delve" },
+    "simple": {
+      "fr": "En payant un sort avec fouille, vous pouvez exiler des cartes de votre cimetière. Chaque carte exilée paie 1 mana générique.",
+      "en": "When paying for a spell with delve, you may exile cards from your graveyard. Each card exiled pays for 1 generic mana."
+    },
+    "examples": {
+      "fr": ["« Treasure Cruise » (7 manas) avec fouille : exilez 6 cartes de votre cimetière, payez seulement {U}.", "Fouille apparaît dans Future Sight (2007) et Khans of Tarkir (2014)."],
+      "en": ["'Treasure Cruise' (7 mana) with delve: exile 6 cards from your graveyard, pay only {U}.", "Delve appeared in Future Sight (2007) and Khans of Tarkir (2014)."]
+    },
+    "fullDefinition": {
+      "fr": "La fouille est une capacité statique fonctionnant pendant que le sort est sur la pile. « Fouille » signifie « Pour chaque mana générique dans le coût de ce sort, vous pouvez exiler une carte de votre cimetière au lieu de payer ce mana ». La fouille ne peut pas réduire le mana coloré.",
+      "en": "Delve is a static ability that functions while the spell is on the stack. 'Delve' means 'For each generic mana in this spell's cost, you may exile a card from your graveyard rather than pay that mana.' Delve can't reduce colored mana."
+    },
+    "rules": [
+      { "ref": "702.66a", "text": { "fr": "La fouille est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Delve is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "devoid",
+    "category": "ability_keywords",
+    "names": { "fr": "Néant", "en": "Devoid" },
+    "simple": {
+      "fr": "Cette carte est incolore, même si son coût de mana contient des symboles colorés.",
+      "en": "This card is colorless, even if its mana cost contains colored symbols."
+    },
+    "examples": {
+      "fr": ["Un Eldrazi avec néant qui coûte {2}{U}{U} est néanmoins incolore — utile pour contourner la protection contre le bleu.", "Néant est apparu dans Battle for Zendikar (2015) sur les Eldrazi."],
+      "en": ["An Eldrazi with devoid costing {2}{U}{U} is nonetheless colorless — useful for bypassing protection from blue.", "Devoid appeared in Battle for Zendikar (2015) on Eldrazi."]
+    },
+    "fullDefinition": {
+      "fr": "Le néant est une capacité statique fonctionnant en n'importe quelle zone. « Néant » signifie « Cet objet est incolore ».",
+      "en": "Devoid is a static ability that functions in any zone. 'Devoid' means 'This object is colorless.'"
+    },
+    "rules": [
+      { "ref": "702.113a", "text": { "fr": "Le néant est une capacité statique. « Néant » signifie « Cet objet est incolore ». Cette capacité fonctionne dans toutes les zones.", "en": "Devoid is a static ability. 'Devoid' means 'This object is colorless.' This ability functions in all zones." } }
+    ]
+  },
+  {
+    "id": "devour",
+    "category": "ability_keywords",
+    "names": { "fr": "Dévorer", "en": "Devour" },
+    "simple": {
+      "fr": "Dévorer N : En arrivant en jeu, vous pouvez sacrifier n'importe quel nombre de créatures. Cette créature arrive avec N marqueurs +1/+1 par créature sacrifiée.",
+      "en": "Devour N: As this enters, you may sacrifice any number of creatures. This creature enters with N +1/+1 counters per creature sacrificed."
+    },
+    "examples": {
+      "fr": ["Un 1/1 avec Dévorer 2 : vous sacrifiez 3 créatures à son arrivée, il arrive avec 6 marqueurs +1/+1 (donc 7/7).", "Dévorer est apparu dans Alara Reborn (2009)."],
+      "en": ["A 1/1 with Devour 2: you sacrifice 3 creatures as it enters, it enters with 6 +1/+1 counters (so 7/7).", "Devour appeared in Alara Reborn (2009)."]
+    },
+    "fullDefinition": {
+      "fr": "Dévorer est une capacité statique fonctionnant en arrivant sur le champ de bataille. « Dévorer N » signifie « En arrivant sur le champ de bataille, vous pouvez sacrifier n'importe quel nombre d'autres créatures. Cette permanente arrive avec N marqueurs +1/+1 sur elle pour chaque créature ainsi sacrifiée. »",
+      "en": "Devour is a static ability that functions as the permanent enters the battlefield. 'Devour N' means 'As this permanent enters the battlefield, you may sacrifice any number of other creatures. This permanent enters with N +1/+1 counters on it for each creature sacrificed this way.'"
+    },
+    "rules": [
+      { "ref": "702.81a", "text": { "fr": "Dévorer est une capacité statique fonctionnant pendant que la permanente entre sur le champ de bataille.", "en": "Devour is a static ability that functions as the permanent enters the battlefield." } }
+    ]
+  },
+  {
+    "id": "disturb",
+    "category": "ability_keywords",
+    "names": { "fr": "Tourmenter", "en": "Disturb" },
+    "simple": {
+      "fr": "Vous pouvez lancer cette carte depuis votre cimetière transformée pour son coût de tourment.",
+      "en": "You may cast this card from your graveyard transformed for its disturb cost."
+    },
+    "examples": {
+      "fr": ["Un humain avec Tourmenter {3}{W} peut être lancé du cimetière transformé en sa face arrière (souvent un Esprit).", "Tourmenter est apparu dans Innistrad: Midnight Hunt (2021)."],
+      "en": ["A Human with Disturb {3}{W} can be cast from the graveyard transformed into its back face (often a Spirit).", "Disturb appeared in Innistrad: Midnight Hunt (2021)."]
+    },
+    "fullDefinition": {
+      "fr": "Tourmenter est une capacité statique fonctionnant dans le cimetière. « Tourmenter [coût] » signifie « Vous pouvez lancer cette carte depuis votre cimetière transformée en payant son coût de tourment au lieu de son coût de mana ». Si elle quitterait la pile autrement que par résolution, exilez-la à la place. Si une créature avec tourmenter meurt, elle est exilée à la place.",
+      "en": "Disturb is a static ability that functions in the graveyard. 'Disturb [cost]' means 'You may cast this card from your graveyard transformed by paying its disturb cost rather than its mana cost.' If it would leave the stack other than by resolving, exile it instead. If a creature with disturb dies, it's exiled instead."
+    },
+    "rules": [
+      { "ref": "702.146a", "text": { "fr": "Tourmenter est une capacité statique fonctionnant dans le cimetière. Elle représente plusieurs capacités liées.", "en": "Disturb is a static ability that functions in the graveyard. It represents multiple linked abilities." } }
+    ]
+  },
+  {
+    "id": "dredge",
+    "category": "ability_keywords",
+    "names": { "fr": "Drague", "en": "Dredge" },
+    "simple": {
+      "fr": "Drague N : Si vous deviez piocher une carte, vous pouvez à la place mettre N cartes du dessus de votre bibliothèque au cimetière et remettre cette carte en main.",
+      "en": "Dredge N: If you would draw a card, you may instead put N cards from the top of your library into your graveyard and return this card from graveyard to hand."
+    },
+    "examples": {
+      "fr": ["Vous avez « Stinkweed Imp » avec Drague 5 dans votre cimetière. Au lieu de piocher, vous moulinez 5 cartes et reprenez Stinkweed Imp.", "Drague est apparu dans Ravnica (2005) avec la guilde Golgari."],
+      "en": ["You have 'Stinkweed Imp' with Dredge 5 in your graveyard. Instead of drawing, you mill 5 cards and take back Stinkweed Imp.", "Dredge appeared in Ravnica (2005) with the Golgari guild."]
+    },
+    "fullDefinition": {
+      "fr": "Drague est une capacité statique fonctionnant dans le cimetière. « Drague N » signifie « Si vous deviez piocher une carte, à la place vous pouvez moudre N cartes et remettre cette carte de votre cimetière dans votre main. Si vous ne pouvez pas moudre N cartes, la drague échoue et vous piochez normalement ».",
+      "en": "Dredge is a static ability that functions in the graveyard. 'Dredge N' means 'If you would draw a card, you may instead mill N cards and return this card from your graveyard to your hand. If you can't mill N cards, dredge fails and you draw normally.'"
+    },
+    "rules": [
+      { "ref": "702.52a", "text": { "fr": "La drague est une capacité statique fonctionnant pendant que la carte est dans le cimetière du joueur.", "en": "Dredge is a static ability that functions only while the card with dredge is in a player's graveyard." } }
+    ]
+  },
+  {
+    "id": "echo",
+    "category": "ability_keywords",
+    "names": { "fr": "Écho", "en": "Echo" },
+    "simple": {
+      "fr": "Au début du prochain entretien, sacrifiez cette permanente à moins de payer son coût d'écho.",
+      "en": "At the beginning of your next upkeep, sacrifice this permanent unless you pay its echo cost."
+    },
+    "examples": {
+      "fr": ["Une créature avec Écho {3}{R} : au début de votre prochain entretien, payez 3R ou sacrifiez-la.", "Écho est apparu dans Urza's Saga (1998)."],
+      "en": ["A creature with Echo {3}{R}: at the beginning of your next upkeep, pay 3R or sacrifice it.", "Echo appeared in Urza's Saga (1998)."]
+    },
+    "fullDefinition": {
+      "fr": "Écho est une capacité déclenchée. « Écho [coût] » signifie « Au début de votre entretien, si cette permanente est arrivée sous votre contrôle depuis le début de votre dernier entretien, sacrifiez cette permanente à moins que vous ne payiez [coût] ».",
+      "en": "Echo is a triggered ability. 'Echo [cost]' means 'At the beginning of your upkeep, if this permanent came under your control since the beginning of your last upkeep, sacrifice it unless you pay [cost].'"
+    },
+    "rules": [
+      { "ref": "702.50a", "text": { "fr": "Écho est une capacité déclenchée. « Écho [coût] » signifie « Au début de votre entretien, si cette permanente est arrivée sous votre contrôle depuis le début de votre dernier entretien, sacrifiez-la à moins de payer [coût] ».", "en": "Echo is a triggered ability. 'Echo [cost]' means 'At the beginning of your upkeep, if this permanent came under your control since the beginning of your last upkeep, sacrifice it unless you pay [cost].'" } }
+    ]
+  },
+  {
+    "id": "embalm",
+    "category": "ability_keywords",
+    "names": { "fr": "Embaumer", "en": "Embalm" },
+    "simple": {
+      "fr": "Embaumer [coût] : Exilez cette carte de votre cimetière pour créer un jeton qui en est une copie, mais c'est un Zombie blanc en plus.",
+      "en": "Embalm [cost]: Exile this card from your graveyard to create a token copy, but it's a white Zombie in addition."
+    },
+    "examples": {
+      "fr": ["Une créature avec Embaumer {3}{W} : vous pouvez l'exiler du cimetière pour 3W pour créer un jeton-copie Zombie blanc.", "Embaumer est apparu dans Amonkhet (2017)."],
+      "en": ["A creature with Embalm {3}{W}: you can exile it from your graveyard for 3W to create a white Zombie token copy.", "Embalm appeared in Amonkhet (2017)."]
+    },
+    "fullDefinition": {
+      "fr": "Embaumer est une capacité activée fonctionnant uniquement dans le cimetière. « Embaumer [coût] » signifie « [coût], exiler cette carte de votre cimetière : créez un jeton qui est une copie de cette carte, sauf que c'est un Zombie blanc en plus de ses autres couleurs et types, et qu'il n'a pas de coût de mana. Activez seulement comme un rituel ».",
+      "en": "Embalm is an activated ability that functions only in the graveyard. 'Embalm [cost]' means '[Cost], exile this card from your graveyard: Create a token that's a copy of this card, except it's a white Zombie in addition to its other colors and types, and it has no mana cost. Activate only as a sorcery.'"
+    },
+    "rules": [
+      { "ref": "702.128a", "text": { "fr": "Embaumer est une capacité activée fonctionnant uniquement dans le cimetière.", "en": "Embalm is an activated ability that functions only while the card with embalm is in a graveyard." } }
+    ]
+  },
+  {
+    "id": "emerge",
+    "category": "ability_keywords",
+    "names": { "fr": "Émergence", "en": "Emerge" },
+    "simple": {
+      "fr": "Vous pouvez lancer ce sort pour son coût d'émergence en sacrifiant une créature : le coût est réduit par la valeur de mana de la créature sacrifiée.",
+      "en": "You may cast this spell for its emerge cost by sacrificing a creature: the cost is reduced by the sacrificed creature's mana value."
+    },
+    "examples": {
+      "fr": ["Un Eldrazi avec « Émergence {7} » : sacrifiez une créature 3 manas, payez {4} au lieu de {7}.", "Émergence est apparu dans Eldritch Moon (2016)."],
+      "en": ["An Eldrazi with 'Emerge {7}': sacrifice a 3-mana creature, pay {4} instead of {7}.", "Emerge appeared in Eldritch Moon (2016)."]
+    },
+    "fullDefinition": {
+      "fr": "L'émergence est une capacité statique fonctionnant pendant que le sort est sur la pile. « Émergence [coût] » signifie « Vous pouvez lancer ce sort en payant [coût] et en sacrifiant une créature au lieu de payer son coût de mana. Si vous le faites, le coût total à payer est réduit d'un montant générique égal à la valeur de mana de la créature sacrifiée ».",
+      "en": "Emerge is a static ability that functions while the spell is on the stack. 'Emerge [cost]' means 'You may cast this spell by paying [cost] and sacrificing a creature rather than paying its mana cost. If you do, the total cost to cast is reduced by an amount of generic mana equal to the sacrificed creature's mana value.'"
+    },
+    "rules": [
+      { "ref": "702.119a", "text": { "fr": "L'émergence est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Emerge is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "encore",
+    "category": "ability_keywords",
+    "names": { "fr": "Bis", "en": "Encore" },
+    "simple": {
+      "fr": "Bis [coût] : Exilez cette carte de votre cimetière, payez [coût] : Créez un jeton-copie pour chaque adversaire, qui attaque cet adversaire ce tour-ci puis est exilé.",
+      "en": "Encore [cost]: Exile this card from your graveyard, pay [cost]: Create a token copy for each opponent, which attacks that opponent this turn then is exiled."
+    },
+    "examples": {
+      "fr": ["Une créature avec Bis {4}{B}{B} en multijoueur (3 adversaires) : créez 3 jetons-copies, chacun attaque un adversaire différent.", "Bis est apparu dans Commander Legends (2020)."],
+      "en": ["A creature with Encore {4}{B}{B} in multiplayer (3 opponents): create 3 token copies, each attacks a different opponent.", "Encore appeared in Commander Legends (2020)."]
+    },
+    "fullDefinition": {
+      "fr": "Bis est une capacité activée fonctionnant dans le cimetière. « Bis [coût] » signifie « [coût], exilez cette carte du cimetière : Pour chaque adversaire, créez un jeton qui est une copie de cette carte. Ces jetons gagnent la hâte. Chacun d'eux attaque l'adversaire correspondant ce tour-ci si possible. Exilez-les au début de la prochaine étape de fin. Activez seulement comme un rituel ».",
+      "en": "Encore is an activated ability that functions in the graveyard. 'Encore [cost]' means '[Cost], exile this card from your graveyard: For each opponent, create a token copy of this card. They gain haste. Each one attacks that opponent this turn if able. Exile them at the beginning of the next end step. Activate only as a sorcery.'"
+    },
+    "rules": [
+      { "ref": "702.141a", "text": { "fr": "Bis est une capacité activée fonctionnant uniquement dans le cimetière.", "en": "Encore is an activated ability that functions only while the card is in a graveyard." } }
+    ]
+  },
+  {
+    "id": "entwine",
+    "category": "ability_keywords",
+    "names": { "fr": "Entrelacement", "en": "Entwine" },
+    "simple": {
+      "fr": "Vous pouvez payer un coût additionnel pour choisir tous les modes d'un sort modal au lieu d'un seul.",
+      "en": "Pay an additional cost to choose all modes of a modal spell instead of just one."
+    },
+    "examples": {
+      "fr": ["Un sort avec 4 modes et « Entrelacement {2} » : payez le coût normal + 2 manas pour tous les 4 modes.", "Entrelacement est apparu dans Mirrodin (2003)."],
+      "en": ["A spell with 4 modes and 'Entwine {2}': pay the normal cost + 2 mana to get all 4 modes.", "Entwine appeared in Mirrodin (2003)."]
+    },
+    "fullDefinition": {
+      "fr": "L'entrelacement est une capacité statique fonctionnant pendant que le sort est sur la pile. « Entrelacement [coût] » signifie « Vous pouvez choisir tous les modes de ce sort au lieu d'un seul. Si vous le faites, vous payez un coût additionnel de [coût] ».",
+      "en": "Entwine is a static ability that functions while the spell is on the stack. 'Entwine [cost]' means 'You may choose all modes of this spell instead of just one. If you do, you pay an additional [cost].'"
+    },
+    "rules": [
+      { "ref": "702.41a", "text": { "fr": "L'entrelacement est une capacité statique d'un sort modal qui fonctionne pendant que le sort est sur la pile.", "en": "Entwine is a static ability of a modal spell that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "epic",
+    "category": "ability_keywords",
+    "names": { "fr": "Épique", "en": "Epic" },
+    "simple": {
+      "fr": "Copie ce sort au début de chacun de vos entretiens pour le reste de la partie. Vous ne pouvez plus lancer d'autres sorts.",
+      "en": "Copy this spell at the beginning of each of your upkeeps for the rest of the game. You can't cast any more spells."
+    },
+    "examples": {
+      "fr": ["Un sort épique se résout, puis à chaque tour vous obtenez une copie automatique. Mais vous ne pouvez plus lancer aucun sort.", "Épique est apparu dans Saviors of Kamigawa (2005) — mécanique iconique et rare."],
+      "en": ["An epic spell resolves, then each turn you get an automatic copy. But you can't cast any more spells.", "Epic appeared in Saviors of Kamigawa (2005) — iconic and rare mechanic."]
+    },
+    "fullDefinition": {
+      "fr": "Épique est une capacité qui apparaît sur certains rituels. « Épique » signifie « Pour le reste de la partie, vous ne pouvez pas lancer d'autres sorts. Au début de chacun de vos entretiens pour le reste de la partie, copiez ce sort sauf pour sa capacité épique. Vous pouvez choisir de nouvelles cibles pour la copie ».",
+      "en": "Epic is an ability that appears on some sorceries. 'Epic' means 'For the rest of the game, you can't cast any more spells. At the beginning of each of your upkeeps for the rest of the game, copy this spell except for its epic ability. You may choose new targets for the copy.'"
+    },
+    "rules": [
+      { "ref": "702.49a", "text": { "fr": "Épique est une capacité fonctionnant pendant que le sort est sur la pile.", "en": "Epic is an ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "escalate",
+    "category": "ability_keywords",
+    "names": { "fr": "Escalade", "en": "Escalate" },
+    "simple": {
+      "fr": "Vous pouvez payer un coût additionnel pour chaque mode supplémentaire choisi sur un sort modal.",
+      "en": "Pay an additional cost for each additional mode chosen on a modal spell."
+    },
+    "examples": {
+      "fr": ["Un sort modal à 4 modes avec « Escalade {2} » : 1 mode = coût normal, 2 modes = +2 manas, 3 modes = +4 manas, etc.", "Escalade est apparu dans Eldritch Moon (2016)."],
+      "en": ["A 4-mode modal spell with 'Escalate {2}': 1 mode = normal cost, 2 modes = +2 mana, 3 modes = +4 mana, etc.", "Escalate appeared in Eldritch Moon (2016)."]
+    },
+    "fullDefinition": {
+      "fr": "L'escalade est une capacité statique fonctionnant pendant que le sort est sur la pile. « Escalade [coût] » signifie « Pour chaque mode choisi au-delà du premier, payez [coût] de plus ».",
+      "en": "Escalate is a static ability that functions while the spell is on the stack. 'Escalate [cost]' means 'For each mode chosen beyond the first, pay [cost] more.'"
+    },
+    "rules": [
+      { "ref": "702.120a", "text": { "fr": "L'escalade est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Escalate is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "escape",
+    "category": "ability_keywords",
+    "names": { "fr": "Évasion", "en": "Escape" },
+    "simple": {
+      "fr": "Évasion — [coût], exilez N cartes de votre cimetière : Vous pouvez lancer cette carte depuis votre cimetière pour ce coût.",
+      "en": "Escape — [cost], exile N cards from your graveyard: You may cast this card from your graveyard for this cost."
+    },
+    "examples": {
+      "fr": ["Un sort avec « Évasion — {2}{B}{B}, exilez trois autres cartes de votre cimetière » : payez 2BB + exilez 3 cartes du cimetière pour le rejouer.", "Évasion est apparu dans Theros: Beyond Death (2020)."],
+      "en": ["A spell with 'Escape — {2}{B}{B}, exile three other cards from your graveyard': pay 2BB + exile 3 cards from graveyard to recast.", "Escape appeared in Theros: Beyond Death (2020)."]
+    },
+    "fullDefinition": {
+      "fr": "L'évasion est une capacité statique fonctionnant dans le cimetière. « Évasion — [coût] » signifie « Vous pouvez lancer cette carte depuis votre cimetière en payant [coût] au lieu de son coût de mana ». Le coût d'évasion inclut typiquement l'exil d'autres cartes du cimetière comme coût additionnel.",
+      "en": "Escape is a static ability that functions in the graveyard. 'Escape — [cost]' means 'You may cast this card from your graveyard by paying [cost] rather than its mana cost.' The escape cost typically includes exiling other cards from the graveyard as an additional cost."
+    },
+    "rules": [
+      { "ref": "702.143a", "text": { "fr": "L'évasion est une capacité statique fonctionnant pendant que la carte est dans le cimetière du joueur.", "en": "Escape is a static ability that functions while the card is in a player's graveyard." } }
+    ]
+  },
+  {
+    "id": "eternalize",
+    "category": "ability_keywords",
+    "names": { "fr": "Éterniser", "en": "Eternalize" },
+    "simple": {
+      "fr": "Éterniser [coût] : Exilez cette carte de votre cimetière pour créer un jeton-copie 4/4 noir et Zombie sans coût de mana.",
+      "en": "Eternalize [cost]: Exile this card from your graveyard to create a 4/4 black Zombie token copy with no mana cost."
+    },
+    "examples": {
+      "fr": ["Une créature 2/2 avec Éterniser {5}{B}{B} : exilez-la du cimetière pour 5BB, créez un jeton-copie qui est aussi 4/4 noir Zombie.", "Éterniser est apparu dans Hour of Devastation (2017)."],
+      "en": ["A 2/2 creature with Eternalize {5}{B}{B}: exile it from graveyard for 5BB, create a token copy that's also 4/4 black Zombie.", "Eternalize appeared in Hour of Devastation (2017)."]
+    },
+    "fullDefinition": {
+      "fr": "Éterniser est une capacité activée fonctionnant uniquement dans le cimetière. « Éterniser [coût] » signifie « [coût], exiler cette carte de votre cimetière : Créez un jeton qui est une copie de cette carte, sauf qu'il est noir, c'est un Zombie 4/4, et il n'a pas de coût de mana. Activez seulement comme un rituel ».",
+      "en": "Eternalize is an activated ability that functions only in the graveyard. 'Eternalize [cost]' means '[Cost], exile this card from your graveyard: Create a token that's a copy of this card, except it's black, it's a 4/4 Zombie, and it has no mana cost. Activate only as a sorcery.'"
+    },
+    "rules": [
+      { "ref": "702.129a", "text": { "fr": "Éterniser est une capacité activée fonctionnant uniquement dans le cimetière.", "en": "Eternalize is an activated ability that functions only in the graveyard." } }
+    ]
+  },
+  {
+    "id": "evoke",
+    "category": "ability_keywords",
+    "names": { "fr": "Évoquer", "en": "Evoke" },
+    "simple": {
+      "fr": "Évoquer [coût] : Vous pouvez lancer cette créature pour son coût d'évocation. Si vous le faites, sacrifiez-la quand elle arrive.",
+      "en": "Evoke [cost]: You may cast this creature for its evoke cost. If you do, sacrifice it when it enters."
+    },
+    "examples": {
+      "fr": ["« Mulldrifter » (5 manas, tire 2 cartes en arrivant) avec Évoquer 3 : payez 3 manas, sacrifiez la créature à l'arrivée mais déclenchez tout de même sa capacité d'arrivée.", "Évoquer est apparu dans Lorwyn (2007)."],
+      "en": ["'Mulldrifter' (5 mana, draws 2 cards on entering) with Evoke 3: pay 3 mana, sacrifice the creature on entering but still trigger its enter ability.", "Evoke appeared in Lorwyn (2007)."]
+    },
+    "fullDefinition": {
+      "fr": "Évoquer est une capacité représentant deux capacités liées. « Évoquer [coût] » signifie « Vous pouvez lancer ce sort en payant [coût] au lieu de son coût de mana » et « Quand cette permanente arrive sur le champ de bataille, si son coût d'évocation a été payé, sacrifiez-la ».",
+      "en": "Evoke is an ability representing two linked abilities. 'Evoke [cost]' means 'You may cast this spell by paying [cost] rather than its mana cost' and 'When this permanent enters the battlefield, if its evoke cost was paid, sacrifice it.'"
+    },
+    "rules": [
+      { "ref": "702.74a", "text": { "fr": "Évoquer est une capacité représentant deux capacités liées.", "en": "Evoke represents two linked abilities." } }
+    ]
+  },
+  {
+    "id": "evolve",
+    "category": "ability_keywords",
+    "names": { "fr": "Évolution", "en": "Evolve" },
+    "simple": {
+      "fr": "À chaque fois qu'une autre créature arrive sous votre contrôle, si elle a une plus grande force ou endurance que celle-ci, mettez un marqueur +1/+1 sur celle-ci.",
+      "en": "Whenever another creature enters under your control, if it has greater power or toughness than this, put a +1/+1 counter on this."
+    },
+    "examples": {
+      "fr": ["Votre 2/2 a évolution. Une 3/2 arrive : son endurance est égale, mais sa force est plus grande, donc +1/+1.", "Évolution est apparu dans Gatecrash (2013) avec la guilde Simic."],
+      "en": ["Your 2/2 has evolve. A 3/2 enters: its toughness is equal, but its power is greater, so +1/+1.", "Evolve appeared in Gatecrash (2013) with the Simic guild."]
+    },
+    "fullDefinition": {
+      "fr": "Évolution est une capacité déclenchée. « Évolution » signifie « À chaque fois qu'une créature arrive sur le champ de bataille sous votre contrôle, si sa force ou son endurance est supérieure à celle de cette créature, mettez un marqueur +1/+1 sur cette créature ».",
+      "en": "Evolve is a triggered ability. 'Evolve' means 'Whenever a creature enters the battlefield under your control, if that creature's power and/or toughness is greater than this creature's, put a +1/+1 counter on this creature.'"
+    },
+    "rules": [
+      { "ref": "702.100a", "text": { "fr": "Évolution est une capacité déclenchée. « Évolution » signifie « À chaque fois qu'une créature arrive sous votre contrôle, si sa force et/ou son endurance est supérieure, mettez un marqueur +1/+1 sur cette créature. »", "en": "Evolve is a triggered ability. 'Evolve' means 'Whenever a creature enters under your control, if its power and/or toughness is greater, put a +1/+1 counter on this creature.'" } }
+    ]
+  },
+  {
+    "id": "exalted",
+    "category": "ability_keywords",
+    "names": { "fr": "Exalté", "en": "Exalted" },
+    "simple": {
+      "fr": "À chaque fois qu'une créature attaque seule, elle gagne +1/+1 jusqu'à la fin du tour.",
+      "en": "Whenever a creature you control attacks alone, it gets +1/+1 until end of turn."
+    },
+    "examples": {
+      "fr": ["Vous contrôlez 3 permanentes avec Exalté. Vous attaquez avec une seule créature 2/2 : elle reçoit +3/+3 (un par exalté), devient 5/5.", "Exalté est apparu dans Shards of Alara (2008)."],
+      "en": ["You control 3 permanents with Exalted. You attack with a single 2/2 creature: it gets +3/+3 (one per exalted), becoming 5/5.", "Exalted appeared in Shards of Alara (2008)."]
+    },
+    "fullDefinition": {
+      "fr": "Exalté est une capacité déclenchée. « Exalté » signifie « À chaque fois qu'une créature que vous contrôlez attaque seule, cette créature gagne +1/+1 jusqu'à la fin du tour ». Plusieurs occurrences d'exalté se déclenchent toutes séparément, chacune donnant +1/+1.",
+      "en": "Exalted is a triggered ability. 'Exalted' means 'Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.' Multiple instances of exalted each trigger separately, each giving +1/+1."
+    },
+    "rules": [
+      { "ref": "702.83a", "text": { "fr": "Exalté est une capacité déclenchée. « Exalté » signifie « À chaque fois qu'une créature que vous contrôlez attaque seule, cette créature gagne +1/+1 jusqu'à la fin du tour. »", "en": "Exalted is a triggered ability. 'Exalted' means 'Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.'" } }
+    ]
+  },
+  {
+    "id": "exploit",
+    "category": "ability_keywords",
+    "names": { "fr": "Exploiter", "en": "Exploit" },
+    "simple": {
+      "fr": "Quand cette créature arrive, vous pouvez sacrifier une créature ; en sacrifiant, déclenchez les capacités liées à l'exploitation.",
+      "en": "When this creature enters, you may sacrifice a creature; sacrificing triggers exploit abilities."
+    },
+    "examples": {
+      "fr": ["Une créature avec « Exploiter » : quand elle arrive, vous pouvez sacrifier une de vos créatures, et la carte a typiquement « quand vous exploitez une créature, [bonus] ».", "Exploiter est apparu dans Dragons of Tarkir (2015) avec le clan Silumgar."],
+      "en": ["A creature with 'Exploit': when it enters, you may sacrifice one of your creatures, and the card typically has 'when you exploit a creature, [bonus]'.", "Exploit appeared in Dragons of Tarkir (2015) with the Silumgar clan."]
+    },
+    "fullDefinition": {
+      "fr": "Exploiter est une capacité déclenchée. « Exploiter » signifie « Quand cette créature arrive sur le champ de bataille, vous pouvez sacrifier une créature ». Les capacités « Quand vous exploitez une créature, [effet] » se déclenchent à chaque fois que cela se produit.",
+      "en": "Exploit is a triggered ability. 'Exploit' means 'When this creature enters the battlefield, you may sacrifice a creature.' Abilities reading 'When you exploit a creature, [effect]' trigger whenever that happens."
+    },
+    "rules": [
+      { "ref": "702.112a", "text": { "fr": "Exploiter est une capacité déclenchée. « Exploiter » signifie « Quand cette créature arrive, vous pouvez sacrifier une créature. »", "en": "Exploit is a triggered ability. 'Exploit' means 'When this creature enters the battlefield, you may sacrifice a creature.'" } }
+    ]
+  },
+  {
+    "id": "extort",
+    "category": "ability_keywords",
+    "names": { "fr": "Extorsion", "en": "Extort" },
+    "simple": {
+      "fr": "À chaque fois que vous lancez un sort, vous pouvez payer {W/B} : chaque adversaire perd 1 point de vie, et vous en gagnez autant.",
+      "en": "Whenever you cast a spell, you may pay {W/B}: each opponent loses 1 life and you gain that much life."
+    },
+    "examples": {
+      "fr": ["Vous contrôlez 3 permanentes avec extorsion et lancez un sort. Chacune se déclenche : payez 3 {W/B} pour drainer 3 PV à chaque adversaire.", "Extorsion est apparu dans Gatecrash (2013) avec la guilde Orzhov."],
+      "en": ["You control 3 permanents with extort and cast a spell. Each triggers: pay 3 {W/B} to drain 3 life from each opponent.", "Extort appeared in Gatecrash (2013) with the Orzhov guild."]
+    },
+    "fullDefinition": {
+      "fr": "Extorsion est une capacité déclenchée. « Extorsion » signifie « À chaque fois que vous lancez un sort, vous pouvez payer {W/B}. Si vous le faites, chaque adversaire perd 1 point de vie et vous gagnez autant de points de vie que le nombre total de points de vie perdus de cette manière. »",
+      "en": "Extort is a triggered ability. 'Extort' means 'Whenever you cast a spell, you may pay {W/B}. If you do, each opponent loses 1 life and you gain life equal to the total life lost this way.'"
+    },
+    "rules": [
+      { "ref": "702.99a", "text": { "fr": "Extorsion est une capacité déclenchée. « Extorsion » signifie « À chaque fois que vous lancez un sort, vous pouvez payer {W/B} » avec l'effet correspondant.", "en": "Extort is a triggered ability. 'Extort' means 'Whenever you cast a spell, you may pay {W/B}' with the corresponding effect." } }
+    ]
+  },
+  {
+    "id": "fabricate",
+    "category": "ability_keywords",
+    "names": { "fr": "Fabriquer", "en": "Fabricate" },
+    "simple": {
+      "fr": "Fabriquer N : Quand cette créature arrive, mettez N marqueurs +1/+1 sur elle OU créez N jetons Servo 1/1 incolores.",
+      "en": "Fabricate N: When this creature enters, put N +1/+1 counters on it OR create N 1/1 colorless Servo tokens."
+    },
+    "examples": {
+      "fr": ["Un 2/2 avec Fabriquer 2 : à l'arrivée, choisissez entre +2/+2 (devient 4/4) ou créer 2 Servos 1/1.", "Fabriquer est apparu dans Kaladesh (2016)."],
+      "en": ["A 2/2 with Fabricate 2: on entering, choose between +2/+2 (becomes 4/4) or create 2 1/1 Servos.", "Fabricate appeared in Kaladesh (2016)."]
+    },
+    "fullDefinition": {
+      "fr": "Fabriquer est une capacité déclenchée. « Fabriquer N » signifie « Quand cette créature arrive sur le champ de bataille, mettez N marqueurs +1/+1 sur elle ou créez N jetons de créature-artefact Servo 1/1 incolores ».",
+      "en": "Fabricate is a triggered ability. 'Fabricate N' means 'When this creature enters the battlefield, put N +1/+1 counters on it or create N 1/1 colorless Servo artifact creature tokens.'"
+    },
+    "rules": [
+      { "ref": "702.123a", "text": { "fr": "Fabriquer est une capacité déclenchée. « Fabriquer N » signifie « Quand cette créature arrive, mettez N marqueurs +1/+1 sur elle ou créez N jetons Servo 1/1 incolores ».", "en": "Fabricate is a triggered ability. 'Fabricate N' means 'When this creature enters, put N +1/+1 counters on it or create N 1/1 colorless Servo tokens.'" } }
+    ]
+  },
+  {
+    "id": "fading",
+    "category": "ability_keywords",
+    "names": { "fr": "Étiolement", "en": "Fading" },
+    "simple": {
+      "fr": "Étiolement N : Cette permanente arrive avec N marqueurs d'étiolement. À votre entretien, retirez-en un ; sans marqueur, sacrifiez-la.",
+      "en": "Fading N: This permanent enters with N fade counters. At your upkeep, remove one; without a counter, sacrifice it."
+    },
+    "examples": {
+      "fr": ["Une permanente avec Étiolement 3 dure 3 tours puis disparaît.", "Étiolement est apparu dans Urza's Legacy (1999)."],
+      "en": ["A permanent with Fading 3 lasts 3 turns then disappears.", "Fading appeared in Urza's Legacy (1999)."]
+    },
+    "fullDefinition": {
+      "fr": "Étiolement est une capacité statique et une capacité déclenchée. « Étiolement N » signifie « Cette permanente arrive sur le champ de bataille avec N marqueurs d'étiolement » et « Au début de votre entretien, retirez un marqueur d'étiolement de cette permanente. Si vous ne pouvez pas, sacrifiez cette permanente ».",
+      "en": "Fading is a static and triggered ability. 'Fading N' means 'This permanent enters the battlefield with N fade counters on it' and 'At the beginning of your upkeep, remove a fade counter from this permanent. If you can't, sacrifice this permanent.'"
+    },
+    "rules": [
+      { "ref": "702.32a", "text": { "fr": "Étiolement est une capacité statique et une capacité déclenchée.", "en": "Fading is a static ability and a triggered ability." } }
+    ]
+  },
+  {
+    "id": "fear",
+    "category": "ability_keywords",
+    "names": { "fr": "Peur", "en": "Fear" },
+    "simple": {
+      "fr": "Cette créature ne peut être bloquée que par des créatures-artefact et/ou des créatures noires.",
+      "en": "This creature can only be blocked by artifact creatures and/or black creatures."
+    },
+    "examples": {
+      "fr": ["Un mort-vivant 3/3 avec peur ne peut être bloqué que par une créature noire ou un artefact-créature.", "Peur a été remplacée par « Intimidation » puis « Menace » dans les sets récents."],
+      "en": ["A 3/3 zombie with fear can only be blocked by a black creature or an artifact creature.", "Fear was replaced by 'Intimidate' then 'Menace' in recent sets."]
+    },
+    "fullDefinition": {
+      "fr": "Peur est une capacité statique d'évasion. « Peur » signifie « Cette créature ne peut pas être bloquée à moins que la créature bloqueuse ne soit un artefact et/ou noire ».",
+      "en": "Fear is a static evasion ability. 'Fear' means 'This creature can't be blocked except by artifact creatures and/or black creatures.'"
+    },
+    "rules": [
+      { "ref": "702.36a", "text": { "fr": "Peur est une capacité statique d'évasion.", "en": "Fear is a static evasion ability." } }
+    ]
+  },
+  {
+    "id": "flanking",
+    "category": "ability_keywords",
+    "names": { "fr": "Flanc", "en": "Flanking" },
+    "simple": {
+      "fr": "À chaque fois que cette créature est bloquée par une créature sans flanc, la bloqueuse reçoit -1/-1 jusqu'à la fin du tour.",
+      "en": "Whenever this creature is blocked by a creature without flanking, the blocker gets -1/-1 until end of turn."
+    },
+    "examples": {
+      "fr": ["Votre 2/2 avec flanc est bloqué par une 2/2 sans flanc. La bloqueuse devient 1/1 ; votre 2/2 la tue sans subir de dommages.", "Flanc est apparu dans Mirage (1996)."],
+      "en": ["Your 2/2 with flanking is blocked by a 2/2 without flanking. The blocker becomes 1/1; your 2/2 kills it without taking damage.", "Flanking appeared in Mirage (1996)."]
+    },
+    "fullDefinition": {
+      "fr": "Flanc est une capacité déclenchée. « Flanc » signifie « À chaque fois que cette créature est bloquée par une créature sans flanc, la créature bloqueuse reçoit -1/-1 jusqu'à la fin du tour ». Plusieurs occurrences de flanc se déclenchent toutes séparément.",
+      "en": "Flanking is a triggered ability. 'Flanking' means 'Whenever this creature is blocked by a creature without flanking, the blocking creature gets -1/-1 until end of turn.' Multiple instances of flanking each trigger separately."
+    },
+    "rules": [
+      { "ref": "702.25a", "text": { "fr": "Flanc est une capacité déclenchée affectant les créatures bloqueuses.", "en": "Flanking is a triggered ability that affects blocking creatures." } }
+    ]
+  },
+  {
+    "id": "foretell",
+    "category": "ability_keywords",
+    "names": { "fr": "Présage", "en": "Foretell" },
+    "simple": {
+      "fr": "Pendant votre tour, vous pouvez payer {2} pour exiler cette carte face cachée. À un tour suivant, vous pouvez la lancer pour son coût de présage.",
+      "en": "During your turn, you may pay {2} to exile this card face down. On a later turn, you may cast it for its foretell cost."
+    },
+    "examples": {
+      "fr": ["Une carte avec « Présage {1}{U} » : payez {2} ce tour pour la cacher, puis lancez-la 1U un tour suivant — économie totale par rapport au coût normal.", "Présage est apparu dans Kaldheim (2021)."],
+      "en": ["A card with 'Foretell {1}{U}': pay {2} this turn to hide it, then cast it for 1U on a later turn — overall savings versus normal cost.", "Foretell appeared in Kaldheim (2021)."]
+    },
+    "fullDefinition": {
+      "fr": "Présage représente deux capacités liées : statique en main, et statique en exil. « Présage [coût] » signifie « Pendant votre tour, vous pouvez payer {2} et exiler cette carte de votre main face cachée » et « À un tour suivant, vous pouvez lancer cette carte depuis l'exil pour son coût de présage ».",
+      "en": "Foretell represents two linked abilities: static in hand, and static in exile. 'Foretell [cost]' means 'During your turn, you may pay {2} and exile this card from your hand face down' and 'On a later turn, you may cast this card from exile for its foretell cost.'"
+    },
+    "rules": [
+      { "ref": "702.143a", "text": { "fr": "Présage est une capacité représentant deux capacités statiques liées.", "en": "Foretell is an ability representing two linked static abilities." } }
+    ]
+  },
+  {
+    "id": "frenzy",
+    "category": "ability_keywords",
+    "names": { "fr": "Frénésie", "en": "Frenzy" },
+    "simple": {
+      "fr": "Frénésie N : À chaque fois que cette créature attaque et n'est pas bloquée, elle gagne +N/+0 jusqu'à la fin du tour.",
+      "en": "Frenzy N: Whenever this creature attacks and isn't blocked, it gets +N/+0 until end of turn."
+    },
+    "examples": {
+      "fr": ["Un 2/2 avec Frénésie 3 attaque non bloqué : il devient 5/2 et inflige 5 blessures.", "Frénésie est apparu dans Shadowmoor (2008)."],
+      "en": ["A 2/2 with Frenzy 3 attacks unblocked: it becomes 5/2 and deals 5 damage.", "Frenzy appeared in Shadowmoor (2008)."]
+    },
+    "fullDefinition": {
+      "fr": "Frénésie est une capacité déclenchée. « Frénésie N » signifie « À chaque fois que cette créature attaque et n'est pas bloquée, elle gagne +N/+0 jusqu'à la fin du tour ».",
+      "en": "Frenzy is a triggered ability. 'Frenzy N' means 'Whenever this creature attacks and isn't blocked, it gets +N/+0 until end of turn.'"
+    },
+    "rules": [
+      { "ref": "702.68a", "text": { "fr": "Frénésie est une capacité déclenchée. « Frénésie N » signifie « À chaque fois que cette créature attaque et n'est pas bloquée, elle gagne +N/+0 jusqu'à la fin du tour. »", "en": "Frenzy is a triggered ability. 'Frenzy N' means 'Whenever this creature attacks and isn't blocked, it gets +N/+0 until end of turn.'" } }
+    ]
+  },
+  {
+    "id": "graft",
+    "category": "ability_keywords",
+    "names": { "fr": "Greffe", "en": "Graft" },
+    "simple": {
+      "fr": "Greffe N : Cette créature arrive avec N marqueurs +1/+1. À chaque fois qu'une autre créature arrive, vous pouvez déplacer un marqueur +1/+1 de cette créature vers elle.",
+      "en": "Graft N: This creature enters with N +1/+1 counters. Whenever another creature enters, you may move a +1/+1 counter from this creature to it."
+    },
+    "examples": {
+      "fr": ["Un 0/0 avec Greffe 3 arrive comme 3/3. Une nouvelle créature arrive : vous transférez un marqueur, votre 0/0 devient 2/2 et l'autre +1/+1.", "Greffe est apparu dans Dissension (2006) avec la guilde Simic."],
+      "en": ["A 0/0 with Graft 3 enters as 3/3. A new creature enters: you transfer a counter, your 0/0 becomes 2/2 and the other +1/+1.", "Graft appeared in Dissension (2006) with the Simic guild."]
+    },
+    "fullDefinition": {
+      "fr": "Greffe est une capacité statique et déclenchée. « Greffe N » signifie « Cette créature arrive sur le champ de bataille avec N marqueurs +1/+1 » et « À chaque fois qu'une autre créature arrive, vous pouvez déplacer un marqueur +1/+1 de cette créature vers cette autre créature ».",
+      "en": "Graft is a static and triggered ability. 'Graft N' means 'This creature enters the battlefield with N +1/+1 counters' and 'Whenever another creature enters the battlefield, you may move a +1/+1 counter from this creature onto it.'"
+    },
+    "rules": [
+      { "ref": "702.59a", "text": { "fr": "Greffe est une capacité statique et déclenchée.", "en": "Graft is a static and triggered ability." } }
+    ]
+  },
+  {
+    "id": "haunt",
+    "category": "ability_keywords",
+    "names": { "fr": "Hanter", "en": "Haunt" },
+    "simple": {
+      "fr": "Quand cette carte va au cimetière, exilez-la sur une créature ciblée. Quand cette créature meurt, déclenche un effet.",
+      "en": "When this card goes to the graveyard, exile it haunting a target creature. When that creature dies, trigger an effect."
+    },
+    "examples": {
+      "fr": ["Un sort avec hanter exilé sur une créature : quand cette créature meurt, le sort se déclenche à nouveau.", "Hanter est apparu dans Ravnica (2005) avec la guilde Orzhov."],
+      "en": ["A spell with haunt exiled onto a creature: when that creature dies, the spell triggers again.", "Haunt appeared in Ravnica (2005) with the Orzhov guild."]
+    },
+    "fullDefinition": {
+      "fr": "Hanter est une capacité représentant deux capacités liées : une qui se déclenche quand la carte va dans le cimetière, et une autre qui se déclenche quand la créature hantée meurt.",
+      "en": "Haunt is an ability representing two linked triggered abilities: one that triggers when the card goes to the graveyard, and one that triggers when the haunted creature dies."
+    },
+    "rules": [
+      { "ref": "702.55a", "text": { "fr": "Hanter représente deux capacités déclenchées liées.", "en": "Haunt represents two linked triggered abilities." } }
+    ]
+  },
+  {
+    "id": "hideaway",
+    "category": "ability_keywords",
+    "names": { "fr": "Repaire", "en": "Hideaway" },
+    "simple": {
+      "fr": "En arrivant, regardez les 4 cartes du dessus, exilez-en une face cachée. Vous pouvez la jouer plus tard si une condition est remplie.",
+      "en": "On entering, look at the top 4 cards, exile one face down. You can play it later if a condition is met."
+    },
+    "examples": {
+      "fr": ["Un terrain avec Repaire 4 : à l'arrivée, regardez 4 cartes, exilez-en une. Plus tard, à une condition donnée, vous pouvez la lancer gratuitement.", "Repaire est apparu dans Lorwyn (2007) et est revenu dans Modern Horizons 2."],
+      "en": ["A land with Hideaway 4: on entering, look at 4 cards, exile one. Later, on a given condition, you may cast it free.", "Hideaway appeared in Lorwyn (2007) and returned in Modern Horizons 2."]
+    },
+    "fullDefinition": {
+      "fr": "Repaire est une capacité déclenchée. « Repaire N » signifie « Cette permanente arrive engagée. Quand elle arrive, regardez les N cartes du dessus de votre bibliothèque, exilez-en une face cachée, puis remettez les autres au-dessous dans n'importe quel ordre ». La permanente avec repaire a souvent une autre capacité permettant de lancer la carte exilée sous certaines conditions.",
+      "en": "Hideaway is a triggered ability. 'Hideaway N' means 'This permanent enters tapped. When it enters, look at the top N cards of your library, exile one face down, then put the others on the bottom in any order.' The permanent with hideaway often has another ability allowing you to cast the exiled card under certain conditions."
+    },
+    "rules": [
+      { "ref": "702.75a", "text": { "fr": "Repaire est une capacité déclenchée.", "en": "Hideaway is a triggered ability." } }
+    ]
+  },
+  {
+    "id": "horsemanship",
+    "category": "ability_keywords",
+    "names": { "fr": "Cavalcade", "en": "Horsemanship" },
+    "simple": {
+      "fr": "Cette créature ne peut être bloquée que par des créatures ayant la cavalcade.",
+      "en": "This creature can only be blocked by creatures with horsemanship."
+    },
+    "examples": {
+      "fr": ["Une créature avec cavalcade attaque ; seules d'autres créatures avec cavalcade peuvent la bloquer.", "Cavalcade est apparue dans Portal Three Kingdoms (1999) — extrêmement rare."],
+      "en": ["A creature with horsemanship attacks; only other creatures with horsemanship can block it.", "Horsemanship appeared in Portal Three Kingdoms (1999) — extremely rare."]
+    },
+    "fullDefinition": {
+      "fr": "Cavalcade est une capacité statique d'évasion. « Cavalcade » signifie « Cette créature ne peut pas être bloquée à moins que la créature bloqueuse n'ait elle aussi la cavalcade ». C'est l'équivalent du vol mais beaucoup plus rare.",
+      "en": "Horsemanship is a static evasion ability. 'Horsemanship' means 'This creature can't be blocked except by creatures with horsemanship.' It's the equivalent of flying but much rarer."
+    },
+    "rules": [
+      { "ref": "702.31a", "text": { "fr": "Cavalcade est une capacité statique d'évasion.", "en": "Horsemanship is a static evasion ability." } }
+    ]
+  },
+  {
+    "id": "improvise",
+    "category": "ability_keywords",
+    "names": { "fr": "Improvisation", "en": "Improvise" },
+    "simple": {
+      "fr": "Vos artefacts peuvent vous aider à lancer ce sort. Chaque artefact engagé paie 1 mana générique.",
+      "en": "Your artifacts can help cast this spell. Each tapped artifact pays for 1 generic mana."
+    },
+    "examples": {
+      "fr": ["Improvisation est comme la convocation mais avec des artefacts au lieu de créatures.", "Improvisation est apparu dans Aether Revolt (2017)."],
+      "en": ["Improvise is like convoke but with artifacts instead of creatures.", "Improvise appeared in Aether Revolt (2017)."]
+    },
+    "fullDefinition": {
+      "fr": "Improvisation est une capacité statique fonctionnant pendant que le sort est sur la pile. « Improvisation » signifie « En lançant ce sort, vous pouvez engager n'importe quel artefact dégagé que vous contrôlez. Chaque artefact engagé de cette façon paie 1 mana générique. »",
+      "en": "Improvise is a static ability that functions while the spell is on the stack. 'Improvise' means 'As you cast this spell, you may tap any untapped artifact you control. Each artifact tapped this way pays for 1 generic mana.'"
+    },
+    "rules": [
+      { "ref": "702.126a", "text": { "fr": "Improvisation est une capacité statique fonctionnant pendant que le sort est sur la pile.", "en": "Improvise is a static ability that functions while the spell is on the stack." } }
+    ]
+  },
+  {
+    "id": "infect",
+    "category": "ability_keywords",
+    "names": { "fr": "Infection", "en": "Infect" },
+    "simple": {
+      "fr": "Cette créature inflige des blessures aux joueurs sous forme de marqueurs poison, et aux créatures sous forme de marqueurs -1/-1.",
+      "en": "This creature deals damage to players as poison counters, and to creatures as -1/-1 counters."
+    },
+    "examples": {
+      "fr": ["Une créature 2/2 avec infection attaque non bloquée : le joueur défenseur reçoit 2 marqueurs poison.", "10 marqueurs poison sur un joueur = défaite. Infection est apparu dans Scars of Mirrodin (2010)."],
+      "en": ["A 2/2 creature with infect attacks unblocked: the defending player gets 2 poison counters.", "10 poison counters on a player = loss. Infect appeared in Scars of Mirrodin (2010)."]
+    },
+    "fullDefinition": {
+      "fr": "Infection est une capacité statique. « Infection » signifie « Cette source inflige des blessures aux créatures sous forme de marqueurs -1/-1 et aux joueurs sous forme de marqueurs poison ». Un joueur perd la partie s'il a 10 marqueurs poison ou plus.",
+      "en": "Infect is a static ability. 'Infect' means 'This source deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.' A player loses the game if they have 10 or more poison counters."
+    },
+    "rules": [
+      { "ref": "702.90a", "text": { "fr": "Infection est une capacité statique modifiant la manière dont les blessures sont infligées.", "en": "Infect is a static ability that modifies how damage is dealt." } }
+    ]
+  },
+  {
+    "id": "intimidate",
+    "category": "ability_keywords",
+    "names": { "fr": "Intimidation", "en": "Intimidate" },
+    "simple": {
+      "fr": "Cette créature ne peut être bloquée que par des créatures-artefact et/ou des créatures partageant une couleur avec elle.",
+      "en": "This creature can only be blocked by artifact creatures and/or creatures sharing a color with it."
+    },
+    "examples": {
+      "fr": ["Une créature noire avec intimidation : seules les créatures noires ou les artefacts peuvent la bloquer.", "Intimidation a remplacé Peur en 2011 puis a été remplacée par Menace."],
+      "en": ["A black creature with intimidate: only black creatures or artifacts can block it.", "Intimidate replaced Fear in 2011 then was replaced by Menace."]
+    },
+    "fullDefinition": {
+      "fr": "Intimidation est une capacité statique d'évasion. « Intimidation » signifie « Cette créature ne peut pas être bloquée à moins que la créature bloqueuse ne soit un artefact ou ne partage une couleur avec elle ».",
+      "en": "Intimidate is a static evasion ability. 'Intimidate' means 'This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.'"
+    },
+    "rules": [
+      { "ref": "702.13a", "text": { "fr": "Intimidation est une capacité statique d'évasion.", "en": "Intimidate is a static evasion ability." } }
+    ]
+  },
+  {
+    "id": "jump_start",
+    "category": "ability_keywords",
+    "names": { "fr": "Démarrage en trombe", "en": "Jump-start" },
+    "simple": {
+      "fr": "Vous pouvez lancer cette carte depuis votre cimetière en défaussant une carte comme coût additionnel. Elle est exilée ensuite.",
+      "en": "You may cast this card from your graveyard by discarding a card as an additional cost. It's exiled afterward."
+    },
+    "examples": {
+      "fr": ["Un sort avec Démarrage en trombe : payez son coût normal + défaussez une carte = lancez-le depuis le cimetière.", "Démarrage en trombe est apparu dans Guilds of Ravnica (2018)."],
+      "en": ["A spell with Jump-start: pay its normal cost + discard a card = cast from graveyard.", "Jump-start appeared in Guilds of Ravnica (2018)."]
+    },
+    "fullDefinition": {
+      "fr": "Démarrage en trombe est une capacité statique fonctionnant dans le cimetière. « Démarrage en trombe » signifie « Vous pouvez lancer cette carte de votre cimetière en défaussant une carte comme coût additionnel. Si vous le faites, exilez-la lorsqu'elle quitterait la pile ».",
+      "en": "Jump-start is a static ability that functions in the graveyard. 'Jump-start' means 'You may cast this card from your graveyard by discarding a card as an additional cost. If you do, exile it as it would leave the stack.'"
+    },
+    "rules": [
+      { "ref": "702.133a", "text": { "fr": "Démarrage en trombe est une capacité statique fonctionnant dans le cimetière.", "en": "Jump-start is a static ability that functions in the graveyard." } }
+    ]
+  }
+]
