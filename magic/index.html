@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTG Rules — Consultation des règles Magic</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --bg-elevated: #ffffff;
+    --bg-hover: #f0ede5;
+    --bg-active: #e8e3d3;
+    --text: #1a1a1a;
+    --text-muted: #5a5a5a;
+    --text-soft: #888;
+    --border: #e0dccf;
+    --border-strong: #c8c2ac;
+    --accent: #7c2d12;
+    --accent-soft: #fde7d4;
+    --accent-text: #7c2d12;
+    --badge-bg: #f3ead5;
+    --badge-text: #6b4513;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+    --focus: #2563eb;
+    --code-bg: #f3ead5;
+    --warning-bg: #fef3c7;
+    --warning-border: #f59e0b;
+    --warning-text: #78350f;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1814;
+      --bg-elevated: #242019;
+      --bg-hover: #2e2920;
+      --bg-active: #3a3326;
+      --text: #f0ebde;
+      --text-muted: #b8b0a0;
+      --text-soft: #8a8270;
+      --border: #3a3326;
+      --border-strong: #524829;
+      --accent: #ea8a55;
+      --accent-soft: #3a2418;
+      --accent-text: #f5a878;
+      --badge-bg: #3a2e1a;
+      --badge-text: #d4b876;
+      --shadow: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.5);
+      --focus: #60a5fa;
+      --code-bg: #2e2920;
+      --warning-bg: #3a2e10;
+      --warning-border: #d97706;
+      --warning-text: #fcd34d;
+    }
+  }
+
+  [data-theme="light"] {
+    --bg: #fafaf7; --bg-elevated: #ffffff; --bg-hover: #f0ede5; --bg-active: #e8e3d3;
+    --text: #1a1a1a; --text-muted: #5a5a5a; --text-soft: #888;
+    --border: #e0dccf; --border-strong: #c8c2ac;
+    --accent: #7c2d12; --accent-soft: #fde7d4; --accent-text: #7c2d12;
+    --badge-bg: #f3ead5; --badge-text: #6b4513; --code-bg: #f3ead5;
+    --warning-bg: #fef3c7; --warning-border: #f59e0b; --warning-text: #78350f;
+  }
+
+  [data-theme="dark"] {
+    --bg: #1a1814; --bg-elevated: #242019; --bg-hover: #2e2920; --bg-active: #3a3326;
+    --text: #f0ebde; --text-muted: #b8b0a0; --text-soft: #8a8270;
+    --border: #3a3326; --border-strong: #524829;
+    --accent: #ea8a55; --accent-soft: #3a2418; --accent-text: #f5a878;
+    --badge-bg: #3a2e1a; --badge-text: #d4b876; --code-bg: #2e2920;
+    --warning-bg: #3a2e10; --warning-border: #d97706; --warning-text: #fcd34d;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .skip-link {
+    position: absolute; top: -40px; left: 0;
+    background: var(--accent); color: white;
+    padding: 8px 16px; z-index: 100; text-decoration: none;
+  }
+  .skip-link:focus { top: 0; }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex; align-items: center; gap: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 18px;
+    color: var(--accent-text); flex-shrink: 0;
+  }
+
+  .logo-icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--accent), #c2410c);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 16px; flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none; border: 1px solid var(--border);
+    color: var(--text);
+    width: 36px; height: 36px; border-radius: 6px;
+    cursor: pointer;
+    align-items: center; justify-content: center;
+  }
+
+  .search-container { position: relative; flex: 1; max-width: 500px; }
+
+  .search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    background: var(--bg); color: var(--text);
+    font-size: 14px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .search-input:focus {
+    border-color: var(--accent); outline: none;
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  .search-icon {
+    position: absolute; left: 10px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-soft); pointer-events: none;
+  }
+
+  .suggestions {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    max-height: 60vh; overflow-y: auto;
+    z-index: 100; display: none;
+  }
+  .suggestions.visible { display: block; }
+
+  .suggestion {
+    padding: 10px 14px; cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.1s;
+  }
+  .suggestion:last-child { border-bottom: none; }
+  .suggestion:hover, .suggestion.highlighted { background: var(--bg-hover); }
+
+  .suggestion-name {
+    font-weight: 600; color: var(--text);
+    margin-bottom: 2px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+
+  .suggestion-summary {
+    font-size: 13px; color: var(--text-muted); line-height: 1.4;
+  }
+
+  .suggestion-empty {
+    padding: 16px; text-align: center; color: var(--text-soft); font-size: 14px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--badge-bg); color: var(--badge-text);
+    padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+
+  .controls { display: flex; gap: 8px; align-items: center; }
+
+  .lang-toggle, .theme-toggle {
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; font-size: 13px; font-weight: 600;
+    transition: background-color 0.15s, border-color 0.15s;
+    display: flex; align-items: center; gap: 6px; height: 36px;
+  }
+
+  .lang-toggle:hover, .theme-toggle:hover {
+    background: var(--bg-hover); border-color: var(--accent);
+  }
+
+  .theme-toggle { width: 36px; padding: 6px; justify-content: center; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 65px);
+  }
+
+  aside {
+    background: var(--bg-elevated);
+    border-right: 1px solid var(--border);
+    padding: 20px 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 65px);
+    position: sticky; top: 65px;
+  }
+
+  .category { margin-bottom: 20px; }
+
+  .category-title {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-soft);
+    padding: 0 20px 8px; margin: 0;
+  }
+
+  .category-list { list-style: none; padding: 0; margin: 0; }
+
+  .category-list li button {
+    width: 100%; text-align: left;
+    background: none; border: none;
+    color: var(--text);
+    padding: 6px 20px; cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.1s, color 0.1s;
+    border-left: 3px solid transparent;
+    font-family: inherit;
+  }
+
+  .category-list li button:hover { background: var(--bg-hover); }
+
+  .category-list li button.active {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+
+  main {
+    padding: 32px 40px;
+    max-width: 900px; margin: 0 auto; width: 100%;
+  }
+
+  .welcome { text-align: center; padding: 60px 20px; }
+  .welcome h1 { font-size: 32px; margin: 0 0 12px; color: var(--accent-text); }
+  .welcome p { color: var(--text-muted); font-size: 16px; max-width: 600px; margin: 0 auto 24px; }
+
+  .welcome-stats {
+    display: flex; justify-content: center; gap: 32px;
+    margin-top: 32px; flex-wrap: wrap;
+  }
+
+  .stat { text-align: center; }
+  .stat-value { font-size: 28px; font-weight: 700; color: var(--accent-text); }
+  .stat-label {
+    font-size: 13px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  .keyword-page h1 { font-size: 32px; margin: 0 0 8px; color: var(--text); }
+
+  .keyword-page .header-row {
+    display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 24px;
+  }
+
+  .section {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .section h2 {
+    margin: 0 0 12px;
+    font-size: 16px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--accent-text);
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .section h2::before {
+    content: ''; width: 4px; height: 18px;
+    background: var(--accent); border-radius: 2px;
+  }
+
+  .simple-text { font-size: 16px; color: var(--text); line-height: 1.7; }
+
+  .examples-list { list-style: none; padding: 0; margin: 0; }
+  .examples-list li {
+    padding: 10px 14px;
+    background: var(--code-bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 14px; color: var(--text);
+  }
+  .examples-list li:last-child { margin-bottom: 0; }
+
+  .full-def { color: var(--text); line-height: 1.7; }
+
+  .rules-list { list-style: none; padding: 0; margin: 0; }
+  .rules-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .rules-list li:last-child { border-bottom: none; }
+
+  .rule-ref {
+    flex-shrink: 0;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 12px; font-weight: 700;
+    background: var(--badge-bg); color: var(--badge-text);
+    padding: 2px 8px; border-radius: 4px;
+    min-width: 60px; text-align: center;
+  }
+
+  .rule-text { color: var(--text); font-size: 14px; line-height: 1.6; }
+
+  /* Loading state */
+  .loading-screen {
+    display: flex; align-items: center; justify-content: center;
+    height: 60vh; flex-direction: column; gap: 16px;
+  }
+
+  .spinner {
+    width: 40px; height: 40px;
+    border: 4px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Warning banner */
+  .banner {
+    background: var(--warning-bg);
+    border-left: 4px solid var(--warning-border);
+    color: var(--warning-text);
+    padding: 12px 20px;
+    font-size: 13px;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+
+  .banner-close {
+    margin-left: auto;
+    background: none; border: none;
+    color: var(--warning-text);
+    cursor: pointer; font-size: 18px;
+    padding: 0 4px;
+  }
+
+  .banner code {
+    background: rgba(0,0,0,0.1);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    header { padding: 10px 12px; gap: 8px; flex-wrap: wrap; }
+    .logo span { display: none; }
+    .menu-toggle { display: flex; }
+    .search-container { order: 3; flex: 1 1 100%; max-width: none; }
+    .controls { gap: 4px; }
+    .lang-toggle, .theme-toggle { padding: 6px 10px; font-size: 12px; }
+    .layout { grid-template-columns: 1fr; }
+    aside {
+      position: fixed; top: 0; left: 0; bottom: 0;
+      width: 80%; max-width: 300px; z-index: 90;
+      transform: translateX(-100%);
+      transition: transform 0.25s;
+      box-shadow: var(--shadow-lg);
+      max-height: 100vh; padding-top: 70px;
+    }
+    aside.open { transform: translateX(0); }
+    .backdrop {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.4); z-index: 80;
+    }
+    .backdrop.visible { display: block; }
+    main { padding: 20px 16px; }
+    .keyword-page h1 { font-size: 24px; }
+    .welcome h1 { font-size: 24px; }
+    .section { padding: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    html { scroll-behavior: auto; }
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" data-i18n="skip">Aller au contenu principal</a>
+
+<header role="banner">
+  <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+
+  <div class="logo">
+    <div class="logo-icon" aria-hidden="true">✦</div>
+    <span>MTG Rules</span>
+  </div>
+
+  <div class="search-container" role="search">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <label for="search" class="sr-only" data-i18n="searchLabel">Rechercher un mot-clé</label>
+    <input
+      type="search" id="search" class="search-input"
+      placeholder="Rechercher un mot-clé..."
+      autocomplete="off"
+      aria-autocomplete="list" aria-controls="suggestions" aria-expanded="false"
+    >
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+  </div>
+
+  <div class="controls">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Changer de langue">
+      <span id="lang-label">FR</span>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+      <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="banner-container"></div>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div class="layout">
+  <aside id="sidebar" aria-label="Menu des catégories">
+    <nav id="categories-nav"></nav>
+  </aside>
+
+  <main id="main-content" tabindex="-1">
+    <div id="content">
+      <div class="loading-screen" role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <div>Chargement des données...</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Embedded fallback data for preview (when JSON files aren't reachable) -->
+<script type="application/json" id="fallback-data">
+{
+  "i18n": {
+    "fr": {
+      "skip": "Aller au contenu principal",
+      "searchLabel": "Rechercher un mot-clé",
+      "searchPlaceholder": "Rechercher un mot-clé...",
+      "welcomeTitle": "Bienvenue dans la consultation des règles Magic",
+      "welcomeText": "Explorez les règles du jeu Magic: The Gathering. Recherchez un mot-clé dans la barre ci-dessus ou parcourez les catégories à gauche.",
+      "keywords": "Mots-clés", "categories": "Catégories", "rules": "Règles",
+      "simpleSection": "Explication simple",
+      "examplesSection": "Exemples",
+      "fullDefSection": "Définition complète",
+      "rulesSection": "Règles associées",
+      "noResults": "Aucun résultat trouvé",
+      "fallbackBanner": "Vous voyez un jeu de données d'exemple (8 mots-clés). Pour la base complète, déployez l'app avec les fichiers JSON dans un dossier <code>./data/</code>.",
+      "loading": "Chargement des données...",
+      "loadError": "Impossible de charger les données externes — utilisation des données d'exemple."
+    },
+    "en": {
+      "skip": "Skip to main content",
+      "searchLabel": "Search for a keyword",
+      "searchPlaceholder": "Search for a keyword...",
+      "welcomeTitle": "Welcome to the Magic Rules Browser",
+      "welcomeText": "Explore the rules of Magic: The Gathering. Search for a keyword in the bar above or browse the categories on the left.",
+      "keywords": "Keywords", "categories": "Categories", "rules": "Rules",
+      "simpleSection": "Simple Explanation",
+      "examplesSection": "Examples",
+      "fullDefSection": "Full Definition",
+      "rulesSection": "Associated Rules",
+      "noResults": "No results found",
+      "fallbackBanner": "You're seeing a sample dataset (8 keywords). For the full database, deploy the app with the JSON files in a <code>./data/</code> folder.",
+      "loading": "Loading data...",
+      "loadError": "Could not load external data — using sample data."
+    }
+  },
+  "categories": [
+    { "id": "ability_keywords", "names": { "fr": "Mots-clés d'aptitude", "en": "Keyword Abilities" } },
+    { "id": "keyword_actions", "names": { "fr": "Actions mots-clés", "en": "Keyword Actions" } },
+    { "id": "card_types", "names": { "fr": "Types de cartes", "en": "Card Types" } },
+    { "id": "zones", "names": { "fr": "Zones", "en": "Zones" } },
+    { "id": "fundamentals", "names": { "fr": "Concepts fondamentaux", "en": "Core Concepts" } }
+  ],
+  "keywords": [
+    {
+      "id": "flying",
+      "category": "ability_keywords",
+      "names": { "fr": "Vol", "en": "Flying" },
+      "simple": {
+        "fr": "Une créature avec le vol ne peut être bloquée que par des créatures ayant le vol ou la portée.",
+        "en": "A creature with flying can only be blocked by creatures with flying or reach."
+      },
+      "examples": {
+        "fr": ["Un Dragon 5/5 avec le vol attaque. Seules les créatures volantes ou avec la portée peuvent le bloquer."],
+        "en": ["A 5/5 Dragon with flying attacks. Only creatures with flying or reach can block it."]
+      },
+      "fullDefinition": {
+        "fr": "Le vol est une capacité statique d'évasion. Une créature avec le vol ne peut pas être bloquée à moins que la créature bloqueuse n'ait elle-même le vol ou la portée.",
+        "en": "Flying is a static evasion ability. A creature with flying can't be blocked except by creatures with flying or reach."
+      },
+      "rules": [
+        { "ref": "702.9a", "text": { "fr": "Le vol est une capacité statique qui modifie les règles de blocage des créatures.", "en": "Flying is a static ability that modifies the rules for declaring blockers." } }
+      ]
+    },
+    {
+      "id": "vigilance",
+      "category": "ability_keywords",
+      "names": { "fr": "Vigilance", "en": "Vigilance" },
+      "simple": {
+        "fr": "Une créature avec la vigilance ne s'engage pas quand elle attaque.",
+        "en": "A creature with vigilance doesn't tap when attacking."
+      },
+      "examples": {
+        "fr": ["Vous attaquez avec un Ange 4/4 avec la vigilance. Il reste dégagé et peut bloquer."],
+        "en": ["You attack with a 4/4 Angel with vigilance. It stays untapped and can block."]
+      },
+      "fullDefinition": {
+        "fr": "La vigilance est une capacité statique qui modifie les règles de déclaration des attaquants.",
+        "en": "Vigilance is a static ability that modifies the rules for declaring attackers."
+      },
+      "rules": [
+        { "ref": "702.20", "text": { "fr": "Attaquer ne fait pas s'engager une créature avec la vigilance.", "en": "Attacking doesn't cause a creature with vigilance to tap." } }
+      ]
+    },
+    {
+      "id": "destroy",
+      "category": "keyword_actions",
+      "names": { "fr": "Détruire", "en": "Destroy" },
+      "simple": {
+        "fr": "Mettre une permanente du champ de bataille dans le cimetière de son propriétaire.",
+        "en": "Move a permanent from the battlefield to its owner's graveyard."
+      },
+      "examples": {
+        "fr": ["'Détruisez la créature ciblée' met cette créature au cimetière."],
+        "en": ["'Destroy target creature' puts that creature into its owner's graveyard."]
+      },
+      "fullDefinition": {
+        "fr": "Détruire une permanente signifie la mettre dans le cimetière de son propriétaire depuis le champ de bataille. Les permanentes avec indestructible ne peuvent pas être détruites.",
+        "en": "To destroy a permanent means to move it from the battlefield to its owner's graveyard. Indestructible permanents can't be destroyed this way."
+      },
+      "rules": [
+        { "ref": "701.7", "text": { "fr": "Détruire une permanente signifie la mettre au cimetière depuis le champ de bataille.", "en": "To destroy a permanent, move it from the battlefield to its owner's graveyard." } }
+      ]
+    },
+    {
+      "id": "creature",
+      "category": "card_types",
+      "names": { "fr": "Créature", "en": "Creature" },
+      "simple": {
+        "fr": "Une permanente qui peut attaquer et bloquer. Possède une force et une endurance.",
+        "en": "A permanent that can attack and block. Has power and toughness."
+      },
+      "examples": {
+        "fr": ["Un 'Ours' 2/2 a 2 en force et 2 en endurance."],
+        "en": ["A 2/2 'Bear' has 2 power and 2 toughness."]
+      },
+      "fullDefinition": {
+        "fr": "Créature est un type de carte. Les créatures ont une force et une endurance et peuvent attaquer et bloquer.",
+        "en": "Creature is a card type. Creatures have power and toughness and can attack and block."
+      },
+      "rules": [
+        { "ref": "302.1", "text": { "fr": "Un joueur peut lancer une carte de créature pendant une phase principale quand la pile est vide.", "en": "A player may cast a creature card during a main phase when the stack is empty." } }
+      ]
+    },
+    {
+      "id": "battlefield",
+      "category": "zones",
+      "names": { "fr": "Champ de bataille", "en": "Battlefield" },
+      "simple": {
+        "fr": "La zone où se trouvent les permanentes en jeu.",
+        "en": "The zone where permanents are in play."
+      },
+      "examples": {
+        "fr": ["Quand vous lancez une créature et qu'elle se résout, elle arrive sur le champ de bataille."],
+        "en": ["When you cast a creature and it resolves, it enters the battlefield."]
+      },
+      "fullDefinition": {
+        "fr": "Le champ de bataille est la zone où les permanentes existent. Il est partagé par tous les joueurs.",
+        "en": "The battlefield is the zone where permanents exist. It's shared by all players."
+      },
+      "rules": [
+        { "ref": "403.1", "text": { "fr": "Le champ de bataille est la zone dans laquelle les permanentes existent.", "en": "The battlefield is the zone in which permanents exist." } }
+      ]
+    },
+    {
+      "id": "graveyard",
+      "category": "zones",
+      "names": { "fr": "Cimetière", "en": "Graveyard" },
+      "simple": {
+        "fr": "Zone face visible où vont les cartes détruites, défaussées ou résolues.",
+        "en": "Face-up zone where destroyed, discarded, or resolved cards go."
+      },
+      "examples": {
+        "fr": ["Une créature détruite va dans le cimetière de son propriétaire."],
+        "en": ["A destroyed creature goes to its owner's graveyard."]
+      },
+      "fullDefinition": {
+        "fr": "Le cimetière d'un joueur est sa pile de défausse. Il est public.",
+        "en": "A player's graveyard is their discard pile. It is public."
+      },
+      "rules": [
+        { "ref": "404.1", "text": { "fr": "Le cimetière d'un joueur est sa pile de défausse.", "en": "A player's graveyard is their discard pile." } }
+      ]
+    },
+    {
+      "id": "mana",
+      "category": "fundamentals",
+      "names": { "fr": "Mana", "en": "Mana" },
+      "simple": {
+        "fr": "La ressource utilisée pour lancer des sorts. Vient en 5 couleurs + incolore.",
+        "en": "The resource used to cast spells. Comes in 5 colors + colorless."
+      },
+      "examples": {
+        "fr": ["Les 5 couleurs sont : blanc (W), bleu (U), noir (B), rouge (R), vert (G)."],
+        "en": ["The 5 colors are: white (W), blue (U), black (B), red (R), green (G)."]
+      },
+      "fullDefinition": {
+        "fr": "Le mana est la ressource principale utilisée pour payer les coûts. Il existe six types : blanc, bleu, noir, rouge, vert et incolore.",
+        "en": "Mana is the primary resource used to pay costs. There are six types: white, blue, black, red, green, and colorless."
+      },
+      "rules": [
+        { "ref": "106.1", "text": { "fr": "Le mana est la ressource principale du jeu.", "en": "Mana is the primary resource in the game." } }
+      ]
+    },
+    {
+      "id": "spell",
+      "category": "fundamentals",
+      "names": { "fr": "Sort", "en": "Spell" },
+      "simple": {
+        "fr": "Une carte sur la pile, ou une copie d'une carte sur la pile.",
+        "en": "A card on the stack, or a copy of a card on the stack."
+      },
+      "examples": {
+        "fr": ["Quand vous lancez une carte, elle devient un sort tant qu'elle est sur la pile."],
+        "en": ["When you cast a card, it becomes a spell while on the stack."]
+      },
+      "fullDefinition": {
+        "fr": "Un sort est une carte sur la pile. La carte reste un sort jusqu'à ce qu'elle quitte la pile.",
+        "en": "A spell is a card on the stack. The card remains a spell until it leaves the stack."
+      },
+      "rules": [
+        { "ref": "111.1", "text": { "fr": "Un sort est une carte sur la pile.", "en": "A spell is a card on the stack." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+/* ============================================================
+   DATA & STATE
+   ============================================================ */
+const DATA = { categories: [], keywords: [] };
+const I18N = {};
+
+const state = {
+  lang: 'fr',
+  theme: null,
+  currentKeyword: null,
+  searchHighlight: -1,
+  fallbackMode: false
+};
+
+/* ============================================================
+   DATA LOADING (multi-file architecture)
+   ============================================================ */
+async function loadData() {
+  // Try loading external JSON files first
+  try {
+    const files = [
+      'data/i18n.json',
+      'data/categories.json',
+      'data/ability-keywords-1.json',
+      'data/ability-keywords-2.json',
+      'data/ability-keywords-3.json',
+      'data/keyword-actions.json',
+      'data/card-types.json',
+      'data/zones.json',
+      'data/fundamentals.json'
+    ];
+
+    const results = await Promise.all(
+      files.map(f => fetch(f).then(r => {
+        if (!r.ok) throw new Error(`Failed to load ${f}: ${r.status}`);
+        return r.json();
+      }))
+    );
+
+    const [i18n, categories, abilityKw1, abilityKw2, abilityKw3, keywordActions, cardTypes, zones, fundamentals] = results;
+
+    Object.assign(I18N, i18n);
+    DATA.categories = categories;
+    DATA.keywords = [
+      ...abilityKw1,
+      ...abilityKw2,
+      ...abilityKw3,
+      ...keywordActions,
+      ...cardTypes,
+      ...zones,
+      ...fundamentals
+    ];
+
+    state.fallbackMode = false;
+    console.log(`Loaded ${DATA.keywords.length} keywords across ${DATA.categories.length} categories.`);
+    return true;
+  } catch (err) {
+    console.warn('Could not load external JSON files, falling back to embedded sample data.', err);
+    return loadFallbackData();
+  }
+}
+
+function loadFallbackData() {
+  try {
+    const raw = document.getElementById('fallback-data').textContent;
+    const parsed = JSON.parse(raw);
+    Object.assign(I18N, parsed.i18n);
+    DATA.categories = parsed.categories;
+    DATA.keywords = parsed.keywords;
+    state.fallbackMode = true;
+    return true;
+  } catch (e) {
+    console.error('Failed to load fallback data', e);
+    return false;
+  }
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => document.querySelectorAll(sel);
+
+function t(key) { return (I18N[state.lang] && I18N[state.lang][key]) || key; }
+
+function normalizeText(s) {
+  return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function getCategoryName(catId) {
+  const cat = DATA.categories.find(c => c.id === catId);
+  return cat ? cat.names[state.lang] : catId;
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+/* ============================================================
+   BANNER
+   ============================================================ */
+function renderBanner() {
+  const c = $('#banner-container');
+  if (!state.fallbackMode) { c.innerHTML = ''; return; }
+  c.innerHTML = `
+    <div class="banner" role="status">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>${t('fallbackBanner')}</span>
+      <button class="banner-close" aria-label="Fermer" onclick="this.parentElement.remove()">×</button>
+    </div>
+  `;
+}
+
+/* ============================================================
+   RENDERING
+   ============================================================ */
+function renderCategories() {
+  const nav = $('#categories-nav');
+  nav.innerHTML = '';
+
+  DATA.categories.forEach(cat => {
+    const div = document.createElement('div');
+    div.className = 'category';
+
+    const title = document.createElement('h2');
+    title.className = 'category-title';
+    title.textContent = cat.names[state.lang];
+    div.appendChild(title);
+
+    const ul = document.createElement('ul');
+    ul.className = 'category-list';
+
+    const items = DATA.keywords.filter(k => k.category === cat.id);
+    items.sort((a, b) => a.names[state.lang].localeCompare(b.names[state.lang], state.lang));
+
+    items.forEach(kw => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button');
+      btn.textContent = kw.names[state.lang];
+      btn.dataset.id = kw.id;
+      if (state.currentKeyword === kw.id) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-current', 'page');
+      }
+      btn.addEventListener('click', () => { selectKeyword(kw.id); closeMenu(); });
+      li.appendChild(btn);
+      ul.appendChild(li);
+    });
+
+    div.appendChild(ul);
+    nav.appendChild(div);
+  });
+}
+
+function renderWelcome() {
+  const content = $('#content');
+  const totalKw = DATA.keywords.length;
+  const totalCat = DATA.categories.length;
+  const totalRules = DATA.keywords.reduce((sum, k) => sum + (k.rules ? k.rules.length : 0), 0);
+
+  content.innerHTML = `
+    <div class="welcome">
+      <h1>${escapeHtml(t('welcomeTitle'))}</h1>
+      <p>${escapeHtml(t('welcomeText'))}</p>
+      <div class="welcome-stats">
+        <div class="stat"><div class="stat-value">${totalKw}</div><div class="stat-label">${escapeHtml(t('keywords'))}</div></div>
+        <div class="stat"><div class="stat-value">${totalCat}</div><div class="stat-label">${escapeHtml(t('categories'))}</div></div>
+        <div class="stat"><div class="stat-value">${totalRules}</div><div class="stat-label">${escapeHtml(t('rules'))}</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderKeyword(id) {
+  const kw = DATA.keywords.find(k => k.id === id);
+  if (!kw) { renderWelcome(); return; }
+
+  const content = $('#content');
+  const lang = state.lang;
+  const examples = (kw.examples && kw.examples[lang]) || [];
+  const rules = kw.rules || [];
+
+  content.innerHTML = `
+    <article class="keyword-page" aria-labelledby="kw-title">
+      <div class="header-row">
+        <h1 id="kw-title">${escapeHtml(kw.names[lang])}</h1>
+        <span class="badge">${escapeHtml(getCategoryName(kw.category))}</span>
+      </div>
+
+      <section class="section" aria-labelledby="simple-h">
+        <h2 id="simple-h">${escapeHtml(t('simpleSection'))}</h2>
+        <p class="simple-text">${escapeHtml(kw.simple[lang])}</p>
+      </section>
+
+      ${examples.length > 0 ? `
+      <section class="section" aria-labelledby="examples-h">
+        <h2 id="examples-h">${escapeHtml(t('examplesSection'))}</h2>
+        <ul class="examples-list">
+          ${examples.map(ex => `<li>${escapeHtml(ex)}</li>`).join('')}
+        </ul>
+      </section>
+      ` : ''}
+
+      <section class="section" aria-labelledby="fulldef-h">
+        <h2 id="fulldef-h">${escapeHtml(t('fullDefSection'))}</h2>
+        <p class="full-def">${escapeHtml(kw.fullDefinition[lang])}</p>
+      </section>
+
+      ${rules.length > 0 ? `
+      <section class="section" aria-labelledby="rules-h">
+        <h2 id="rules-h">${escapeHtml(t('rulesSection'))}</h2>
+        <ul class="rules-list">
+          ${rules.map(r => `
+            <li>
+              <span class="rule-ref">${escapeHtml(r.ref)}</span>
+              <span class="rule-text">${escapeHtml(r.text[lang])}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </section>
+      ` : ''}
+    </article>
+  `;
+
+  $('#main-content').focus();
+  $('#main-content').scrollTop = 0;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+function searchKeywords(query) {
+  if (!query.trim()) return [];
+  const q = normalizeText(query.trim());
+  const results = [];
+
+  DATA.keywords.forEach(kw => {
+    const nameFr = normalizeText(kw.names.fr);
+    const nameEn = normalizeText(kw.names.en);
+    const simpleFr = normalizeText(kw.simple.fr);
+    const simpleEn = normalizeText(kw.simple.en);
+    const fullFr = normalizeText(kw.fullDefinition.fr);
+    const fullEn = normalizeText(kw.fullDefinition.en);
+
+    let score = 0;
+    if (nameFr === q || nameEn === q) score = 100;
+    else if (nameFr.startsWith(q) || nameEn.startsWith(q)) score = 80;
+    else if (nameFr.includes(q) || nameEn.includes(q)) score = 60;
+    else if (simpleFr.includes(q) || simpleEn.includes(q)) score = 40;
+    else if (fullFr.includes(q) || fullEn.includes(q)) score = 20;
+    else if (kw.rules) {
+      const inRules = kw.rules.some(r =>
+        normalizeText(r.text.fr).includes(q) ||
+        normalizeText(r.text.en).includes(q) ||
+        r.ref.includes(q)
+      );
+      if (inRules) score = 10;
+    }
+
+    if (score > 0) results.push({ kw, score });
+  });
+
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, 12).map(r => r.kw);
+}
+
+function renderSuggestions(query) {
+  const box = $('#suggestions');
+  const input = $('#search');
+  const results = searchKeywords(query);
+
+  if (!query.trim()) {
+    box.classList.remove('visible');
+    input.setAttribute('aria-expanded', 'false');
+    return;
+  }
+
+  box.innerHTML = '';
+  state.searchHighlight = -1;
+
+  if (results.length === 0) {
+    box.innerHTML = `<div class="suggestion-empty">${escapeHtml(t('noResults'))}</div>`;
+  } else {
+    results.forEach((kw, i) => {
+      const div = document.createElement('div');
+      div.className = 'suggestion';
+      div.setAttribute('role', 'option');
+      div.setAttribute('id', `suggestion-${i}`);
+      div.dataset.id = kw.id;
+      div.innerHTML = `
+        <div class="suggestion-name">
+          ${escapeHtml(kw.names[state.lang])}
+          <span class="badge">${escapeHtml(getCategoryName(kw.category))}</span>
+        </div>
+        <div class="suggestion-summary">${escapeHtml(kw.simple[state.lang])}</div>
+      `;
+      div.addEventListener('click', () => { selectKeyword(kw.id); clearSearch(); });
+      div.addEventListener('mouseenter', () => { state.searchHighlight = i; updateHighlight(); });
+      box.appendChild(div);
+    });
+  }
+
+  box.classList.add('visible');
+  input.setAttribute('aria-expanded', 'true');
+}
+
+function updateHighlight() {
+  const items = $$('.suggestion');
+  items.forEach((el, i) => {
+    if (i === state.searchHighlight) {
+      el.classList.add('highlighted');
+      el.scrollIntoView({ block: 'nearest' });
+      $('#search').setAttribute('aria-activedescendant', `suggestion-${i}`);
+    } else {
+      el.classList.remove('highlighted');
+    }
+  });
+  if (state.searchHighlight === -1) {
+    $('#search').removeAttribute('aria-activedescendant');
+  }
+}
+
+function clearSearch() {
+  $('#search').value = '';
+  $('#suggestions').classList.remove('visible');
+  $('#search').setAttribute('aria-expanded', 'false');
+  state.searchHighlight = -1;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+function selectKeyword(id) {
+  state.currentKeyword = id;
+  renderKeyword(id);
+  renderCategories();
+  if (history.replaceState) history.replaceState(null, '', '#' + id);
+}
+
+function toggleLang() {
+  state.lang = state.lang === 'fr' ? 'en' : 'fr';
+  document.documentElement.lang = state.lang;
+  $('#lang-label').textContent = state.lang.toUpperCase();
+  $('#search').placeholder = t('searchPlaceholder');
+  $('.skip-link').textContent = t('skip');
+
+  renderBanner();
+  renderCategories();
+  if (state.currentKeyword) renderKeyword(state.currentKeyword);
+  else renderWelcome();
+
+  const q = $('#search').value;
+  if (q.trim()) renderSuggestions(q);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  let next;
+  if (!current) {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    next = isDark ? 'light' : 'dark';
+  } else if (current === 'light') next = 'dark';
+  else next = 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  state.theme = next;
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const icon = $('#theme-icon');
+  const isDark = (state.theme === 'dark') ||
+                 (state.theme === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  if (isDark) {
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  } else {
+    icon.innerHTML = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
+  }
+}
+
+function openMenu() {
+  $('#sidebar').classList.add('open');
+  $('#backdrop').classList.add('visible');
+  $('#menu-toggle').setAttribute('aria-expanded', 'true');
+}
+function closeMenu() {
+  $('#sidebar').classList.remove('open');
+  $('#backdrop').classList.remove('visible');
+  $('#menu-toggle').setAttribute('aria-expanded', 'false');
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+function setupEvents() {
+  const searchInput = $('#search');
+
+  searchInput.addEventListener('input', (e) => renderSuggestions(e.target.value));
+  searchInput.addEventListener('focus', (e) => { if (e.target.value.trim()) renderSuggestions(e.target.value); });
+
+  searchInput.addEventListener('keydown', (e) => {
+    const items = $$('.suggestion');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (items.length > 0) { state.searchHighlight = Math.min(state.searchHighlight + 1, items.length - 1); updateHighlight(); }
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (items.length > 0) { state.searchHighlight = Math.max(state.searchHighlight - 1, 0); updateHighlight(); }
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (state.searchHighlight >= 0 && items[state.searchHighlight]) {
+        selectKeyword(items[state.searchHighlight].dataset.id);
+        clearSearch(); searchInput.blur();
+      } else if (items.length > 0) {
+        selectKeyword(items[0].dataset.id); clearSearch(); searchInput.blur();
+      }
+    } else if (e.key === 'Escape') {
+      clearSearch(); searchInput.blur();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-container')) {
+      $('#suggestions').classList.remove('visible');
+      $('#search').setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  $('#lang-toggle').addEventListener('click', toggleLang);
+  $('#theme-toggle').addEventListener('click', toggleTheme);
+  $('#menu-toggle').addEventListener('click', () => {
+    if ($('#sidebar').classList.contains('open')) closeMenu(); else openMenu();
+  });
+  $('#backdrop').addEventListener('click', closeMenu);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (state.theme === null) updateThemeIcon();
+  });
+
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.replace('#', '');
+    if (id && DATA.keywords.find(k => k.id === id)) selectKeyword(id);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault(); searchInput.focus();
+    }
+  });
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+async function init() {
+  const browserLang = (navigator.language || 'fr').slice(0, 2).toLowerCase();
+  if (browserLang === 'en') {
+    state.lang = 'en';
+    document.documentElement.lang = 'en';
+    $('#lang-label').textContent = 'EN';
+  }
+
+  const ok = await loadData();
+  if (!ok) {
+    $('#content').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted)">Erreur de chargement des données.</div>';
+    return;
+  }
+
+  $('#search').placeholder = t('searchPlaceholder');
+  $('.skip-link').textContent = t('skip');
+
+  renderBanner();
+  renderCategories();
+
+  const hashId = location.hash.replace('#', '');
+  if (hashId && DATA.keywords.find(k => k.id === hashId)) selectKeyword(hashId);
+  else renderWelcome();
+
+  setupEvents();
+  updateThemeIcon();
+}
+
+init();
+</script>
+</body>
+</html>
